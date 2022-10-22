@@ -138,7 +138,6 @@ $("input[name='nurserySchoolMemberPassword']").on("blur", function() {
 	//공백검사
 	var spaceCheck = /\s/;
 
-	console.log(joinForm.nurserySchoolMemberPassword.value)
 	if (!joinForm.nurserySchoolMemberPassword.value) {
 		$("#nurserySchoolMemberPassworddiv").text("비밀번호를 입력해주세요.");
 		$("#nurserySchoolMemberPassworddiv").css("color", "red");
@@ -148,7 +147,6 @@ $("input[name='nurserySchoolMemberPassword']").on("blur", function() {
 	}
 
 	if (!pwCheck.test(joinForm.nurserySchoolMemberPassword.value)) {
-		console.log('안녕1')
 		$("#nurserySchoolMemberPassworddiv").text("비밀번호는 영문 대소문자, 숫자, 특수문자 중 2가지 이상 조합된 8자 ~ 32자만 가능합니다.");
 		return;
 	} else {
@@ -156,7 +154,6 @@ $("input[name='nurserySchoolMemberPassword']").on("blur", function() {
 	}
 
 	if (hangleCheck.test(joinForm.nurserySchoolMemberPassword.value)) {
-		console.log('안녕2')
 		$("#nurserySchoolMemberPassworddiv").text("비밀번호는 영문 대소문자, 숫자, 특수문자 중 2가지 이상 조합된 8자 ~ 32자만 가능합니다.");
 		return;
 	} else {
@@ -164,7 +161,6 @@ $("input[name='nurserySchoolMemberPassword']").on("blur", function() {
 	}
 
 	if (wordCheck.test(joinForm.nurserySchoolMemberPassword.value)) {
-		console.log('안녕3')
 		$("#nurserySchoolMemberPassworddiv").text("비밀번호는 영문 대소문자, 숫자, 특수문자 중 2가지 이상 조합된 8자 ~ 32자만 가능합니다.");
 		return;
 	} else {
@@ -172,7 +168,6 @@ $("input[name='nurserySchoolMemberPassword']").on("blur", function() {
 	}
 
 	if (spaceCheck.test(joinForm.nurserySchoolMemberPassword.value)) {
-		console.log('안녕4')
 		$("#nurserySchoolMemberPassworddiv").text("비밀번호는 영문 대소문자, 숫자, 특수문자 중 2가지 이상 조합된 8자 ~ 32자만 가능합니다.");
 		return;
 	} else {
@@ -263,8 +258,14 @@ $("#submitButton").on('click', function() {
 		$("#nurserySchoolMemberEmaildiv").css("color", "red");
 		check = true;
 	}
+	/*--------------------이메일 인증 안했을 때---------------------*/
+	if(checkEmail){
+		$("#checkNurserySchoolMemberEmaildiv").text("인증번호 확인을 진행해주세요.");
+		$("#checkNurserySchoolMemberEmaildiv").css("color", "red");
+	}
 
-	if (!check && !idCheck && !checkPw) {
+	if (!check && !idCheck && !checkPw && !checkEmail) {
+		alert('회원가입을 완료했습니다 로그인을 진행해주세요')
 		joinForm.submit();
 	} else {
 		window.scrollTo(0, 0);
@@ -277,11 +278,7 @@ $('.login_naver').on('click',function(){
 })
 /*구글 클릭*/
 $('.login_google').on('click',function(){
-	console.log($('#google_id_login').eq(0).find('iframe').find(".nsm7Bb-HzV7m-LgbsSe"));
 	$('#google_id_login').eq(0).find('iframe').find(".nsm7Bb-HzV7m-LgbsSe").click();
-/*	console.log($('#google_id_login').eq(0).find('iframe').attr('src'))
-//	location.href = $('#google_id_login').eq(0).find('iframe').attr('src');
-	$('#google_id_login').eq(0).find('iframe').get(0).click();*/
 })
 
 /*카카오 로그인*/
@@ -296,8 +293,6 @@ function kakaoLogin() {
 				url: '/v2/user/me',
 				success: (response) => {
 					let email = response.kakao_account.email // 사용자 정보 중 원하는 값 추출
-					console.log('안녕')
-					console.log(email)
 					$('input[name = "nurserySchoolMemberEmail"]').val(email);
 
 
@@ -314,4 +309,42 @@ function kakaoLogin() {
 		}
 	});
 }
+/*이메일인증*/
+let key = generateRandomCode();
+function generateRandomCode() {
+    let str = ''
+    for (let i = 0; i < 6; i++) {
+        str += Math.floor(Math.random() * 10)
+    }
+    return str
+}
+function sendEmail() {
+	if (!$("input[name='nurserySchoolMemberEmail']").val()) {
+		$("#nurserySchoolMemberEmaildiv").text("이메일을 입력해주세요.");
+		$("#nurserySchoolMemberEmaildiv").css("color", "red");
+		return;
+	}
+	$("#checkNurserySchoolMemberEmaildiv").text("입력하신 이메일로 인증번호를 발송했습니다.");
+	$("#checkNurserySchoolMemberEmaildiv").css("color", "green");
+    emailjs.send("service_vfzxi5g", "template_vtzhsgc", {
+        message: key,
+        to_email: "ghkdwltn5@naver.com",
+    });
+}
+
+var checkEmail = true;
+$("input[name='checkNurserySchoolMemberEmail']").on("blur",function (){
+	var inputKey = $('input[name = "checkNurserySchoolMemberEmail"]').val();
+	if(inputKey==key){
+		$("#checkNurserySchoolMemberEmaildiv").text("인증번호가 일치합니다.");
+		$("#checkNurserySchoolMemberEmaildiv").css("color", "blue");
+		checkEmail = false;
+	}else{
+		$("#checkNurserySchoolMemberEmaildiv").text("인증번호가 일치하지 않습니다.");
+		$("#checkNurserySchoolMemberEmaildiv").css("color", "red");
+		checkEmail = true;
+	}
+	
+});
+
 
