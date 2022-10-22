@@ -74,6 +74,10 @@
 	<!-- 도움이 필요한 보육원 메인페이지꺼 -->
 	<select id="helpSchoolSelect2" resultType="nurseryVO">
 		select
+		nursery_school_member_number,
+		nursery_school_address,
+		nursery_school_detailed_address,
+		nursery_school_member_phone_number,
 		nursery_school_photo ,
 		nursery_school_member_name ,
 		number_of_donations_received ,

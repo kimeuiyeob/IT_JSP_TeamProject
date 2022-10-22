@@ -32,6 +32,7 @@
 	<jsp:include page="../fix/header.jsp" />
 
 	<!-- ----------------------------뒷 배경 슬라이드--------------------------- -->
+
 	<div id="bigback" class="main_swiper">
 		<div id="back" class="swiper-container">
 			<div class="swiper-wrapper">
@@ -361,27 +362,32 @@
 
 	<div class="slide slide_wrap">
 		<div class="slide_item item1">
-			<img style="height:300px ; width : 400px"
-			src="https://image.utoimage.com/preview/cp872722/2021/10/202110002995_500.jpg"  alt="">
+			<img style="height: 300px; width: 400px"
+				src="https://image.utoimage.com/preview/cp872722/2021/10/202110002995_500.jpg"
+				alt="">
 		</div>
 		<div class="slide_item item2">
-			<img style="height:300px ; width : 400px"
-			src="http://image.dongascience.com/Photo/2017/07/15000093300927.jpg"  alt="">
+			<img style="height: 300px; width: 400px"
+				src="https://img.freepik.com/free-vector/illustration-with-happy-children-day-wish_23-2148325012.jpg"
+				alt="">
 		</div>
 		<div class="slide_item item3">
-			<img style="height:300px ; width : 400px"
-			src="https://image.utoimage.com/preview/cp869740/2021/05/202105015137_500.jpg"  alt="">
+			<img style="height: 300px; width: 400px"
+				src="https://image.utoimage.com/preview/cp869740/2021/05/202105015137_500.jpg"
+				alt="">
 		</div>
 		<div class="slide_item item4">
-			<img style="height:300px ; width : 400px"
-			src="https://image.utoimage.com/preview/cp872722/2021/10/202110002995_500.jpg"  alt="">
+			<img style="height: 300px; width: 400px"
+				src="https://image.utoimage.com/preview/cp872722/2021/10/202110002995_500.jpg"
+				alt="">
 		</div>
 		<div class="slide_item item5">
-			<img style="height:300px ; width : 400px"
-			src="https://img.freepik.com/free-vector/illustration-with-happy-children-day-wish_23-2148325012.jpg"  alt="">
+			<img style="height: 300px; width: 400px"
+				src="https://img.freepik.com/free-vector/illustration-with-happy-children-day-wish_23-2148325012.jpg"
+				alt="">
 		</div>
 		<div class="slide_prev_button slide_button">
-			<img 
+			<img
 				src="${pageContext.request.contextPath}/assets/img/main/left.png"
 				alt="">
 		</div>
@@ -395,28 +401,30 @@
 	<script
 		src="${pageContext.request.contextPath}/assets/js/main/slide.js"></script>
 
-
-
+<%-- <a href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySM.getNurserySchoolMemberNumber()}'> --%>
 
 
 	<!-- --------------------------------도움이 필요한 보육원---------------------------------------- -->
 
 	<div class="subjectname">도움이 필요한 보육원</div>
-
 	<div style="padding-left: 298px;">
 		<c:forEach var="nurserySM" items="${nurserySM}">
 			<div style="float: left;">
-				<div style="padding-right: 33px; padding-bottom : 20px">
-					<img style="height: 250px; width: 300px; border-radius: 5px;"
-						src="${nurserySM.getNurserySchoolPhoto()}" />
+				<div style="padding-right: 33px; padding-bottom: 20px;">
+					<img
+						style="height: 250px; width: 300px; border-radius: 5px; cursor: pointer;"
+						src="${nurserySM.getNurserySchoolPhoto()}" onclick="location.href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySM.getNurserySchoolMemberNumber()}'" />
 				</div>
-				<div style="padding-bottom : 200px">
+				<div>
 
 					<h4
 						style="margin-top: -15px; margin-bottom: -15px; display: inline-block;">
-						"<c:out value="${nurserySM.getNurserySchoolMemberName()}" />"&nbsp나눔을 함께해요.
+						"
+						<c:out value="${nurserySM.getNurserySchoolMemberName()}" />
+						"&nbsp나눔을 함께해요.
 					</h4>
 				</div>
+				<div style="padding-bottom: 200px";></div>
 			</div>
 		</c:forEach>
 	</div>
@@ -424,6 +432,7 @@
 	<!-- ----------------------------------------------------------------------- -->
 
 	<jsp:include page="../fix/footer.jsp" />
+
 </body>
 
 <!-- slick js -->

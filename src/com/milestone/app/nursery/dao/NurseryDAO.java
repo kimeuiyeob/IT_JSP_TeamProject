@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.milestone.app.donation.vo.DonationDTO;
+import com.milestone.app.news.vo.NewsVO;
 import com.milestone.app.nursery.vo.NurseryVO;
 import com.milestone.mybatis.config.MyBatisConfig;
 
@@ -69,7 +70,7 @@ public class NurseryDAO {
 
 //	기부하기(보육원 상세페이지)
 	public NurseryVO selectDetail(int nurserySchoolMemberNumber) {
-		return sqlSession.selectOne("NurserySchoolMember.selectDetail" + "", nurserySchoolMemberNumber);
+		return sqlSession.selectOne("NurserySchoolMember.selectDetail", nurserySchoolMemberNumber);
 	}
 
 //	비밀번호 체크
@@ -81,5 +82,5 @@ public class NurseryDAO {
 	public NurseryVO selectInfo(int nurseryMemberNumber) {
 		return sqlSession.selectOne("NurserySchoolMember.selectInfo", nurseryMemberNumber);
 	}
-
+	
 }
