@@ -42,8 +42,9 @@ public class MemberFrontController extends HttpServlet {
 			result = new IndexController().execute(req, resp);
 		} else if (request.equals("/member/statistics.me")) {  //통계!!
 			result = new StatisticsController().execute(req, resp);
+		} else if (request.equals("/member/banner.me")) {  //통계!!
+			result = new BannerOkController().execute(req, resp); 
 		}
-		
 		// =====================회원 목록 관리===========================
 
 		else if (request.equals("/management/deleteOk.me")) {

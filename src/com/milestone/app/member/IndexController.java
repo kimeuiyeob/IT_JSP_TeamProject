@@ -11,6 +11,8 @@ import com.milestone.app.Execute;
 import com.milestone.app.Result;
 import com.milestone.app.donation.vo.DonationDTO;
 import com.milestone.app.member.dao.MemberDAO;
+import com.milestone.app.nursery.dao.NurseryDAO;
+import com.milestone.app.nursery.vo.NurseryVO;
 
 public class IndexController implements Execute {
 
@@ -23,14 +25,19 @@ public class IndexController implements Execute {
 			session.invalidate();
 		}
 		
+		
 		DonationDTO donationDTO = new DonationDTO();
 		MemberDAO memberDAO = new MemberDAO();
+		NurseryDAO nurseryDAO = new NurseryDAO();
+		NurseryVO nurseryVO = new NurseryVO();
 
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
  		
-		req.setAttribute("donation", memberDAO.selectMainAll());
+		req.setAttribute("member", memberDAO.selectMainAll());
+		req.setAttribute("nurserySM", memberDAO.helpSchoolSelect2());
+		
 		
 		result.setPath("/app/main/main.jsp");
 		return result;

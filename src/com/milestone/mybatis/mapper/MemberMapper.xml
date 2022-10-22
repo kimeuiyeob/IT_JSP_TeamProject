@@ -14,7 +14,7 @@
 		i.individual_member_number = n.nursery_school_member_number
 		order by
 		d.donation_date desc
-		limit 0,4;
+		limit 0,8;
 	</select>
 
 </mapper>
