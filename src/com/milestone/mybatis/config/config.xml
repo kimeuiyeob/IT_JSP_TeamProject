@@ -19,6 +19,8 @@
       <typeAlias type="com.milestone.app.nursery.vo.NurseryVO" alias="nurseryVO"/>
       <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityVO" alias="nurserySchoolCommunityVO"/>
       <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityDTO" alias="nurserySchoolCommunityDTO"/>
+      <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityDTO" alias="nurserySchoolCommunityDTO"/>
+      <typeAlias type="com.milestone.app.file.vo.FileVO" alias="fileVO"/>
    </typeAliases>
 
    <environments default="mysql">
@@ -44,6 +46,7 @@
       <mapper resource="com/milestone/mybatis/mapper/NoticeMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/NurserySchoolCommunityMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/NurserySchoolMemberMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/FileMapper.xml"/>
    </mappers>
    
 </configuration>

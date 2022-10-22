@@ -22,6 +22,7 @@ public class FileFrontController extends HttpServlet{
 	}
 	
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("파일컨트롤러 들어옴");
 		String requestURI = req.getRequestURI();
 		String contextPath = req.getContextPath();
 		String request = requestURI.substring(contextPath.length());

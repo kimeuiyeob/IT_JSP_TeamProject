@@ -20,8 +20,8 @@
    <!-- 게시글 작성 -->
    <insert id="insert" parameterType="nurserySchoolCommunityVO">
       insert into tbl_nursery_school_member_community 
-      (nursery_school_community_title, nursery_school_community_content, nursery_school_community_image, nursery_school_member_number)
-      values(#{nurserySchoolCommunityTitle}, #{nurserySchoolCommunityContent}, #{nurserySchoolCommunityImage}, #{nurserySchoolMemberNumber});
+      (nursery_school_community_title, nursery_school_community_content, nursery_school_member_number)
+      values(#{nurserySchoolCommunityTitle}, #{nurserySchoolCommunityContent}, #{nurserySchoolMemberNumber});
    </insert>
    
    <!-- 게시물 상세페이지 -->
@@ -50,6 +50,11 @@
       set nursery_school_community_title = #{nurserySchoolCommunityTitle}, nursery_school_community_content = #{nurserySchoolCommunityContent}
       where nursery_school_community_number = #{nurserySchoolCommunityNumber}
    </update>
+   
+   <!-- 파일첨부 -->
+   	<select id="selectCurrentSequence" resultType="_int">
+		select last_insert_id()
+	</select>
    
 </mapper>
 

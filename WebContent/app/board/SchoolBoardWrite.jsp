@@ -97,27 +97,28 @@
                     src="${pageContext.request.contextPath}/assets/img/board/smalluser.png"
                     style="height: 30px; padding-right: 5px">
                </div>
-               
+          <form action="${pageContext.request.contextPath}/board/scboardwriteOk.schoolcom" name="writeForm" method="post" enctype="multipart/form-data">         
                <!-- 작성자 -->
                <div class="writer" md="Body2" class="sc-8ee9b8f2-0 gBPcnX sc-e489b3e-8 eaqXQT"
                    style="font-size : 14px; letter-spacing: -1px; padding-right: 394px;"><c:out value="${nurserySchoolMemberId}"/></div>
-   
-               <!-- 파일첨부 -->
-                   <div style="display: flex;">
-                       <div class="image-upload">
-                           <label for="file-input" style="right: 20px;">
-                           <img
-                             src="${pageContext.request.contextPath}/assets/img/board/putpicture.png"
-                             style="height: 43px; cursor: pointer;">
-                           </label>
-                           <input name="nurserySchoolCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/>
-                           <!-- <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제"> -->
-                       </div>
+    				<!-- 파일첨부 -->
+    				<div class="files">
+	                   <div style="display: flex;">
+	                       <div class="image-upload">
+	                           <label for="file-input" style="right: 20px;">
+	                           <img
+	                             src="${pageContext.request.contextPath}/assets/img/board/putpicture.png"
+	                             style="height: 43px; cursor: pointer;">
+	                           </label>
+	                           <input name="nurserySchoolCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/>
+	                           <input type="button" onclick="cancelFile('nurserySchoolCommunityImage')" value="첨부 삭제">
+	                       </div>
+	                   </div>
                    </div>
            </div>
        </div>
 
-   <form action="${pageContext.request.contextPath}/board/scboardwriteOk.schoolcom" name="writeForm" method="post">
+
       <!-- 제목 -->
          <input id="boardTitle" type="text" placeholder="제목을 입력하세요" name="nurserySchoolCommunityTitle"
             style="padding: 16px; margin: 20px 20px 0 20px; width: 605px; height: 20px">
@@ -165,6 +166,26 @@ function send(){
    }
    writeForm.submit();
 }
+
+$(".files").change(function(e){
+    var file = e.target.files[0];
+    var img = $(this).find("img");
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    
+     reader.onload = function(e){
+        if(e.target.result.indexOf("image") != -1){
+           img.attr("src", e.target.result)
+        }else{
+           /* img.attr("src", "${pageContext.request.contextPath}/images/no_img.jpg"); */
+        }
+     }
+  });
+ 
+ function cancelFile(fileName){
+    $("input#" + fileName).val("");
+    $("img#" + fileName + "Img").attr("src", "${pageContext.request.contextPath}/images/filePlus.png");
+ }
 
 </script>
 </html>

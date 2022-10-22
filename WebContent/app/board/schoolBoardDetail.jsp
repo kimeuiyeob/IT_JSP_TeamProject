@@ -89,7 +89,25 @@
     
         <!-- 그림 2개 -->
         <div class="pictures">
-            <div id="pic"><img src="${pageContext.request.contextPath}/assets/img/board/아이들8.jpg"></div>
+            <div id="pic">
+               <c:choose>
+	               	<c:when test="${files != null and fn:length(files) > 0}">
+	                	<c:forEach var="file" items="${files}">
+                    		<!--  a태그 -->
+                    		<a href="${pageContext.request.contextPath}/file/download.file?fileSystemName=${file.getFileSystemName()}&fileOriginalName=${file.getFileOriginalName()}">
+	                        	<c:out value="${file.getFileOriginalName()}"/>
+	                        	<img src="${pageContext.request.contextPath}/assets/img/board/아이들8.jpg">
+	                        </a>
+	                        <br>
+						</c:forEach>
+	                 </c:when>
+	                 <c:otherwise>
+			         첨부파일이 없습니다.
+			         <hr>
+	                 </c:otherwise>
+                 </c:choose>
+            
+            </div>
         </div>
 
         <!-- 게시물  -->
@@ -145,6 +163,20 @@ $("#deletePost").click(function(){
    alert("게시글이 삭제되었습니다.");
 })
 
+$(".files").change(function(e){
+    var file = e.target.files[0];
+    var img = $(this).find("img");
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    
+     reader.onload = function(e){
+        if(e.target.result.indexOf("image") != -1){
+           img.attr("src", e.target.result)
+        }else{
+           /* img.attr("src", "${pageContext.request.contextPath}/images/no_img.jpg"); */
+        }
+     }
+  });
 
 </script>
 
