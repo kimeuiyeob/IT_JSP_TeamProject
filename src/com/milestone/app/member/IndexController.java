@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 
 import com.milestone.app.Execute;
 import com.milestone.app.Result;
+import com.milestone.app.donation.vo.DonationDTO;
+import com.milestone.app.member.dao.MemberDAO;
 
 public class IndexController implements Execute {
 
@@ -20,9 +22,17 @@ public class IndexController implements Execute {
 		if (logout) {
 			session.invalidate();
 		}
+		
+		DonationDTO donationDTO = new DonationDTO();
+		MemberDAO memberDAO = new MemberDAO();
 
-		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/app/main/main.jsp");
+		req.setCharacterEncoding("UTF-8");
+		resp.setCharacterEncoding("UTF-8");
+		
+ 		
+		req.setAttribute("donation", memberDAO.selectMainAll());
+		
+		result.setPath("/app/main/main.jsp");
 		return result;
 	}
 
