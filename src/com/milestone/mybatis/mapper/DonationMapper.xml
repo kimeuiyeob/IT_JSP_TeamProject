@@ -18,9 +18,10 @@
 	</select>
 
 	<!-- 기부 관리 -->
-	<select id="managerSelectDonationHistory"
-		resultType="donationDTO">
-		select d.donation_amount, d.donation_products, i.nickname,
+	<select id="managerSelectDonationHistory" parameterType="map" resultType="donationDTO">
+		select 
+        d.donation_number,
+        d.donation_amount, d.donation_products, i.nickname,
 		n.nursery_school_member_name, d.donation_date,
 		i.individual_member_email
 		from tbl_donation d, tbl_individual_member i,
@@ -29,6 +30,14 @@
 		i.individual_member_number and
 		i.individual_member_number =
 		n.nursery_school_member_number
+        order by d.donation_number
+		desc limit #{startRow}, #{rowCount}
+	</select>
+    
+    <!-- 기부 관리 -->
+    <select id="donationSelectCount" resultType="_int">
+		select
+		count(donation_number) from tbl_donation
 	</select>
 
 	<!-- 기부 물품 별 분류 -->

@@ -54,10 +54,10 @@ public class DonationFrontController extends HttpServlet {
 
 		// =============================기부내역관리=============================
 
-		/*	
-		 * else if (request.equals("/management/managerDonateHistory.don")) { result =
-		 * new ManagerDonateHistoryController().execute(req, resp); }
-		 */
+			
+		 else if (request.equals("/management/managerDonateHistory.don")) { result =
+		 new ManagerDonateHistoryController().execute(req, resp); }
+		 
 		
 		// ==================================================================
 
