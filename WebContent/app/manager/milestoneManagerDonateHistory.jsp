@@ -272,8 +272,16 @@
 													</th>
 													<th class="card-body-title-padding" style="width: 23%;">
 														<div class="donate-info-height">
-															<c:out value="${donation.getDonationProducts()}" />
+															<c:choose>
+																<c:when test="${empty donation.getDonationProducts()}">
+																	<c:out value="${donation.getDonationAmount()}" />
+																</c:when>
+																<c:otherwise>
+																	<c:out value="${donation.getDonationProducts()}" />
+																</c:otherwise>
+															</c:choose>
 														</div>
+
 													</th>
 													<th class="card-body-title-padding" style="width: 25%;">
 														<div class="donate-info-height">
