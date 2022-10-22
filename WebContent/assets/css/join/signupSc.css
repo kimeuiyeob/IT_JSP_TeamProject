@@ -1,0 +1,741 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Pretendard-Regular';
+    margin-left: 0px;
+}
+
+
+footer {
+    padding-bottom: 68px;
+}
+
+.footerbiggest {
+    margin-top: 145px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 5000px;
+    width: 100%;
+    height: 100%;
+}
+
+.footerbigger {
+    width: 1310px;
+    display: flex;
+    align-items: center;
+}
+
+.footerup {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 80px;
+    display: flex;
+}
+
+.footerup_left {
+    width: 25%;
+    height: 100%;
+}
+
+.footerup_left01 {
+    height: 35px;
+}
+
+.footerup_left01>img {
+    margin-top: 3px;
+    height: 100%;
+}
+
+.footerup_left02 {
+    width: 330px;
+}
+
+.footerup_left02>p {
+    font-size: 16px;
+    line-height: 3px;
+    letter-spacing: -0.15px;
+    margin-top: 30px;
+    color: rgb(102, 102, 102);
+}
+
+.footerup_right {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    margin-top: 5px;
+}
+
+.footerup_right>a {
+    font-weight: 700;
+    font-size: 19px;
+    color: rgb(26, 26, 26);
+    margin-right: 233px;
+    text-decoration: none;
+}
+
+.footerup_right_down {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 30px;
+    margin-right: 855px;
+    line-height: 35px;
+    font-size: 16px;
+
+}
+
+.footerup_right_down>a {
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+.footerup_right_down2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 30px;
+    line-height: 35px;
+    margin-right: 567px;
+    font-size: 16px;
+}
+
+.footerup_right_down2>a {
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+.controll>a {
+    margin-right: 230px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(26, 26, 26);
+    margin-left: 140px;
+    text-decoration: none;
+}
+
+.controll_enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(248, 248, 248);
+    margin-top: 40px;
+    margin-right: 10px;
+    height: 40px;
+    width: 280px;
+    cursor: pointer;
+}
+
+.controll_enter>a {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+.footerdown {
+    width: 100%;
+    padding: 30px;
+    height: 40px;
+    max-width: 1310px;
+    display: flex;
+    border-top: solid 1px rgb(248, 248, 248);
+}
+
+.footerdown_left {
+    height: 100%;
+    width: 70%;
+    margin-left: -30px;
+}
+
+.footerdown_left>p {
+    font-size: 14px;
+    line-height: 5px;
+    margin-top: 9px;
+    text-decoration: none;
+    color: rgb(162, 162, 162);
+}
+
+.footerdown_right {
+    height: 100%;
+    width: 70%;
+    align-items: center;
+    text-align: center;
+}
+
+.footerdown_right01>p {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 16px;
+    margin-left: 12px;
+    text-decoration: none;
+    color: rgb(162, 162, 162);
+}
+
+.footerdown_right02>p {
+    font-size: 11px;
+    line-height: 7px;
+    margin-top: 13px;
+    margin-left: 12px;
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+}
+
+header {
+    z-index: 20;
+    position: relative;
+    position: fixed;
+    background-color: white;
+}
+
+.head {
+    width: 100%;
+    height: auto;
+}
+
+.biggest {
+    display: flex;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.bigger {
+    width: 100%;
+    height: 100px;
+    max-width: 1380px;
+    display: flex;
+}
+
+.logo {
+    height: 0px;
+}
+
+.logoimg {
+    margin: 31px;
+    display: flex;
+}
+
+.logoimg>img {
+    height: 40px;
+}
+
+.upList {
+    display: flex;
+    height: 50px;
+    margin-left: 11%;
+    margin-top: 33px;
+    align-items: center;
+    position: absolute;
+}
+
+.upList>a {
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 23px;
+    color: black;
+    text-decoration: none;
+}
+
+.search_box {
+    height: 40px;
+    width: 123%;
+    margin-left: 32%;
+    margin-top: 40px;
+    display: flex;
+}
+
+#search {
+    width: 414px;
+    border: darkgray;
+    background-color: rgb(245, 245, 245);
+}
+
+#search_btn {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#search_btn>img {
+    margin-left: -50px;
+    height: 20px;
+}
+
+input::placeholder {
+    color: #A2A2A2;
+    font-size: 15px;
+    line-height: 1.125rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-family: 'Pretendard-Regular';
+}
+
+
+/* ------------------------------------------------------------------- */
+.user {
+    height: 30px;
+    font-size: 16px;
+    margin: 48px;
+    margin-left: 44%;
+    display: flex;
+    min-width: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.user>a {
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+}
+
+/* ------------------------------------------------------------------- */
+
+.dot {
+    width: 4.5px;
+    height: 4.5px;
+    overflow: hidden;
+    background-color: #ff5d00;
+    margin-left: 8.8%;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.navbig {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    max-width: 1380px;
+    display: flex;
+    align-items: center;
+}
+
+.lists {
+    font-size: 18px;
+    margin-left: 26px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* -----------------------------------------여기부터 회원가입------------------------------------- */
+
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-jp.css");
+
+.main_login {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding-left: 125px;
+    padding-right: 120px;
+}
+
+
+
+h1 {
+    font-family: 'Pretendard JP';
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: -0.6px;
+
+}
+
+h3 {
+    font-weight: bold;
+    padding-bottom: 72px;
+    padding-top: 55px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 31px;
+    margin-top: -43px;
+    color: rgb(58, 58, 58);
+    letter-spacing: -3px;
+    padding-top: 93px;
+}
+
+.login_title {
+    margin-right: -40px;
+    padding-right: 11px;
+}
+
+.login_kakao {
+    position: relative;
+    width: 375px;
+    padding-top: 10px;
+}
+
+.kakao_logo {
+    position: absolute;
+    left: 113px;
+    top: 21px;
+}
+
+.login_other {
+    width: 375px;
+}
+
+span.kakaologo {
+    position: absolute;
+}
+
+.lost-sign {
+    padding-bottom: 35px;
+}
+
+a.lostid {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: -1px;
+    margin: 0px;
+    display: block;
+    float: left;
+    color: rgb(26, 26, 26);
+    text-decoration: none;
+}
+
+a.signup {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: -1px;
+    margin: 0px;
+    display: block;
+    float: left;
+    color: rgb(26, 26, 26);
+    text-decoration: none;
+}
+
+
+input.button {
+    width: 470px;
+    height: 47px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    color: rgb(58, 58, 58);
+    transition: filter 0.1s ease 0s;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background-color: rgb(255, 86, 0);
+    border: 0 solid white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: 'Pretendard-Regular';
+}
+
+
+
+input.button1 {
+    width: 470px;
+    height: 47px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    color: rgb(58, 58, 58);
+    transition: filter 0.1s ease 0s;
+    background-color: rgb(255, 232, 18);
+    border: 0 solid white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: 'Pretendard-Regular';
+}
+
+input.button2 {
+    width: 470px;
+    height: 47px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    color: white;
+    transition: filter 0.1s ease 0s;
+    background-color: rgb(0, 199, 60);
+    border: 0 solid white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: 'Pretendard-Regular';
+}
+
+input.button3 {
+    width: 470px;
+    height: 47px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    color: white;
+    transition: filter 0.1s ease 0s;
+    background-color: rgb(9 97 197 / 82%);
+    border: 0 solid white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: 'Pretendard-Regular';
+}
+
+input.button4 {
+    width: 470px;
+    height: 47px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    color: rgb(58, 58, 58);
+    transition: filter 0.1s ease 0s;
+    background-color: rgb(248, 248, 248);
+    border: 0 solid white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: 'Pretendard-Regular';
+}
+
+input.button5 {
+    width: 470px;
+    height: 47px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    color: white;
+    transition: filter 0.1s ease 0s;
+    background-color: rgb(1 1 1);
+    border: 0 solid white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: 'Pretendard-Regular';
+}
+
+.login_picture {
+    width: 700px;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: -1.5px;
+    margin: 0px;
+    white-space: pre-wrap;
+    color: rgb(26, 26, 26);
+    text-align: center;
+}
+
+#id {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#nickname {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#phonenumber {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#pass {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#pass2 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#email {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+input::placeholder {
+    color: rgb(234, 231, 231);
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(26, 26, 26);
+}
+
+.gvCUgI {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    color: rgb(202, 202, 202);
+    text-align: center;
+}
+
+.jPIqKw {
+    margin-top: 5px;
+    margin-left: 5px;
+    color: rgb(102, 102, 102);
+}
+
+.iePiQE {
+    padding-top: 1px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 11px;
+    margin: 2px 0px;
+}
+
+#memberZipcode {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 374px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#memberAddress {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#memberAddressDetail {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 469px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}

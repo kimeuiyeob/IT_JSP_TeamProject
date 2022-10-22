@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Notice">
+
+	<select id="selectNotice" resultType="NoticeVO"> <!-- 공지사항 -->
+		select * from tbl_notice
+	</select>
+
+	<!-- 공지사항 목록 -->
+	<select id="selectNoticeManager" resultType="NoticeVO"> <!-- 공지 관리 -->
+		select notice_number, notice_classification, notice_title, notice_date_created
+		from
+		tbl_notice;
+	</select>
+
+	<!-- 공지사항 추가 -->
+	<insert id="noticeInsert" parameterType="NoticeVO">
+		insert
+		into
+		tbl_notice
+		(notice_classification,
+		notice_title,
+		notice_content)
+		values(#{noticeClassification},
+		#{noticeTitle}, #{noticeContent})
+	</insert>
+
+	<!-- 공지사항 삭제 -->
+	<delete id="noticeDelete" parameterType="_int">
+		delete
+		from
+		tbl_notice
+		where
+		notice_number = #{noticeNumber}
+	</delete>
+
+	<!-- 공지사항 수정 -->
+	<update id="noticeUpdate" parameterType="NoticeVO">
+		update
+		tbl_notice
+		set
+		notice_title = #{noticeTitle},
+		notice_content = #{noticeContent}
+		where
+		notice_number = #{noticeNumber}
+	</update>
+
+
+	<!-- 관리자 공지사항 필터 분류 (공지) -->
+	<select id="noticeSortClassification" resultType="NoticeVO"
+		parameterType="string">
+		select
+		notice_number,
+		notice_classification,
+		notice_title,
+		notice_date_created,
+		notice_content
+		from
+		tbl_notice
+		where
+		notice_classification like CONCAT(‘%’, #{noticeClassification}, ‘%’)
+	</select>
+
+	<!-- 공지사항 분류 날짜 -->
+	<select id="noticeSortDate" resultType="NoticeVO">
+		select
+		notice_number,
+		notice_classification,
+		notice_title,
+		notice_date_created,
+		notice_content
+		from
+		tbl_notice
+		order by
+		notice_date_created desc;
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,659 @@
+header {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 8px;
+    display: flex;
+}
+
+.logout{
+    text-decoration: none;
+    color: black;
+}
+
+#headerBox {
+    display: flex;
+}
+
+#searchInput {
+    width: 220px;
+    height: 42px;
+    border: darkgray;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+}
+
+#modifySchool {
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: auto;
+    position: relative;
+}
+
+#withdrawal {
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    position: relative;
+}
+
+#footer {
+    margin-top: 56px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    position: relative;
+}
+
+#profilePicture {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#content {
+    padding: 24px;
+    width: 592px;
+}
+
+.content {
+    margin-bottom: 16px;
+}
+
+.inputContent {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(26, 26, 26);
+}
+
+#userInput {
+    width: 89%;
+}
+
+input {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    width: 100%;
+    margin: 0px;
+    border: 1px solid #efefef;
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+#category {
+    width: 590px;
+    height: 29px;
+}
+
+#category>* {
+    display: inline-block;
+    height: auto;
+    border-radius: 24px;
+    background-color: rgb(248, 248, 248);
+    padding: 6px 10px;
+    color: rgb(202, 202, 202);
+
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+
+    text-align: center;
+}
+
+.logo>img {
+    padding-top: 5px;
+    height: 25px;
+}
+
+.search_box {
+    padding-left: 16px;
+    padding-right: 10px;
+    height: 35px;
+    width: 340px;
+    display: flex;
+    left: 22%;
+}
+
+.search_box>img {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 11px;
+    left: 360px;
+}
+
+#searchInput {
+    margin-left: 10px;
+    position: absolute;
+    display: flex;
+    width: 60%;
+}
+
+.user {
+    display: flex;
+    left: 80%;
+}
+
+.user>span {
+    padding-top: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.userIcon img {
+    margin-top: 5px;
+   margin-left: 20px;
+}
+
+.userIcon img {
+    height: 34px;
+    width: 34px;
+}
+
+.userIcon2 img {
+    margin-top: 5px;
+    margin-left: 17px;
+}
+
+.userIcon2 img {
+    height: 34px;
+    width: 34px;
+}
+
+#bottomPointer svg {
+    display: block;
+    padding-top: 10px;
+    height: 12px;
+    width: 12px;
+}
+
+
+
+#attach svg {
+    position: absolute;
+    top: 62%;
+    left: 62%;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 27px;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+#slash {
+    color-scheme: light;
+    text-align: left;
+    text-transform: none;
+    word-break: keep-all;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    color: rgb(162, 162, 162);
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    transform: rotate(13deg);
+    margin: 0px 6px;
+    width: 1px;
+    height: 17px;
+    background-color: rgb(202, 202, 202);
+}
+
+#modifySubmit {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0px 16px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    border: white;
+    background-color: rgb(255, 242, 233);
+    cursor: pointer;
+}
+
+#smallHistory {
+    color: #1A1A1A;
+}
+
+
+#content2 {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    padding: 24px;
+}
+
+.withdrawalSubmit {
+    text-transform: none;
+    line-height: inherit;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 40px;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+#first>span {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+footer {
+    padding-top: 50px;
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    width: auto;
+    position: relative;
+}
+
+footer>div {
+    width: 158px;
+    height: 35px;
+}
+
+footer>div>p {
+    font-size: 11px;
+    color: rgb(202, 202, 202);
+}
+
+footer>div>h5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    color: rgb(102, 102, 102);
+    font-feature-settings: "case", "ss02";
+    margin-top: 20px;
+}
+
+#button {
+    background-color: rgb(248 248 248);
+    position: absolute;
+    left: 86%;
+    width: 10%;
+    cursor: pointer;
+}
+
+#userWrap {
+    cursor: pointer;
+}
+
+#miniBox {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    z-index: 3002;
+    top: 67px;
+    right: 35px;
+    position: absolute;
+    border-radius: 3px;
+
+
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+#miniBox2 {
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 0;
+    box-shadow: rgb(0 0 0 / 8%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 12px 2px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+    border-radius: 3px;
+}
+
+#miniBox3 {
+    border-radius: 3px;
+    display: flex;
+    width: 152px;
+    padding: 24px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+#miniProfile {
+    display: flex;
+}
+
+#miniProfile>img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 34px;
+    height: 34px;
+}
+
+.css-1g5174 {
+    flex: 0 0 auto;
+    background-color: rgb(229, 229, 229);
+    width: 100%;
+    height: 1px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.css-bchp3n {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color-scheme: light;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    text-transform: none;
+    line-height: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(246, 49, 5);
+    font-size: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(255, 86, 0);
+    overflow: hidden;
+}
+
+
+/* --------------황지수 css------------------- */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgb(248 248 248);
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.small-circle {
+    display: flex;
+    border: 1.5px solid rgb(102, 102, 102);
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    font-size: 6px;
+    box-sizing: border-box;
+}
+
+.gray-font {
+    font-size: 14px;
+    color: #a2a2a2;
+}
+
+.width8 {
+    width: 8px;
+}
+
+.marginTop8{
+    margin-top: 8px;
+}
+
+.submit-button{
+    border: none;
+    background-color: #ff5d00;
+    height: 48px;
+    width: 100%;
+    color: #fff;
+}
+
+.border-box{
+    background-color: #fff;
+    border: 1px solid rgb(248 248 248);
+    min-width: calc(50% - 8px);
+    height: 48px;
+}
+
+.white-space {
+    height: 12px;
+    background-color: #0000000D;
+    margin: 24px -24px;
+}
+
+.all-body {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+}
+
+.body-header-padding {
+    padding: 24px;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+    box-sizing: border-box;
+}
+
+.body-header-flex {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.body-header-title {
+    border-width: 0px;
+    color: rgb(12, 12, 12);
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+}
+
+.body-header-subTitle {
+    display: flex;
+    align-items: center;
+}
+
+.protect-img {
+    background: url(https://class101.net/images/ic-shield-yellow.png);
+    background-size: 18px;
+    height: 18px;
+    width: 18px;
+}
+
+.protect-img-title {
+    color: rgb(255, 114, 42);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+
+.marginBottom16 {
+    margin-bottom: 16px;
+}
+
+.contents-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+}
+
+.items-background {
+    margin-left: auto;
+    background-color: rgb(248, 248, 248);
+    height: 28px;
+    width: 28px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.items-img-pencel {
+    background: transparent url(imgs/pencel.png);
+    background-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.contents-sub-title {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+}
+
+.contents-margin-top {
+    margin-top: 8px;
+}
+
+.contents-img {
+    background: url(imgs/iuImg.jpeg);
+    background-size: 72px;
+    height: 72px;
+    width: 72px;
+}
+
+.select-box {
+    color: rgb(243, 243, 243);
+    background-color: rgb(32, 32, 32);
+    padding: 13px 12px;
+    box-sizing: border-box;
+    height: 48px;
+    font-size: 14px;
+    margin-left: auto;
+    display: flex;
+    font-family: 'Pretendard JP';
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents-input-box {
+    width: 505px;
+}
+
+input {
+    padding: 13px 16px;
+    box-sizing: border-box;
+}
+
+.sub-text {
+    font-size: 13px;
+    color: #a2a2a2;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-jp.css");
+
+.contents-img{
+    width: 88px;
+    height: 70px;
+}
+
+
+.selectbox {
+    position: relative;
+    width: 100%;  /* 너비설정 */
+    border: 1px solid #999;  /* 테두리 설정 */
+    z-index: 1;
+  }
+  
+  .selectbox:before {  /* 화살표 대체 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    margin-top: -1px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+  }
+  
+  .selectbox label {
+    position: absolute;
+    top: 1px;  /* 위치정렬 */ 
+    left: 5px;  /* 위치정렬 */
+    padding:.5em;  /* select의 여백 크기 만큼 */
+    color: #999;  
+    z-index: -1;  /* IE8에서 label이 위치한 곳이 클릭되지 않는 것 해결 */
+  }
+  
+  .selectbox select {
+    width: 100%; 
+    height: auto;  /* 높이 초기화 */
+    line-height: normal;  /* line-height 초기화 */
+    font-family: inherit;  /* 폰트 상속 */
+    padding: .8em .5em;  /* 여백과 높이 결정 */
+    border: 0;
+    opacity: 0;  /* 숨기기 */
+    filter:alpha(opacity=0);  /* IE8 숨기기 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+  }

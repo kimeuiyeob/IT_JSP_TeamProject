@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+   <settings>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+   </settings>
+   
+   <typeAliases>
+      <typeAlias type="com.milestone.app.banners.vo.BannersVO" alias="bannersVO"/>
+      <typeAlias type="com.milestone.app.comments.vo.CommentsVO" alias="commentsVO"/>
+      <typeAlias type="com.milestone.app.donation.vo.DonationVO" alias="donationVO"/>
+      <typeAlias type="com.milestone.app.donation.vo.DonationDTO" alias="donationDTO"/>
+      <typeAlias type="com.milestone.app.individual.vo.IndividualVO" alias="individualVO"/>
+      <typeAlias type="com.milestone.app.individual.vo.IndividualDTO" alias="individualDTO"/>
+      <typeAlias type="com.milestone.app.individualcommunity.vo.IndividualCommunityVO" alias="individualCommunityVO"/>
+      <typeAlias type="com.milestone.app.news.vo.NewsVO" alias="newsVO"/>
+      <typeAlias type="com.milestone.app.notice.vo.NoticeVO" alias="noticeVO"/>
+      <typeAlias type="com.milestone.app.nursery.vo.NurseryVO" alias="nurseryVO"/>
+      <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityVO" alias="nurserySchoolCommunityVO"/>
+      <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityDTO" alias="nurserySchoolCommunityDTO"/>
+   </typeAliases>
+
+   <environments default="mysql">
+      <environment id="mysql">
+         <transactionManager type="JDBC"/>
+         <dataSource type="POOLED">
+            <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/milestone"/>
+            <property name="username" value="root"/>
+            <property name="password" value="1234"/>
+         </dataSource>
+      </environment>
+   </environments>
+   
+   <mappers> 
+      <mapper resource="com/milestone/mybatis/mapper/BannersMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/CommentsMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/DonationMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/IndividualCommunityMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/IndividualMemberMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/NewsMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/NoticeMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/NurserySchoolCommunityMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/NurserySchoolMemberMapper.xml"/>
+   </mappers>
+   
+</configuration>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="News">
+
+	<select id="selectNewsList" resultType="newsVO"> <!-- 공지사항 -->
+		select * from tbl_news
+		order by news_number asc
+		limit 0,9
+	</select>
+	
+	
+	<select id="select" parameterType="_int" resultType="newsVO">
+		select news_number,	news_title, news_content, news_image, news_date_content
+		from tbl_news
+		where news_number = #{newsNumber}
+	</select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

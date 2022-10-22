@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="IndividualMember">
+	<select id="checkId" parameterType="string" resultType="_int">
+		select
+		count(individual_member_id) from tbl_individual_member where
+		individual_member_id = #{individual_member_id}
+	</select>
+	<select id="checkNickName" parameterType="string"
+		resultType="_int">
+		select count(nickName) from tbl_individual_member where
+		nickName = #{nickName}
+	</select>
+	<select id="checkPhoneNumber" parameterType="string"
+		resultType="_int">
+		select count(individual_member_phone_number) from
+		tbl_individual_member where individual_member_phone_number =
+		#{individualMemberPhoneNumber}
+	</select>
+	<insert id="join" parameterType="individualVO">
+		insert into
+		tbl_individual_member
+		(individual_member_name, nickname,
+		individual_member_phone_number,
+		individual_member_id,
+		individual_member_password,
+		individual_member_email,
+		individual_member_address,
+		individual_member_detailed_address,
+		zip_code)
+		values(#{individualMemberName}, #{nickName},
+		#{individualMemberPhoneNumber}, #{individualMemberId},
+		#{individualMemberPassword}, #{individualMemberEmail},
+		#{individualMemberAddress}, #{individualMemberDetailedAddress},
+		#{zip_code});
+	</insert>
+	<select id="login" parameterType="individualVO"
+		resultType="_int">
+		select individual_member_number from tbl_individual_member
+		where individual_member_id = #{individualMemberId} and
+		individual_member_password = #{individualMemberPassword}
+	</select>
+	<select id="findId" parameterType="individualVO"
+		resultType="string">
+		select individual_member_id from tbl_individual_member
+		where individual_member_name = #{individualMemberName} and
+		individual_member_phone_number = #{individualMemberPhoneNumber}
+	</select>
+	<select id="findPw" parameterType="individualVO"
+		resultType="_int">
+		select individual_member_number from tbl_individual_member
+		where individual_member_id = #{individualMemberId} and
+		individual_member_phone_number = #{individualMemberPhoneNumber}
+	</select>
+	<update id="updatePw" parameterType="individualVO">
+		update tbl_individual_member
+		set individual_member_password = #{individualMemberPassword}
+		where
+		individual_member_number = #{individualMemberNumber}
+	</update>
+
+	<select id="selectRanking" resultType="individualDTO">  <!-- 기부랭킹 전체 목록 가져오기 -->
+		select i.individual_member_number, i.nickname, d.donation_amount,
+		d.donation_products,i.number_of_donations,d.donation_date
+		from
+		tbl_individual_member i , tbl_donation d
+		where
+		i.individual_member_number = d.donation_number
+		order by
+		number_of_donations desc
+		limit 0,6;
+	</select>
+
+	<select id="selectByIndividualMemberNumber" parameterType="_int"
+		resultType="individualDTO">
+		select i.individual_member_number
+		, i.nickname
+		, d.donation_amount
+		, d.donation_products
+		, i.number_of_donations
+		, d.donation_date
+		, (select COUNT(*) + 1
+		from tbl_individual_member a
+		inner join tbl_donation b
+		on a.individual_member_number = b.donation_number
+		where number_of_donations > (
+		select number_of_donations
+		from tbl_individual_member c
+		inner join tbl_donation d
+		on c.individual_member_number = d.donation_number
+		where c.individual_member_number = #{individual_member_number} )) as
+		my_rank
+		from
+		tbl_individual_member i , tbl_donation d
+		where
+		i.individual_member_number = d.donation_number and
+		i.individual_member_number = #{individual_member_number};
+	</select>
+
+	<select id="indiUserList" parameterType="individualVO">
+		select
+		individual_member_number,
+		individual_member_name, nickname,
+		individual_member_email,
+		individual_member_join_date,
+		individual_member_recent_logins
+		from
+		tbl_individual_member
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

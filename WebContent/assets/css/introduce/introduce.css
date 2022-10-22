@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#content{
+        height: auto;
+        justify-content: center;
+        display: flex;
+    }
+    
+    
+    ul{
+        float: left;
+        list-style: none;
+        margin-left: 30px;
+        padding-right: 40px;
+        text-align: center;
+        width: 150px;
+        line-height: 20px;
+        padding-bottom: 8px;
+    }
+    
+    
+    .text{
+        width: 190px;
+        height: 260px;
+        border: 1px solid #bdb4b4;
+        margin-top: 18px;
+        margin-bottom: 16px;
+        margin-right: 50px;
+        text-align: center;
+        padding: 25px 20px 20px 20px;
+        border-radius: 4%;
+        font-size: 14px;
+        left: 35px
+    }
+    
+    .image{
+        width: 228px;
+        height: 168px;
+        border: 2px solid #ffa1a8;
+        border-radius: 4%;
+        box-shadow: 1px 2px 2px 2px rgb(0 0 0 / 10%);
+        position: relative;
+        font-size: 15px;
+    }
+    
+    .image1::after{
+        content: "";
+        display: block;
+        width: 100px;
+        height: 82px;
+        background-image: url(https://chest.or.kr/common/img/contents/vision_icons.png);
+        background-position: 0px 0px;
+        position: absolute;
+        left: 70px;
+        top: 24px;
+    }
+    .image2::after{
+        content: "";
+        display: block;
+        width: 100px;
+        height: 82px;
+        background-image: url(https://chest.or.kr/common/img/contents/vision_icons.png);
+        background-position: 0 -80px;
+        position: absolute;
+        left: 77px;
+        top: 24px;
+    }
+    .image3::after{
+        content: "";
+        display: block;
+        width: 100px;
+        height: 82px;
+        background-image: url(https://chest.or.kr/common/img/contents/vision_icons.png);
+        background-position: 0 -160px;
+        position: absolute;
+        left: 72px;
+        top: 24px;
+    }
+    .image4::after{
+        content: "";
+        display: block;
+        width: 100px;
+        height: 82px;
+        background-image: url(https://chest.or.kr/common/img/contents/vision_icons.png);
+        background-position: 0 -240px;
+        position: absolute;
+        left: 69px;
+        top: 24px;
+    }
+    
+    .number{
+        font-size: 40px;
+        font-weight: 200;
+        margin-top: 0px;
+        margin-left: 10px;
+        color: #fd5d75;
+        position: absolute;
+        left: 10px;
+        top: 18px;
+    }
+    
+    strong{
+        display: inline-block;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 105px;
+    }
+    
+    
+    .string::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 179px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 18px;
+        height: 37px;
+        background-image: url(https://chest.or.kr/common/img/contents/vision_icons.png);
+        background-size: 222px 384px;
+        background-position: -98px 7px;
+    }
+    
+    
+    #title{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    
+    
+    .vision .vision__principle li {font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -.035em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    word-break: keep-all;
+    visibility: visible;
+    color: #3c3c3c;
+    text-align: center;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 50px;
+    }
+    
+    
+    .vision__principle li em::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 184px;
+        height: 184px;
+        border: 3px solid #8fd1a1;
+        border-radius: 50%;
+    }
+    
+    .vision__principle li::after {
+        content: "+";
+        font-size: 24px;
+        display: block;
+        position: absolute;
+        top: 90px;
+        left: 224px;
+        color: #ddd;
+    }
+    
+    #운영원리{
+        position: relative;
+        background-color: gray;
+    }
+    
+    .task{
+        color: #e60012;
+        font-weight: 100;
+    }
+
+strong{
+    font-weight: normal;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+li>p{
+    font-weight: 100;
+}
+
+#contentBox{
+    margin-left: -90px;
+}

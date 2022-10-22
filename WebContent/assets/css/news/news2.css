@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    word-break: keep-all;
+    line-height: 1;
+    text-align: left;
+    text-transform: none;
+}
+
+header.head {
+    z-index: 10;
+}
+
+
+.maincontent {
+    padding-top: 155px;
+    z-index: 20;
+}
+
+
+.buttonall {
+    width: auto;
+    display: inline-flex;
+    vertical-align: middle;
+    letter-spacing: -0.2px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    outline: none;
+    margin: 0px;
+    padding-top: 30px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 379px;
+    margin-bottom: 40px;
+}
+
+
+.clicked {
+    color: red;
+}
+
+.searchEngine {
+    display: inline-block;
+    position: absolute;
+    left: 660px;
+    top: 187px;
+}
+
+.searchEngine img {
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 320px;
+}
+
+.searchEngine input {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard JP", Pretendard, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-size: 14px;
+    display: flex;
+    width: 354px;
+    height: 38px;
+    padding-left: 16px;
+    padding-right: 10px;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    border-color: white;
+    box-sizing: border-box;
+    -webkit-box-align: stretch;
+    margin-top: 6.5px;
+    margin-bottom: -9px;
+    margin-left: -4px;
+    margin-right: -4px;
+    align-items: stretch;
+    flex-direction: row;
+    cursor: unset;
+    border: 1px solid rgb(229, 229, 229)
+}
+
+.wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard JP", Pretendard, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    position: relative;
+    width: 1920px;
+    height: 350px;
+    z-index: 1;
+    display: flex;
+    transition-property: transform, -webkit-transform;
+    box-sizing: content-box;
+    justify-content: center;
+}
+
+div.nsname {
+    width: 270px;
+    border-width: 0;
+    color: #000000;
+    margin-top: 7px;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 0.875rem;
+
+}
+
+.donateintro {
+    width: 276px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    color: rgb(26, 26, 26);
+    height: 80px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin: 4px 0px 8px;
+    word-break: keep-all;
+
+}
+
+.address {
+    margin-top: 10px;
+}
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Pretendard-Regular';
+    margin-left: 0px;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+}
+
+.head {
+    width: 100%;
+    height: auto;
+}
+
+.biggest {
+    display: flex;
+    justify-content: center;
+}
+
+.bigger {
+    width: 100%;
+    height: 100px;
+    max-width: 1380px;
+    display: flex;
+}
+
+.logo {
+    height: 0px;
+}
+
+.logoimg {
+    margin: 31px;
+    display: flex;
+}
+
+.logoimg>img {
+    height: 40px;
+}
+
+.search_box {
+    height: 35px;
+    width: 320px;
+    margin-top: 36px;
+    display: flex;
+}
+
+#search {
+    width: 320px;
+    border: darkgray;
+    background-color: rgb(245, 245, 245);
+}
+
+#search_btn {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#search_btn>img {
+    height: 20px;
+}
+
+#search_btn>a>img {
+    height: 20px;
+}
+
+.user {
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    margin: 38px;
+    margin-left: 680px;
+    display: flex;
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.user>a {
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+}
+
+.navbig {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    max-width: 1380px;
+    display: flex;
+    align-items: center;
+}
+
+.lists {
+    margin-left: 40px;
+    color: black;
+    text-decoration: none;
+}
+
+.longdivs {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    height: 547px;
+    max-width: 100%;
+}
+
+.longdived {
+    width: 100%;
+    height: 100%;
+    max-width: 1216px;
+    display: flex;
+    max-width: 14.5%;
+    background-color: aquamarine;
+    border: solid 1px;
+}
+
+.footerbiggest {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1665px;
+    width: 100%;
+    height: 100%;
+}
+
+.footerbigger {
+    width: 1100px;
+    display: flex;
+    align-items: center;
+}
+
+.footerup {
+    width: 100%;
+    height: 60px;
+    margin-bottom: -10px;
+    display: flex;
+}
+
+.footerup_left {
+    width: 60%;
+    height: 100%;
+}
+
+.footerup_left01 {
+    height: 35px;
+    margin-left: 10px;
+}
+
+.footerup_left01>img {
+    margin-top: 3px;
+    height: 70%;
+}
+
+.footerup_left02>p {
+    font-size: 14px;
+    line-height: 3px;
+    letter-spacing: -0.15px;
+    margin-top: 6px;
+    margin-left: 12px;
+    color: rgb(102, 102, 102);
+}
+
+.footerdown {
+    width: 100%;
+    height: 40px;
+    max-width: 1176px;
+    display: flex;
+}
+
+.footerdown_left {
+    height: 100%;
+    width: 30%;
+}
+
+.footerdown_left>p {
+    font-size: 11px;
+    line-height: 0px;
+    margin-top: 9px;
+    margin-left: 12px;
+    text-decoration: none;
+    color: rgb(162, 162, 162);
+}
+
+.footerdown_right {
+    height: 100%;
+    width: 70%;
+    align-items: center;
+    text-align: center;
+}
+
+.footerdown_right01>p {
+    font-size: 11px;
+    line-height: 0px;
+    margin-top: 16px;
+    margin-left: 12px;
+    text-decoration: none;
+    color: rgb(162, 162, 162);
+}
+
+.footerdown_right02>p {
+    font-size: 9px;
+    line-height: 7px;
+    margin-top: 13px;
+    margin-left: 12px;
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+}
+
+
+#title {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* --------------황지수--------------- */
+.imgdiv {
+    display: flex;
+    flex-direction: column;
+    height: 310px;
+}
+
+.writeDate {
+    color: #a1a1a1;
+    margin-top: auto;
+    text-align: end;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+}

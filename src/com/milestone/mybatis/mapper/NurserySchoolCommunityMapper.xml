@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="NurserySchoolCommunity">
+   
+   <!-- 페이징 처리 :  -->
+   <select id="selectAll" parameterType="map" resultType="nurserySchoolCommunityDTO">
+      select nursery_school_community_number, nursery_school_community_title, nursery_school_community_content, nursery_school_community_image, nursery_school_community_like, nursery_school_community_hits,
+      n.nursery_school_member_number, nursery_school_member_name
+      from tbl_nursery_school_member n join tbl_nursery_school_member_community c 
+      on n.nursery_school_member_number= c.nursery_school_member_number
+      order by nursery_school_community_number desc limit #{startRow}, #{rowCount}
+   </select>
+   
+   
+   <!-- 페이징 처리 -->
+   <select id="selectCount" resultType="_int">
+      select count(nursery_school_community_number) from tbl_nursery_school_member_community
+   </select>
+   
+   <!-- 게시글 작성 -->
+   <insert id="insert" parameterType="nurserySchoolCommunityVO">
+      insert into tbl_nursery_school_member_community 
+      (nursery_school_community_title, nursery_school_community_content, nursery_school_community_image, nursery_school_member_number)
+      values(#{nurserySchoolCommunityTitle}, #{nurserySchoolCommunityContent}, #{nurserySchoolCommunityImage}, #{nurserySchoolMemberNumber});
+   </insert>
+   
+   <!-- 게시물 상세페이지 -->
+   <select id="select" parameterType="_int" resultType="nurserySchoolCommunityDTO">
+   select nursery_school_community_number, nursery_school_community_title,nursery_school_community_content,nursery_school_community_date_created,nursery_school_community_hits, n.nursery_school_member_number,nursery_school_member_id, nursery_school_member_name 
+   from tbl_nursery_school_member n join tbl_nursery_school_member_community c 
+   on nursery_school_community_number= #{nurserySchoolCommunityNumber} and n.nursery_school_member_number = c.nursery_school_member_number 
+   </select>
+   
+   <!-- 조회수 -->
+   <update id="updateHits" parameterType="_int">
+      update tbl_nursery_school_member_community
+      set nursery_school_community_hits = nursery_school_community_hits + 1 
+      where nursery_school_community_number = #{nurserySchoolCommunityNumber}
+   </update>
+   
+   <!-- 삭제 -->
+   <delete id="delete" parameterType="_int">
+      delete from tbl_nursery_school_member_community
+      where nursery_school_community_number=#{nurserySchoolCommunityNumber}
+   </delete>
+   
+   <!-- 수정 -->
+   <update id="update" parameterType="nurserySchoolCommunityVO">
+      update tbl_nursery_school_member_community
+      set nursery_school_community_title = #{nurserySchoolCommunityTitle}, nursery_school_community_content = #{nurserySchoolCommunityContent}
+      where nursery_school_community_number = #{nurserySchoolCommunityNumber}
+   </update>
+   
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
