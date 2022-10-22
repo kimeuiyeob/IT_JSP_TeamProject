@@ -15,7 +15,6 @@ public class DonationProductController implements Execute {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Result result = new Result();
 		String nurserySchoolMemberNumber = req.getParameter("nurserySchoolMemberNumber");
-		System.out.println(nurserySchoolMemberNumber);
 		
 		req.setAttribute("nurserySchoolMemberNumber", nurserySchoolMemberNumber);
 		

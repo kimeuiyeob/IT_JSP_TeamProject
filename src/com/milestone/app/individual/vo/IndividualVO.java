@@ -1,7 +1,7 @@
 package com.milestone.app.individual.vo;
 
 public class IndividualVO {
-	
+
 	private int individualMemberNumber;
 	private String individualMemberName;
 	private String nickName;
@@ -15,9 +15,11 @@ public class IndividualVO {
 	private int numberOfDonations;
 	private String individualMemberJoinDate;
 	private String individualMemberRecentLogins;
-	private String zip_code;
-	
-	public IndividualVO () {;}
+	private String zipCode;
+
+	public IndividualVO() {
+		;
+	}
 
 	public int getIndividualMemberNumber() {
 		return individualMemberNumber;
@@ -123,12 +125,12 @@ public class IndividualVO {
 		this.individualMemberRecentLogins = individualMemberRecentLogins;
 	}
 
-	public String getZip_code() {
-		return zip_code;
+	public String getZipCode() {
+		return zipCode;
 	}
 
-	public void setZip_code(String zip_code) {
-		this.zip_code = zip_code;
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
 
 	@Override
@@ -141,9 +143,7 @@ public class IndividualVO {
 				+ ", individualMemberDetailedAddress=" + individualMemberDetailedAddress
 				+ ", individualMemberProfileImage=" + individualMemberProfileImage + ", numberOfDonations="
 				+ numberOfDonations + ", individualMemberJoinDate=" + individualMemberJoinDate
-				+ ", individualMemberRecentLogins=" + individualMemberRecentLogins + ", zip_code=" + zip_code + "]";
+				+ ", individualMemberRecentLogins=" + individualMemberRecentLogins + ", zipCode=" + zipCode + "]";
 	}
 
-	
 }
-

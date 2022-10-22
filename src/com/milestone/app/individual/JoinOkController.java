@@ -42,7 +42,7 @@ public class JoinOkController implements Execute {
 		individualVO.setIndividualMemberEmail(individualMemberEmail);
 		individualVO.setIndividualMemberAddress(individualMemberAddress);
 		individualVO.setIndividualMemberDetailedAddress(individualMemberDetailedAddress);
-		individualVO.setZip_code(zipCode);
+		individualVO.setZipCode(zipCode);
 		
 		individualDAO.join(individualVO);
 		

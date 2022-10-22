@@ -32,7 +32,7 @@
 		#{individualMemberPhoneNumber}, #{individualMemberId},
 		#{individualMemberPassword}, #{individualMemberEmail},
 		#{individualMemberAddress}, #{individualMemberDetailedAddress},
-		#{zip_code});
+		#{zipCode});
 	</insert>
 	<select id="login" parameterType="individualVO"
 		resultType="_int">
@@ -75,20 +75,26 @@
 		resultType="individualDTO">
 		select i.individual_member_number
 		, i.nickname
-		, d.donation_amount
+		,
+		d.donation_amount
 		, d.donation_products
 		, i.number_of_donations
-		, d.donation_date
+		,
+		d.donation_date
 		, (select COUNT(*) + 1
 		from tbl_individual_member a
 		inner join tbl_donation b
-		on a.individual_member_number = b.donation_number
+		on a.individual_member_number =
+		b.donation_number
 		where number_of_donations > (
-		select number_of_donations
+		select
+		number_of_donations
 		from tbl_individual_member c
-		inner join tbl_donation d
+		inner join tbl_donation
+		d
 		on c.individual_member_number = d.donation_number
-		where c.individual_member_number = #{individual_member_number} )) as
+		where
+		c.individual_member_number = #{individual_member_number} )) as
 		my_rank
 		from
 		tbl_individual_member i , tbl_donation d
@@ -106,6 +112,16 @@
 		individual_member_recent_logins
 		from
 		tbl_individual_member
+	</select>
+	<select id="userOneInfo" parameterType="_int" resultType="individualVO">
+		select individual_member_number, individual_member_name, nickname,
+		individual_member_phone_number, individual_member_id,
+		individual_member_password, individual_member_email,
+		individual_member_address, individual_member_detailed_address,
+		individual_member_profile_image, number_of_donations,
+		individual_member_join_date, individual_member_recent_logins, zip_code
+		from tbl_individual_member
+		where individual_member_number = #{individualMemberNumber};
 	</select>
 
 </mapper>
