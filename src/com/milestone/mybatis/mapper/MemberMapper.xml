@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Member">
-	<!-- 유저 목록 -->
-	<select id="memberList" resultType="MemberDTO"> 
-		
-	
+
+	<select id="selectMainAll" resultType="donationDTO">
+		select
+		d.donation_number, d.donation_amount, d.donation_products, d.donation_date,
+		i.nickname,
+		n.nursery_school_photo, n.nursery_school_member_name, n.nursery_school_introductory_article
+		from 
+		tbl_donation d, tbl_individual_member i, tbl_nursery_school_member n
+		where
+		d.donation_number = i.individual_member_number and
+		i.individual_member_number = n.nursery_school_member_number
+		order by
+		d.donation_date desc
+		limit 0,4;
 	</select>
 
 </mapper>

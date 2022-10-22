@@ -39,6 +39,7 @@
       <mapper resource="com/milestone/mybatis/mapper/DonationMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/IndividualCommunityMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/IndividualMemberMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/MemberMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/NewsMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/NoticeMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/NurserySchoolCommunityMapper.xml"/>

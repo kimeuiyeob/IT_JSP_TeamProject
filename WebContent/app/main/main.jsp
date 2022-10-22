@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +21,8 @@
 </head>
 
 <body>
-	<jsp:include page="../fix/header.jsp" />
-	
+   <jsp:include page="../fix/header.jsp" />
+   
   <!-- ----------------------------뒷 배경 슬라이드--------------------------- -->
   <div id="bigback" class="main_swiper">
     <div id="back" class="swiper-container">
