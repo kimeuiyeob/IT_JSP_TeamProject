@@ -20,4 +20,9 @@ public class BannersDAO {
 	public List<BannersVO> bannerList() {
 		return sqlSession.selectList("Banners.bannerList");
 	}
+	
+//	메인페이지 자동슬라이드 불러오는거
+	public List<BannersVO> bannersList() {
+		return sqlSession.selectList("Banners.bannersList");
+	}
 }

@@ -19,14 +19,11 @@ public class BannerController implements Execute {
 
 		BannersVO bannersVO = new BannersVO();
 		BannersDAO bannersDAO = new BannersDAO();
-		
-		System.out.println("배너 들어옴!");
 
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
  		
 		req.setAttribute("banners", bannersDAO.bannerList());
-		System.out.println(bannersDAO.bannerList());
 		
 		result.setPath("/app/manager/milestoneManagerBanner.jsp");
 		return result;

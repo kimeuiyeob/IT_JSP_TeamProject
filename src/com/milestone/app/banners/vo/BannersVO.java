@@ -7,6 +7,8 @@ public class BannersVO {
 	private String bannersImage;
 	private String bannersUrl;
 	private int noticeNumber;
+	private String bannersTitle;
+	private String bannersContent;
 
 	public BannersVO() {
 		;
@@ -52,10 +54,27 @@ public class BannersVO {
 		this.noticeNumber = noticeNumber;
 	}
 
+	public String getBannersTitle() {
+		return bannersTitle;
+	}
+
+	public void setBannersTitle(String bannersTitle) {
+		this.bannersTitle = bannersTitle;
+	}
+
+	public String getBannersContent() {
+		return bannersContent;
+	}
+
+	public void setBannersContent(String bannersContent) {
+		this.bannersContent = bannersContent;
+	}
+
 	@Override
 	public String toString() {
-		return "MemberVO2 [bannersNumber=" + bannersNumber + ", bannersRegistrationDate=" + bannersRegistrationDate
+		return "BannersVO [bannersNumber=" + bannersNumber + ", bannersRegistrationDate=" + bannersRegistrationDate
 				+ ", bannersImage=" + bannersImage + ", bannersUrl=" + bannersUrl + ", noticeNumber=" + noticeNumber
-				+ "]";
+				+ ", bannersTitle=" + bannersTitle + ", bannersContent=" + bannersContent + "]";
 	}
+	
 }
