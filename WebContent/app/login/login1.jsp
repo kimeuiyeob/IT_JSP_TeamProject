@@ -18,7 +18,6 @@
 <!-- 황지수 작업내용 -->
 	<div class="main_login">
 
-
 		<div class="login_title">
 
 			<div class="login_logo">
