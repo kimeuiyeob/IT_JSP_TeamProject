@@ -17,15 +17,15 @@ public class FileDAO {
 	}
 	
 	public void insert(FileVO fileVO) {
-		sqlSession.insert("File.insert", fileVO);
+		sqlSession.insert("nurserySchoolCommunityFile.insert", fileVO);
 	}
 	
 	public List<FileVO> select(int boardNumber){
-		return sqlSession.selectList("File.select", boardNumber);
+		return sqlSession.selectList("nurserySchoolCommunityFile.select", boardNumber);
 	}
 	
 	public void delete(int boardNumber) {
-		sqlSession.delete("File.delete", boardNumber);
+		sqlSession.delete("nurserySchoolCommunityFile.delete", boardNumber);
 	}
 }
 

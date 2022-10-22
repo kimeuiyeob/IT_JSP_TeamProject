@@ -34,9 +34,9 @@ public class NurserySchoolCommunityDAO {
       sqlSession.insert("NurserySchoolCommunity.insert", nurserySchoolCommunityVO);
    }
    
-   //페이징 처리
+   //페이징 처리, 파일첨부
    public int selectCurrentSequence() {
-      return sqlSession.selectOne("Board.selectCurrentSequence");
+      return sqlSession.selectOne("NurserySchoolCommunity.selectCurrentSequence");
    }
    
    //게시물 상세페이지 

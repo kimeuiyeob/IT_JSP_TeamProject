@@ -36,7 +36,7 @@ public class Download implements Execute{
 			inputStream = new FileInputStream(file);
 			
 			resp.setContentType("application/octet-stream");
-			resp.setHeader("Content-Disposition", "attachment;filename=\"" + new String(("[출처:한동석]_" + fileOriginalName).getBytes("UTF-8"), "ISO-8859-1") + "\"");
+			resp.setHeader("Content-Disposition", "attachment;filename=\"" + new String((fileOriginalName).getBytes("UTF-8"), "ISO-8859-1") + "\"");
 			resp.setHeader("Content-Type", "application/octet-stream;charset=utf-8");
 			resp.setHeader("Content-Length", file.length() + "");
 			

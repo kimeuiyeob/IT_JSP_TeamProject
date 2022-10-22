@@ -3,7 +3,7 @@ package com.milestone.app.file.vo;
 public class FileVO {
 	private String fileSystemName;
 	private String fileOriginalName;
-	private int boardNumber;
+	private int nurserySchoolCommunityNumber;
 	
 	public FileVO() {;}
 
@@ -23,17 +23,18 @@ public class FileVO {
 		this.fileOriginalName = fileOriginalName;
 	}
 
-	public int getBoardNumber() {
-		return boardNumber;
+	public int getNurserySchoolCommunityNumber() {
+		return nurserySchoolCommunityNumber;
 	}
 
-	public void setBoardNumber(int boardNumber) {
-		this.boardNumber = boardNumber;
+	public void setNurserySchoolCommunityNumber(int nurserySchoolCommunityNumber) {
+		this.nurserySchoolCommunityNumber = nurserySchoolCommunityNumber;
 	}
 
 	@Override
 	public String toString() {
-		return "FileVO [fileSystemName=" + fileSystemName + ", fileOriginalName=" + fileOriginalName + ", boardNumber="
-				+ boardNumber + "]";
+		return "FileVO [fileSystemName=" + fileSystemName + ", fileOriginalName=" + fileOriginalName
+				+ ", nurserySchoolCommunityNumber=" + nurserySchoolCommunityNumber + "]";
 	}
+
 }

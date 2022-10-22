@@ -133,14 +133,14 @@
   </servlet-mapping>
   
   
-   <servlet>  <!-- 게시판 관리자 -->
-  	<servlet-name>BoardFrontController</servlet-name>
-  	<servlet-class>com.milestone.app.board.BoardFrontController</servlet-class>
+   <servlet>  <!--  첨부파일  -->
+  	<servlet-name>FileFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.file.FileFrontController</servlet-class>
   </servlet>
   
-  <servlet-mapping>  <!-- 게시판 관리자 -->
-  	<servlet-name>BoardFrontController</servlet-name>
-  	<url-pattern>*.board</url-pattern> 
+  <servlet-mapping>  <!-- 첨부파일 -->
+  	<servlet-name>FileFrontController</servlet-name>
+  	<url-pattern>*.file</url-pattern> 
   </servlet-mapping>
   
   

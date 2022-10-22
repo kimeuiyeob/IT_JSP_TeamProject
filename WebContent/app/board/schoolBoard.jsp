@@ -37,12 +37,12 @@
                         <div class="longdivedimg">
                             <img src="${pageContext.request.contextPath}/assets/img/board/baby1.jpg" alt="">
                         </div>
+                        <input type="hidden" name="nurserySchoolCommunityNumber" value="${board.getNurserySchoolCommunityNumber()}">
                    <a style="text-decoration: none; color: black"
                     href="${pageContext.request.contextPath}/board/boardDetailOk.schoolcom?nurserySchoolCommunityNumber=${board.nurserySchoolCommunityNumber}">
                         <div class="longdivedinfo" style="height:15%">
                            <!-- 작성자이름 -->
                             <div class="infoname"><p><c:out value="${board.getNurserySchoolMemberName()}"/></p></div>
-                            <h3 style="display: none">"${board.getNurserySchoolCommunityNumber()}"</h3>
                         </a>
                             <div class="infodetail">
                               <!-- 게시글 내용 -->
