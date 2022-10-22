@@ -1,6 +1,7 @@
 package com.milestone.app.donation.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -18,21 +19,25 @@ public class DonationDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 
 	}
-	
-	//기부현황DAO
+
+	// 기부현황DAO
 	public List<DonationDTO> selectDonationStatus() {
 		return sqlSession.selectList("Donation.selectDonationStatus");
 	}
-	
-	//	관리자 기부내역DAO
-	public List<DonationDTO> managerSelectDonationHistory() {
-		return sqlSession.selectList("Donation.managerSelectDonationHistory");
+
+	// 관리자 기부내역DAO
+	public List<DonationDTO> managerSelectDonationHistory(Map<String, Integer> pageMap) {
+		return sqlSession.selectList("Donation.managerSelectDonationHistory", pageMap);
 	}
-	
+
+	// 게시물 개수
+	public int donationSelectCount() {
+		return sqlSession.selectOne("Donation.donationSelectCount");
+	}
+
 	// 물품기부
 	public void donationProduct(DonationVO donationVO) {
-		sqlSession.insert("Donation.donationProduct",donationVO);
+		sqlSession.insert("Donation.donationProduct", donationVO);
 	}
-	
-	
+
 }
