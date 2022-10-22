@@ -26,13 +26,11 @@ public class RankingOkController implements Execute {
 		
 		 req.setAttribute("ranking", individualDAO.selectRanking());
 		 
-		 
-		 int individualMemberNumber = (Integer)req.getSession().getAttribute("individualMemberNumber");
-		 
-		 System.out.println("select ranking 들어옴!");
-		 System.out.println(individualMemberNumber);
-
-		result.setPath("/app/donation/donationRanking.jsp");
+		 if((Integer)req.getSession().getAttribute("individualMemberNumber") == null) {
+			 result.setPath("/app/donation/donationRanking2.jsp");
+		 } else {
+			 result.setPath("/app/donation/donationRanking.jsp");
+		 }
 		
 		return result;
 	}
