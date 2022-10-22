@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+<!-- 황지수 작업내용 -->
 	<div class="main_login">
 
 
