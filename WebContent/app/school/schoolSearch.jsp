@@ -94,7 +94,7 @@
 	<div style="font-size: 1.3rem">
 		<div align="center" valign="middle">
 			<div class="web-view"
-				style="padding-top: 883px; padding-right: 20px;">
+				style="padding-top: 915px; padding-right: 20px;">
 				<c:if test="${prev}">
 					<a
 						href="${pageContext.request.contextPath}/search/schoolSearchOk.school?page=${startPage - 1}">&lt;</a>

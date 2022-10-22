@@ -18,7 +18,7 @@ public class SchoolSearchOkController implements Execute {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-System.out.println("나는야 의엽이 들어옴");
+		System.out.println("나는야 의엽이 들어옴");
 		
 		HashMap<String, Integer> pageMap = new HashMap<String, Integer>();
 		NurseryDAO nurseryDAO = new NurseryDAO();
