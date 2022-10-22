@@ -29,10 +29,9 @@
 
 
 
-    <div class="longdivs">
+		    <div class="longdivs">
       <c:choose>   
          <c:when test="${boards != null and fn:length(boards)>0}">
-            <!-- 빠른for문: forEach(String name: names)라면 names는 ${boards}  -->
             <c:forEach var="board" items="${boards}">
                    <div class="longdived">
                         <div class="longdivedimg">
@@ -40,7 +39,7 @@
                         </div>
                    <a style="text-decoration: none; color: black"
                     href="${pageContext.request.contextPath}/board/boardDetailOk.schoolcom?nurserySchoolCommunityNumber=${board.nurserySchoolCommunityNumber}">
-                        <div class="longdivedinfo">
+                        <div class="longdivedinfo" style="height:15%">
                            <!-- 작성자이름 -->
                             <div class="infoname"><p><c:out value="${board.getNurserySchoolMemberName()}"/></p></div>
                             <h3 style="display: none">"${board.getNurserySchoolCommunityNumber()}"</h3>
@@ -53,13 +52,13 @@
                              </a>
                             </div>
                             <div class="infolike">
-                                <div class="heart">
+                                <div class="heart" style="width:12%">
                                 </div>
-                                <div class="thumbsup">
+                                <div class="thumbsup" style="display: flex">
                                     <div style="padding-right : 8px">
                                         <img src="${pageContext.request.contextPath}/assets/img/board/eye.png" alt="">
+                                    	<c:out value="${board.getNurserySchoolCommunityHits()}"/>
                                     </div>
-                                    <div class="thubmsupcount"><c:out value="${board.getNurserySchoolCommunityHits()}"/></div>
                                 </div>
                             </div>
                         </div>
@@ -81,23 +80,18 @@
 
 
 
-
-
-
-
     </div>
+
+
+
+
 
     <div class="givepaadding" style="padding-bottom : 80px"></div>
 
     
-    
-    
-    
-    
-    
-    
-    <!-- ===================================================================================== -->
-   <!-- 비 인기글 -->
+
+
+
 
 
     <!-- ------------------------------------------------------------------------------------- -->
@@ -106,37 +100,39 @@
         <div class="Pagination__PaginationStyle-s1roa8-0 jvAeCO">
             <div class="bottom-page-bar">
                 <ul class="pagination">
+                
+                
+                
                <c:if test="${prev}">
-                       <a href="${pageContext.request.contextPath}/board/scboardOk.schoolcom?page=${startPage - 1}">
-                           <img src="${pageContext.request.contextPath}/assets/img/board/left2.png" alt="left" width="24px" style="color: rgb(207, 213, 219);">
-                       </a>
+                       <a href="${pageContext.request.contextPath}/board/schoolBoard.schoolcom?page=${startPage - 1}">&lt;</a>
                </c:if>
-                   <c:forEach var="i" begin="${startPage}" end="${endPage}">
-                      <c:choose>
-                         <c:when test="${not(i eq page)}">
+               
+               
+               
+               <c:forEach var="i" begin="${startPage}" end="${endPage}">
+                  <c:choose>
+                     <c:when test="${not(i eq page)}">
 
-                              <li class="page-number active">
-                                 <a href="${pageContext.request.contextPath}/board/scboardOk.schoolcom?page=${i}">
-                                     <span class=""><c:out value="${i}"/></span>
-                                 </a>
-                              </li>
-         
-                                 <a href="${i}" style="margin-top: 6px;">
-                                     <img src="${pageContext.request.contextPath}/assets/img/board/right2.png" alt="right" width="24px">
-                                 </a>
-                         </c:when>
-                         <c:otherwise>
-                                  <span class=""><c:out value="${i}"/></span>
-                         </c:otherwise>
-                        </c:choose>
-                   </c:forEach>
+                          <li class="page-number active">
+                                 <span class="">
+	                                 <a href="${pageContext.request.contextPath}/board/schoolBoard.schoolcom?page=${i}" style="text-decoration: none">
+	                                 <c:out value="${i}"/>&nbsp;&nbsp;</a>
+                                 </span>
+                            
+                          </li>
+                     </c:when>
+                     <c:otherwise>
+                     	<a style="color: black;display: flex;align-items: center;">
+                           <span class=""><c:out value="${i}"/>&nbsp;&nbsp;</span>
+                     	</a>
+                     </c:otherwise>
+                    </c:choose>
+               </c:forEach>
                    
                    
-                  <c:if test="${next}">
-                       <a href="${pageContext.request.contextPath}/board/scboardOk.schoolcom?page=${endPage + 1}">
-                           <img src="${pageContext.request.contextPath}/assets/img/board/left2.png" alt="left" width="24px" style="color: rgb(207, 213, 219);">
-                       </a>
-               </c:if>
+                  	<c:if test="${next}">
+                       <a href="${pageContext.request.contextPath}/board/schoolBoard.schoolcom?page=${endPage + 1}">&gt;</a>
+              		</c:if>
                 </ul>
             </div>
         </div>

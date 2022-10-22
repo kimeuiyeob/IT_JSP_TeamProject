@@ -24,36 +24,67 @@
 <jsp:include page="../fix/header.jsp"/>
 
     <div id="news3Contents">
-
-       <c:if test="${nurserySchoolMemberNumber eq board.getNurserySchoolMemberNumber()}">
-      <!-- 수정버튼 -->
-           <input style="text-align: center;
-            font-weight: 600;
-            justify-content: center;
-            align-items: center;
-            border-color: transparent;
-            background-color: rgb(248, 248, 248);
-            height: 30px;
-            width: 7%;
-            margin-left: 84%;
-            cursor: pointer;"
-              type="button" value="수정" onclick="location.href = '${pageContext.request.contextPath}/board/boardUpdate.schoolcom?nurserySchoolCommunityNumber=${board.getNurserySchoolCommunityNumber()}'"/>
+		<div style="width:100%; margin-bottom: 30px">
+			<c:choose>
+	      		<c:when test="${nurserySchoolMemberNumber eq board.getNurserySchoolMemberNumber()}">
+		      		<!-- 수정버튼 -->
+		           <input style="text-align: center;
+		            font-weight: 600;
+		            justify-content: center;
+		            align-items: center;
+		            border-color: transparent;
+		            background-color: rgb(248, 248, 248);
+		            height: 30px;
+		            width: 7%;
+		            margin-left: 76%;
+		            cursor: pointer;"
+		            type="button" value="수정" onclick="location.href = '${pageContext.request.contextPath}/board/boardUpdate.schoolcom?nurserySchoolCommunityNumber=${board.getNurserySchoolCommunityNumber()}'"/>
+		      
+		         	<!-- 삭제버튼 -->
+			         <input style="text-align: center;
+			         font-weight: 600;
+			         justify-content: center;
+			         align-items: center;
+			         border-color: transparent;
+			         background-color: rgb(248, 248, 248);
+			         height: 30px;
+			         width: 7%;
+			         margin-left: 10px;
+			         cursor: pointer;"
+			         id="deletePost"
+			         type="button" value="삭제" onclick="location.href = '${pageContext.request.contextPath}/board/boardDeleteOk.schoolcom?nurserySchoolCommunityNumber=${board.getNurserySchoolCommunityNumber()}'"/>
+		            
+		            <!-- 목록버튼 -->
+		           <input style="text-align: center;
+		            font-weight: 600;
+		            justify-content: center;
+		            align-items: center;
+		            border-color: transparent;
+		            background-color: rgb(248, 248, 248);
+		            height: 30px;
+		            width: 7%;
+		            margin-left: 10px;
+		            cursor: pointer;"
+		            type="button" value="목록" onclick="location.href = '${pageContext.request.contextPath}/board/schoolBoard.schoolcom'"/>
+      		</c:when>
+      		<c:otherwise>
+		            <!-- 목록버튼 -->
+		           <input style="text-align: center;
+		            font-weight: 600;
+		            justify-content: center;
+		            align-items: center;
+		            border-color: transparent;
+		            background-color: rgb(248, 248, 248);
+		            height: 30px;
+		            width: 7%;
+		            margin-left: 90%;
+		            cursor: pointer;"
+		            type="button" value="목록" onclick="location.href = '${pageContext.request.contextPath}/board/schoolBoard.schoolcom'"/>
+	      	
+      		</c:otherwise>
+      	</c:choose>
       
-         <!-- 삭제버튼 -->
-         <input style="text-align: center;
-         font-weight: 600;
-         justify-content: center;
-         align-items: center;
-         border-color: transparent;
-         background-color: rgb(248, 248, 248);
-         height: 30px;
-         width: 7%;
-         margin-left: 10px;
-         cursor: pointer;"
-         id="deletePost"
-         type="button" value="삭제" onclick="location.href = '${pageContext.request.contextPath}/board/boardDeleteOk.schoolcom?nurserySchoolCommunityNumber=${board.getNurserySchoolCommunityNumber()}'"/>
-      </c:if>
-
+		</div>	
 
     
         <!-- 그림 2개 -->
