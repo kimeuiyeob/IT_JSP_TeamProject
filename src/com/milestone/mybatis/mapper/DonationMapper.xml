@@ -26,9 +26,9 @@
 		i.individual_member_email
 		from tbl_donation d, tbl_individual_member i,
 		tbl_nursery_school_member n
-		where d.donation_number =
+		where d.individual_member_number  =
 		i.individual_member_number and
-		i.individual_member_number =
+		d.nursery_school_member_number  =
 		n.nursery_school_member_number
         order by d.donation_number
 		desc limit #{startRow}, #{rowCount}
