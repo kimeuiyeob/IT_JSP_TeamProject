@@ -3,7 +3,7 @@
 <mapper namespace="NurserySchoolCommunity">
    
    <!-- 페이징 처리 :  -->
-   <select id="selectAll" parameterType="map" resultType="nurserySchoolCommunityDTO">
+   <select id="selectAll" resultType="nurserySchoolCommunityDTO">
       select nursery_school_community_number, nursery_school_community_title, nursery_school_community_content, nursery_school_community_image, nursery_school_community_like, nursery_school_community_hits,
       n.nursery_school_member_number, nursery_school_member_name
       from tbl_nursery_school_member n join tbl_nursery_school_member_community c 
