@@ -10,7 +10,14 @@
 	<select id="selectNoticeManager" resultType="NoticeVO"> <!-- 공지 관리 -->
 		select notice_number, notice_classification, notice_title, notice_date_created
 		from
-		tbl_notice;
+		tbl_notice
+		order by notice_number
+		desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id="noticeSelectCount" resultType="_int">
+		select
+		count(notice_number) from tbl_notice
 	</select>
 
 	<!-- 공지사항 추가 -->

@@ -1,6 +1,7 @@
 package com.milestone.app.notice.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -22,9 +23,14 @@ public class NoticeDAO {
 	}
 	
 //	관리자페이지 공지사항 목록DAO
-	public List<NoticeVO> selectNoticeManager() {// NoticeDAO
-		return sqlSession.selectList("Notice.selectNoticeManager");
+	public List<NoticeVO> selectNoticeManager(Map<String, Integer> pageMap) {// NoticeDAO
+		return sqlSession.selectList("Notice.selectNoticeManager", pageMap);
 	}
+    // 게시물 개수
+	public int noticeSelectCount() {
+		return sqlSession.selectOne("Notice.noticeSelectCount");
+	}
+	
 //	공지사항 추가DAO
 	public void noticeInsert(NoticeVO noticeVO) {
 		sqlSession.insert("Notice.noticeInsert", noticeVO);
