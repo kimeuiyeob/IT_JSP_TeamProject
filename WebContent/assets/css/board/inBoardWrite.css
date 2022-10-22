@@ -1,0 +1,659 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Pretendard-Regular';
+    margin-left: 0px;
+}
+
+header {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 8px;
+    display: flex;
+}
+
+#headerBox {
+    display: flex;
+}
+
+#searchInput {
+    width: 220px;
+    height: 42px;
+    border: darkgray;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+}
+
+#modifySchool {
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: auto;
+    position: relative;
+    padding-bottom: 372px;
+}
+
+#withdrawal {
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    position: relative;
+}
+
+#footer {
+    margin-top: 56px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    position: relative;
+}
+
+#profilePicture {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#content {
+    padding: 24px;
+    width: 592px;
+}
+
+.content {
+    margin-bottom: 16px;
+}
+
+.inputContent {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(26, 26, 26);
+}
+
+#userInput {
+    width: 89%;
+}
+
+input {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    width: 100%;
+    margin: 0px;
+    border: 1px solid #efefef;
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+#category {
+    width: 590px;
+    height: 29px;
+}
+
+#category>* {
+    display: inline-block;
+    height: auto;
+    border-radius: 24px;
+    background-color: rgb(248, 248, 248);
+    padding: 6px 10px;
+    color: rgb(202, 202, 202);
+
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+
+    text-align: center;
+}
+
+.logo>img {
+    padding-top: 5px;
+    height: 25px;
+}
+
+.search_box {
+    padding-left: 16px;
+    padding-right: 10px;
+    height: 35px;
+    width: 340px;
+    display: flex;
+    left: 22%;
+}
+
+.search_box>img {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 11px;
+    left: 112%;
+}
+
+#searchInput {
+    margin-left: 10px;
+    position: absolute;
+    display: flex;
+    width: 62%;
+}
+
+.user {
+    display: flex;
+    left: 80%;
+}
+
+.user>span {
+    padding-top: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.userIcon img {
+    height: 34px;
+    width: 34px;
+}
+
+#bottomPointer svg {
+    display: block;
+    padding-top: 10px;
+    height: 12px;
+    width: 12px;
+}
+
+.userIcon img {
+    margin-top: 5px;
+}
+
+#attach svg {
+    position: absolute;
+    top: 62%;
+    left: 62%;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 27px;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+#slash {
+    color-scheme: light;
+    text-align: left;
+    text-transform: none;
+    word-break: keep-all;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    color: rgb(162, 162, 162);
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    transform: rotate(13deg);
+    margin: 0px 6px;
+    width: 1px;
+    height: 17px;
+    background-color: rgb(202, 202, 202);
+}
+
+#modifySubmit {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0px 16px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    border: white;
+    background-color: rgb(255, 242, 233);
+    cursor: pointer;
+}
+
+#smallHistory {
+    color: #1A1A1A;
+}
+
+
+#content2 {
+    background-color: white;
+    position: relative;
+    border: 1px solid rgb(239, 239, 239);
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    padding: 11px;
+    margin-right: -19px;
+    margin-top: -20px;
+    width: 622px;
+    margin-left: -2px;
+}
+
+.withdrawalSubmit {
+    text-transform: none;
+    line-height: inherit;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(255, 86, 0);
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 48px;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+#first>span {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+footer {
+    padding-top: 50px;
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    width: auto;
+    position: relative;
+}
+
+footer>div>img {
+    width: 158px;
+    height: 35px;
+}
+
+footer>div>p {
+    font-size: 11px;
+    color: rgb(202, 202, 202);
+}
+
+footer>div>h5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    color: rgb(102, 102, 102);
+    font-feature-settings: "case", "ss02";
+    margin-top: 20px;
+}
+
+#button {
+    background-color: rgb(248 248 248);
+    position: absolute;
+    left: 86%;
+    width: 10%;
+    cursor: pointer;
+}
+
+#userWrap {
+    cursor: pointer;
+}
+
+#miniBox {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    z-index: 3002;
+    top: 67px;
+    right: 35px;
+    position: absolute;
+    border-radius: 3px;
+
+
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+#miniBox2 {
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 0;
+    box-shadow: rgb(0 0 0 / 8%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 12px 2px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+    border-radius: 3px;
+}
+
+#miniBox3 {
+    border-radius: 3px;
+    display: flex;
+    width: 152px;
+    padding: 24px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+#miniProfile {
+    display: flex;
+}
+
+#miniProfile>img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 34px;
+    height: 34px;
+}
+
+.css-1g5174 {
+    flex: 0 0 auto;
+    background-color: rgb(229, 229, 229);
+    width: 100%;
+    height: 1px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.css-bchp3n {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color-scheme: light;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    text-transform: none;
+    line-height: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(246, 49, 5);
+    font-size: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(255, 86, 0);
+    overflow: hidden;
+}
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#modalBody {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    letter-spacing: 0;
+    line-height: 1;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 3001;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 6px 0px, rgba(0, 0, 0, 0.12) 0px 8px 16px 0px;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    transform: translate(-50%, -50%);
+    animation: 0.25s ease 0s 1 normal none running openModal;
+    max-height: 95%;
+    padding: 32px 24px;
+    z-index: 0;
+}
+
+
+h1 {
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(26, 26, 26);
+    line-height: 34px;
+    letter-spacing: -0.4px;
+}
+
+.text {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(102, 102, 102);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+}
+
+.warn {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+}
+
+h4 {
+    padding-top: 40px;
+    padding-bottom: 9px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 28px;
+    margin: 0px;
+}
+
+.exit {
+    position: absolute;
+    left: 90%;
+    top: 4%;
+}
+
+textarea {
+    font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: rgb(244, 240, 236);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    color: rgb(26, 26, 26);
+    border-radius: 1px;
+    background-color: white;
+    border: 1px solid rgb(229, 229, 229);
+    width: 100%;
+    height: 104px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 3px;
+    margin-top: 4px;
+}
+
+#ask {
+    font-weight: normal;
+    padding-left: 20px;
+    color: rgb(255, 61, 0);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+}
+
+.wrap {
+    font-size: 14px;
+    padding-top: 10px;
+    display: flex;
+    align-items: baseline;
+}
+
+#continue {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color-scheme: light;
+    --system-on-color: #0c0c0c;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    pointer-events: initial;
+    overflow: visible;
+    text-transform: none;
+    font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    line-height: inherit;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 40px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#delete {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color-scheme: light;
+    --system-on-color: #0c0c0c;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    pointer-events: initial;
+    overflow: visible;
+    text-transform: none;
+    font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    line-height: inherit;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 86, 0);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 40px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#ask2 {
+    padding-top: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    margin: 0px;
+}
+
+body {
+    background-color: #f8f8f9;
+    margin-top: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.iLCbOX {
+    border: 1px solid rgb(239, 239, 239);
+    padding: 16px;
+}
+
+.iTqZES {
+    resize: none;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    min-height: 280px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.gEAbaC {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dkxgGx {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+}

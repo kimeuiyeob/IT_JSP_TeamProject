@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Comments">
+<!-- 	<select id="selectAll" parameterType="_int" resultType="commentsVO">
+		select comments_number, comments_content, comment_date_created, 
+		s.nursery_school_member_number, nursery_school_community_number, nursery_school_member_name
+		from tbl_nursery_school_member n join tbl_comments c
+		on nursery_school_community_number = #{nurserySchoolCommunityNumber} 
+		and n.nursery_school_community_number = c.nursery_school_community_number
+	</select> -->
+	
+	<insert id="insert" parameterType="commentsVO">
+		insert into tbl_comments (comments_content, nursery_school_member_number, nursery_school_community_number)
+		values (#{content}, #{nurserySchoolMemberNumber}, #{nurserySchoolCommunityNumber})
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

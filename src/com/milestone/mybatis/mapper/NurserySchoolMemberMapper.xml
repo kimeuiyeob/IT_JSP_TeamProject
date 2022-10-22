@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="NurserySchoolMember">
+	<select id="checkId" parameterType="string" resultType="_int">
+		select
+		count(nursery_school_member_Id) from tbl_nursery_school_member where
+		nursery_school_member_Id = #{nurserySchoolMemberId}
+	</select>
+	<select id="checkPhoneNumber" parameterType="string"
+		resultType="_int">
+		select count(nursery_school_member_phone_number) from
+		tbl_nursery_school_member where nursery_school_member_phone_number =
+		#{nurserySchoolMemberPhoneNumber}
+	</select>
+	<insert id="join" parameterType="nurseryVO">
+		insert into
+		tbl_nursery_school_member
+		(nursery_school_member_name,
+		nursery_school_member_phone_number, nursery_school_member_id,
+		nursery_school_member_email, nursery_school_member_password,
+		nursery_school_address, nursery_school_detailed_address,
+		nursery_school_member_join_date, zip_code)
+		values(#{nurserySchoolMemberName}, #{nurserySchoolMemberPhoneNumber},
+		#{nurserySchoolMemberId}, #{nurserySchoolMemberEmail},
+		#{nurserySchoolMemberPassword}, #{nurserySchoolAddress},
+		#{nurserySchoolDetailedAddress}, CURRENT_TIMESTAMP, #{zipCode})
+	</insert>
+	<select id="login" parameterType="nurseryVO" resultType="_int">
+		select
+		nursery_school_member_number from tbl_nursery_school_member
+		where
+		nursery_school_member_id = #{nurserySchoolMemberId} and
+		nursery_school_member_password = #{nurserySchoolMemberPassword}
+	</select>
+	<select id="findId" parameterType="nurseryVO"
+		resultType="string">
+		select nursery_school_member_id from
+		tbl_nursery_school_member
+		where nursery_school_member_email =
+		#{nurserySchoolMemberEmail} and
+		nursery_school_member_phone_number =
+		#{nurserySchoolMemberPhoneNumber}
+	</select>
+	<select id="findPw" parameterType="nurseryVO" resultType="_int">
+		select
+		nursery_school_member_number from tbl_nursery_school_member
+		where
+		nursery_school_member_id = #{nurserySchoolMemberId} and
+		nursery_school_member_phone_number = #{nurserySchoolMemberPhoneNumber}
+	</select>
+	<update id="updatePw" parameterType="nurseryVO">
+		update
+		tbl_nursery_school_member
+		set nursery_school_member_password =
+		#{nurserySchoolMemberPassword}
+		where nursery_school_member_number =
+		#{nurserySchoolMemberNumber}
+	</update>
+
+	<!-- 도움이 필요한 보육원 -->
+	<select id="helpSchoolSelect" resultType="nurseryVO">
+		select
+		nursery_school_photo ,
+		nursery_school_member_name ,
+		number_of_donations_received ,
+		nursery_school_introductory_article
+		from
+		tbl_nursery_school_member
+		order by number_of_donations_received
+		desc
+		limit 1;
+	</select>
+
+	<!-- 보육원 목록 -->
+	<select id="selectSchoolList" parameterType="map"
+		resultType="nurseryVO">
+		select
+		nursery_school_member_number,
+		nursery_school_photo ,
+		nursery_school_member_name ,
+		nursery_school_address ,
+		nursery_school_detailed_address,
+		nursery_school_member_phone_number
+		from
+		tbl_nursery_school_member
+		order by nursery_school_member_number
+		desc limit #{startRow}, #{rowCount}
+	</select>
+
+	<select id="schoolSelectCount" resultType="_int">
+		select
+		count(nursery_school_member_number) from tbl_nursery_school_member
+	</select>
+
+
+	<!-- 지역별 검색 -->
+	<select id="sortSchoolList" parameterType="string"
+		resultType="nurseryVO">
+		select
+		nursery_school_photo ,
+		nursery_school_member_name ,
+		nursery_school_address ,
+		nursery_school_detailed_address
+		from
+		tbl_nursery_school_member
+		where
+		nursery_school_address like CONCAT(‘%’,
+		#{nurserySchoolAddress}, ‘%’)
+	</select>
+
+	<!-- 기부하기 (보육원상세페이지) -->
+	<select id="selectDetail" parameterType="_int"
+		resultType="nurseryVO">
+		select
+		nursery_school_member_number,
+		nursery_school_photo ,
+		nursery_school_member_name ,
+		nursery_school_address ,
+		nursery_school_detailed_address,
+		nursery_school_member_phone_number
+		from
+		tbl_nursery_school_member
+		where
+		nursery_school_member_number =
+		#{nurserySchoolMemberNumber}
+	</select>
+
+	<!-- 비밀번호 검사 -->
+	<select id="checkPassword" parameterType="string"
+		resultType="_int">
+		select nursery_school_member_number from tbl_nursery_school_member where
+		nursery_school_member_password = #{nurserySchoolMemberPassword}
+	</select>
+
+	<!-- 회원정보 수정할때 가져오는거 -->
+	<select id="selectinfo" parameterType="_int"
+		resultType="nurseryVO">
+		select * from tbl_nursery_school_member
+		where nursery_school_member_number = #{nurserySchoolMemberNumber}
+	</select>
+
+
+</mapper>
+
+
+
+

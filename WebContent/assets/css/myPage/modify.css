@@ -1,0 +1,484 @@
+body{
+    margin:0px;
+}
+header {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 8px;
+    display: flex;
+}
+
+#headerBox {
+    display: flex;
+}
+
+#searchInput {
+    height: 42px;
+    border: darkgray;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+
+    margin-left: 10px;
+    position: absolute;
+    display: flex;
+    width: 62%;
+}
+
+#modifySchool {
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: auto;
+    position: relative;
+}
+
+#withdrawal {
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    position: relative;
+}
+
+#footer {
+    margin-top: 56px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    position: relative;
+}
+
+#profilePicture {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#content {
+    padding: 24px;
+    width: 592px;
+}
+
+.content {
+    margin-bottom: 16px;
+}
+
+.inputContent {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(26, 26, 26);
+}
+
+#userInput {
+    width: 89%;
+}
+
+input {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    width: 100%;
+    margin: 0px;
+    border: 1px solid #efefef;
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+#category {
+    width: 590px;
+    height: 29px;
+}
+
+#category>* {
+    display: inline-block;
+    height: auto;
+    border-radius: 24px;
+    background-color: rgb(248, 248, 248);
+    padding: 6px 10px;
+    color: rgb(202, 202, 202);
+
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+
+    text-align: center;
+}
+
+.logo>img {
+    padding-top: 5px;
+    height: 25px;
+}
+
+.search_box {
+    padding-left: 16px;
+    padding-right: 10px;
+    height: 35px;
+    width: 340px;
+    display: flex;
+    left: 22%;
+}
+
+.search_box>img {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 11px;
+    left: 2069%;
+}
+
+.user {
+    margin-left: 3%;
+    padding-left: 60%;
+    display: flex;
+    left: 80%;
+}
+
+.user>span {
+    padding-top: 12px;
+    height: 20px;
+    width: 20px;
+}
+
+.userIcon img {
+    height: 34px;
+    width: 34px;
+}
+
+#bottomPointer svg {
+    display: block;
+    padding-top: 10px;
+    height: 12px;
+    width: 12px;
+}
+
+.userIcon img {
+    margin-top: 5px;
+}
+
+#attach svg {
+    position: absolute;
+    top: 62%;
+    left: 62%;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 27px;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+#slash {
+    color-scheme: light;
+    text-align: left;
+    text-transform: none;
+    word-break: keep-all;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    color: rgb(162, 162, 162);
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    transform: rotate(13deg);
+    margin: 0px 6px;
+    width: 1px;
+    height: 17px;
+    background-color: rgb(202, 202, 202);
+}
+
+#modifySubmit {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0px 16px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    border: white;
+    background-color: rgb(255, 242, 233);
+    cursor: pointer;
+}
+
+#smallHistory {
+    color: #1A1A1A;
+}
+
+
+#content2 {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    padding: 24px;
+}
+
+.withdrawalSubmit {
+    text-transform: none;
+    line-height: inherit;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 40px;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+#first>span {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+footer {
+    padding-top: 50px;
+    margin-top: 56px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 640px;
+    height: flex;
+    width: auto;
+    position: relative;
+}
+
+footer>div>img {
+    width: 158px;
+    height: 35px;
+}
+
+footer>div>p {
+    font-size: 11px;
+    color: rgb(202, 202, 202);
+}
+
+footer>div>h5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    color: rgb(102, 102, 102);
+    font-feature-settings: "case", "ss02";
+    margin-top: 20px;
+}
+
+#button {
+    background-color: rgb(248 248 248);
+    position: absolute;
+    left: 86%;
+    width: 10%;
+    cursor: pointer;
+}
+
+#userWrap {
+    cursor: pointer;
+}
+
+#miniBox {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    z-index: 3002;
+    top: 67px;
+    right: 35px;
+    position: absolute;
+    border-radius: 3px;
+
+
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+#miniBox2 {
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 0;
+    box-shadow: rgb(0 0 0 / 8%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 12px 2px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+    border-radius: 3px;
+}
+
+#miniBox3 {
+    border-radius: 3px;
+    display: flex;
+    width: 152px;
+    padding: 24px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+#miniProfile {
+    display: flex;
+}
+
+#miniProfile>img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 34px;
+    height: 34px;
+}
+
+.css-1g5174 {
+    flex: 0 0 auto;
+    background-color: rgb(229, 229, 229);
+    width: 100%;
+    height: 1px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.css-bchp3n {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color-scheme: light;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    text-transform: none;
+    line-height: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(246, 49, 5);
+    font-size: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(255, 86, 0);
+    overflow: hidden;
+}
+
+/* -----------황지수 썸네일 추가---------- */
+label[for='attach'] div[id='attach2'] {
+    width: 80px;
+    height: 80px;
+    background-image: url('https://class101.net/images/default-user.png');
+    background-size: 80px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#attach2 svg {
+    position: absolute;
+    top: 62%;
+    left: 62%;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 27px;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.flex>input[type='button'] {
+    background-color: rgb(248 248 248);
+    width: 5%;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+}
+
+.flex {
+    display: flex;
+}
+
+#memberZipcode {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 374px;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#memberAddress {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 100%;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}
+
+#memberAddressDetail {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 100%;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+    font-family: 'Pretendard-Regular';
+}

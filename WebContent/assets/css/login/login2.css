@@ -1,0 +1,174 @@
+    .kakao_main2 {
+        display: flex;
+        justify-content: center;
+        padding: 108px;
+    }
+
+    .kakao_menu1 {
+        width: 475px;
+        height: 565px;
+        border: solid 1px;
+        text-align: left;
+        padding: 60px 70px;
+        box-sizing: border-box;
+        border: 1px solid #e5e5e5;
+    }
+
+    input::placeholder {
+        color: #a5a2a2;
+    }
+
+    .phone_number {
+        padding-top: 23px;
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+    }
+
+    #phone_number {
+        border: solid 2px;
+        height: 47px;
+        color: #252525;
+        border-color: #d8d3d3;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 329px;
+        line-height: 47px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .password {
+        padding-top: 5px;
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+    }
+
+    #password {
+        border: solid 2px;
+        height: 47px;
+        color: #252525;
+        border-color: #d8d3d3;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 329px;
+        line-height: 47px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .ico_account {
+        background-image: url(/assets/weblogin/techin/retina/ico_account-c26e0a0….png);
+        background-size: 300px auto;
+    }
+
+    .ico_account {
+        display: inline-block;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -9999px;
+        vertical-align: top;
+        background: url(/assets/weblogin/techin/ico_account-446c9c6….png);
+    }
+
+    .login_status {
+        padding-top: 27px;
+        position: relative;
+        padding-bottom: 38px;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #999;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    input[type="checkbox"]:checked {
+        background: #999;
+        border: none;
+        font-weight: bold;
+    }
+
+    h5 {
+        position: absolute;
+        left: 33px;
+        top: 8px;
+        color: rgb(109, 104, 104);
+    }
+
+    .or {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .buttonWrap{
+    	width: 334px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        letter-spacing: -1.5px;
+        font-weight: bold;
+    }
+    
+    #login {
+        background-color: rgb(255, 86, 0);
+        color: rgb(255, 255, 255);
+    }
+    
+    #join {
+        background-color: #edecec;
+        color: #191919;
+        margin-top: -8px;
+    }
+
+    .service_info {
+        border-bottom: none;
+        border-bottom: left;
+        border-bottom: right;
+        border-top: solid 1px;
+        border-color: #e5e5e5;
+        display: flex;
+        justify-content: center;
+        margin-top: -10px;
+        padding-top: 20px;
+        letter-spacing: -0.08em;
+    }
+
+    .link_info {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 12px;
+        color: #4c4c4c;
+        line-height: 20px;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+    .txt_copyright {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 12px;
+        color: #4c4c4c;
+        line-height: 20px;
+        font-family: sans-serif;
+
+    }
+
+    .bottom {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        padding-top: 8px;
+    }

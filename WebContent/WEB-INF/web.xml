@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>milestone</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet> <!-- 개인 회원 관련 -->
+  	<servlet-name>IndividualMemberFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.individual.IndividualMemberFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> <!-- 개인 회원 관련 -->
+  	<servlet-name>IndividualMemberFrontController</servlet-name>
+  	<url-pattern>*.indi</url-pattern>
+  </servlet-mapping>
+  
+  <servlet> <!-- 보육원 회원 관련 -->
+  	<servlet-name>NurserySchoolMemberFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.nursery.NurserySchoolMemberFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> <!-- 보육원 회원 관련 -->
+  	<servlet-name>NurserySchoolMemberFrontController</servlet-name>
+  	<url-pattern>*.school</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet> <!-- 개인 게시판 관련 -->
+  	<servlet-name>IndividualMemberCommunityFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.individualcommunity.IndividualMemberCommunityFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> <!-- 개인 게시판 관련 -->
+  	<servlet-name>IndividualMemberCommunityFrontController</servlet-name>
+  	<url-pattern>*.indicom</url-pattern> 
+  </servlet-mapping>
+  
+    <servlet> <!-- 보육원 게시판 관련 -->
+  	<servlet-name>NurserySchoolMemberCommunityFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.nurseryschoolcommunity.NurserySchoolMemberCommunityFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- 보육원 게시판 관련 -->
+  	<servlet-name>NurserySchoolMemberCommunityFrontController</servlet-name>
+  	<url-pattern>*.schoolcom</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>  <!-- 댓글 관련 -->
+  	<servlet-name>CommentsFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.comments.CommentsFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> <!-- 댓글 관련 -->
+  	<servlet-name>CommentsFrontController</servlet-name>
+  	<url-pattern>*.comments</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet> <!-- 공지사항 관련 -->
+  	<servlet-name>NoticeFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.notice.NoticeFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> <!-- 공지사항 관련 -->
+  	<servlet-name>NoticeFrontController</servlet-name>
+  	<url-pattern>*.notice</url-pattern> 
+  </servlet-mapping>
+  
+    <servlet> <!-- 소식 관련 -->
+  	<servlet-name>NewsFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.news.NewsFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> <!-- 소식 관련 -->
+  	<servlet-name>NewsFrontController</servlet-name>
+  	<url-pattern>*.news</url-pattern> 
+  </servlet-mapping>
+  
+    <servlet>  <!--기부 관련 -->
+  	<servlet-name>DonationFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.donation.DonationFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> <!--기부 관련 -->
+  	<servlet-name>DonationFrontController</servlet-name>
+  	<url-pattern>*.don</url-pattern> 
+  </servlet-mapping>
+  
+    <servlet>  <!-- 배너 관련 -->
+  	<servlet-name>BannersFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.banners.BannersFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- 배너 관련 -->
+  	<servlet-name>BannersFrontController</servlet-name>
+  	<url-pattern>*.banners</url-pattern> 
+  </servlet-mapping>
+  
+   <servlet>  <!-- 공용 페이지 관련-->
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.member.MemberFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- 공용 페이지 관련-->
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<url-pattern>*.me</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>  <!-- FAQ 관련-->
+  	<servlet-name>FaqFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.faq.FaqFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- FAQ 관련-->
+  	<servlet-name>FaqFrontController</servlet-name>
+  	<url-pattern>*.faq</url-pattern> 
+  </servlet-mapping>
+  
+   <servlet>  <!-- 소개(introduce) 관련-->
+  	<servlet-name>IntroduceFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.introduce.IntroduceFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- 소개(introduce) 관련-->
+  	<servlet-name>IntroduceFrontController</servlet-name>
+  	<url-pattern>*.intro</url-pattern> 
+  </servlet-mapping>
+  
+  
+   <servlet>  <!-- 게시판 관리자 -->
+  	<servlet-name>BoardFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.board.BoardFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- 게시판 관리자 -->
+  	<servlet-name>BoardFrontController</servlet-name>
+  	<url-pattern>*.board</url-pattern> 
+  </servlet-mapping>
+  
+  
+</web-app>

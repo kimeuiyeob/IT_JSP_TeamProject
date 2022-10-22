@@ -1,0 +1,43 @@
+diff a/src/com/milestone/app/nursery/NurserySchoolMemberFrontController.java b/src/com/milestone/app/nursery/NurserySchoolMemberFrontController.java	(rejected hunks)
+@@ -67,25 +67,25 @@
+ 
+ 			// ==============================보육원마이페이지===============================
+ 		
+-		else if (request.equals("/mypage/scmodifych.school")) { // 개인정보 비밀번호 쓰기 화면 이동
+-			result = new Result();
+-			result.setPath("/app/mypage/scmodifych.jsp");
+-		} else if (request.equals("/mypage/checkPwOk.school")) { // 개인정보 수정 비밀번호 검사
+-			result = new CheckPwOkController().execute(req, resp);
+-		} else if (request.equals("/mypage/scmodifyOk.school")) { // 개인정보 수정 디비 조회
+-			result = new IndimodifyOkOkController().execute(req, resp);
+-		} else if (request.equals("/mypage/upDateOk.school")) { // 개인정보 수정 완료
+-			result = new UpDateOkController().execute(req, resp);
+-		} else if (request.equals("/mypage/scdhOk.school")) { // 기부내역 디비 조회
+-			result = new IndidhOkController().execute(req, resp);
+-		} else if (request.equals("/mypage/sccalendarOk.school")) { // 활동일정 디비 조회
+-			result = new IndicalendarOkController().execute(req, resp);
+-		} else if (request.equals("/mypage/scmodify2Ok.school")) { // 보육원프로필 디비 수정
+-			result = new Scmodify2OkController().execute(req, resp);
++//		else if (request.equals("/mypage/scmodifych.school")) { // 개인정보 비밀번호 쓰기 화면 이동
++//			result = new Result();
++//			result.setPath("/app/mypage/scmodifych.jsp");
++//		} else if (request.equals("/mypage/checkPwOk.school")) { // 개인정보 수정 비밀번호 검사
++//			result = new CheckPwOkController().execute(req, resp);
++//		} else if (request.equals("/mypage/scmodifyOk.school")) { // 개인정보 수정 디비 조회
++//			result = new IndimodifyOkOkController().execute(req, resp);
++//		} else if (request.equals("/mypage/upDateOk.school")) { // 개인정보 수정 완료
++//			result = new UpDateOkController().execute(req, resp);
++//		} else if (request.equals("/mypage/scdhOk.school")) { // 기부내역 디비 조회
++//			result = new IndidhOkController().execute(req, resp);
++//		} else if (request.equals("/mypage/sccalendarOk.school")) { // 활동일정 디비 조회
++//			result = new IndicalendarOkController().execute(req, resp);
++//		} else if (request.equals("/mypage/scmodify2Ok.school")) { // 보육원프로필 디비 수정
++//			result = new Scmodify2OkController().execute(req, resp);
++//		}
+ 
+ 		// ==============================보육원검색===============================
+ 
+-		}
+ 		else if (request.equals("/search/schoolSearchOk.school")) { // 보육원 검색 디비 조회
+ 			result = new SchoolSearchOkController().execute(req, resp);
+ 		} else if (request.equals("/search/schoolDetailOk.school")) { // 보육원 상세페이지 (기부,물품) 디비 조회

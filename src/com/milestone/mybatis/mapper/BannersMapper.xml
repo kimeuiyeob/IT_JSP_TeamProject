@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Banners">
+	<!-- 관리자 배너 목록 -->
+	<select id="bannerList" resultType="bannersVO">
+		select
+		count(banners_number),
+		banners_registration_date,
+		banners_image,
+		banners_url,
+		notice_number
+		from
+		tbl_banners;
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
