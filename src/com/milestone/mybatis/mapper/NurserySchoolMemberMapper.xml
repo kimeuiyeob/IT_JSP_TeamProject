@@ -71,6 +71,20 @@
 		limit 1;
 	</select>
 
+	<!-- 도움이 필요한 보육원 메인페이지꺼 -->
+	<select id="helpSchoolSelect2" resultType="nurseryVO">
+		select
+		nursery_school_photo ,
+		nursery_school_member_name ,
+		number_of_donations_received ,
+		nursery_school_introductory_article
+		from
+		tbl_nursery_school_member
+		order by number_of_donations_received
+		desc
+		limit 4;
+	</select>
+
 	<!-- 보육원 목록 -->
 	<select id="selectSchoolList" parameterType="map"
 		resultType="nurseryVO">
@@ -128,15 +142,18 @@
 	<!-- 비밀번호 검사 -->
 	<select id="checkPassword" parameterType="string"
 		resultType="_int">
-		select nursery_school_member_number from tbl_nursery_school_member where
-		nursery_school_member_password = #{nurserySchoolMemberPassword}
+		select nursery_school_member_number from
+		tbl_nursery_school_member where
+		nursery_school_member_password =
+		#{nurserySchoolMemberPassword}
 	</select>
 
 	<!-- 회원정보 수정할때 가져오는거 -->
 	<select id="selectinfo" parameterType="_int"
 		resultType="nurseryVO">
 		select * from tbl_nursery_school_member
-		where nursery_school_member_number = #{nurserySchoolMemberNumber}
+		where
+		nursery_school_member_number = #{nurserySchoolMemberNumber}
 	</select>
 
 

@@ -5,8 +5,9 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.milestone.app.banners.vo.BannersVO;
 import com.milestone.app.donation.vo.DonationDTO;
-import com.milestone.app.donation.vo.DonationVO;
+import com.milestone.app.nursery.vo.NurseryVO;
 import com.milestone.mybatis.config.MyBatisConfig;
 
 public class MemberDAO {
@@ -18,11 +19,19 @@ public class MemberDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 
 	}
-	
-	//메인페이지 SELECT
+
+	// 메인페이지 SELECT
 	public List<DonationDTO> selectMainAll() {
 		return sqlSession.selectList("Member.selectMainAll");
 	}
+
+	public List<BannersVO> selectBanner() {
+		return sqlSession.selectList("Banners.bannerList");
+	}
 	
-	
+//	도움이 필요한 보육원 메인페이지꺼
+	public List<NurseryVO> helpSchoolSelect2() {
+		return sqlSession.selectList("NurserySchoolMember.helpSchoolSelect2");
+	}
+
 }
