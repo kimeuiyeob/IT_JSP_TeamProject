@@ -136,7 +136,7 @@ body {
 									가격</div>
 								<div class="contents-title body-header-subTitle"
 									style="font-size: 15px; font-weight: 700;">
-									<input type="text"
+									<input type="text" name="donationAmount"
 										style="justify-content: right; text-align: right;"><span
 										style="padding-left: 10px">원</span>
 								</div>
@@ -158,18 +158,16 @@ body {
 						<button class="border-box">
 							<div>
 								<img src="	https://class101.net/images/payment/CreditCard.png"
-									style="width: 16px; height: 16px; margin-right: 3px;">카드
-								결제
+									style="width: 16px; height: 16px; margin-right: 3px;">카드결제
 							</div>
 						</button>
-						<button class="border-box">
-							<div>
-								<img
-									src="https://class101.net/images/payment/DepositPassbook.png"
-									style="width: 16px; height: 16px; margin-right: 3px;">무통장
-								입금
-							</div>
-						</button>
+						<!-- 						<button class="border-box"> -->
+						<!-- 							<div> -->
+						<!-- 								<img -->
+						<!-- 									src="https://class101.net/images/payment/DepositPassbook.png" -->
+						<!-- 									style="width: 16px; height: 16px; margin-right: 3px;">무통장입금 -->
+						<!-- 							</div> -->
+						<!-- 						</button> -->
 					</div>
 				</div>
 			</div>
@@ -200,8 +198,26 @@ body {
 
 
 </body>
+<script type="text/javascript">
+var contextPath = "${pageContext.request.contextPath}";
+var individualMemberNumber = ${sessionScope.individualMemberNumber};
+var individualMemberName = '${individualVO.getIndividualMemberName()}';
+var individualMemberPhoneNumber = '${individualVO.getIndividualMemberPhoneNumber()}';
+var individualMemberEmail = '${individualVO.getIndividualMemberEmail()}';
+var individualMemberAddress = '${individualVO.getIndividualMemberAddress()}';
+var zipCode = '${individualVO.getZipCode()}';
+var nurserySchoolMemberName = '${nurseryVO.getNurserySchoolMemberName()}'
+var nurserySchoolMemberNumber = '${nurseryVO.getNurserySchoolMemberNumber()}'
+
+</script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="${pageContext.request.contextPath}/assets/js/donation/donationMoney.js"></script>
+<!-- jQuery -->
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- iamport.payment.js -->
+<script type="text/javascript"
+	src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 </html>

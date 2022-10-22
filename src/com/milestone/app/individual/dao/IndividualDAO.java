@@ -58,5 +58,9 @@ public class IndividualDAO {
 	public IndividualDTO selectByIndividualMemberNumber(int individualMemberNumber) {
 		return sqlSession.selectOne("IndividualMember.selectByIndividualMemberNumber", individualMemberNumber);
 	}
+	
+	public IndividualVO userOneInfo(int individualMemberNumber) {
+		return sqlSession.selectOne("IndividualMember.userOneInfo",individualMemberNumber);
+	}
 
 }
