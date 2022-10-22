@@ -6,11 +6,19 @@
 		select
 		count(banners_number),
 		banners_registration_date,
+		banners_title,
+		banners_content,
 		banners_image,
 		banners_url,
 		notice_number
 		from
-		tbl_banners;
+		tbl_banners
+	</select>
+
+	<select id="bannersList" resultType="bannersVO"> <!-- 메인페이지 매퍼  -->
+		select * from
+		tbl_banners
+		limit 0,6;
 	</select>
 
 </mapper>

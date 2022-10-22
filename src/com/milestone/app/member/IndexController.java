@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 
 import com.milestone.app.Execute;
 import com.milestone.app.Result;
+import com.milestone.app.banners.dao.BannersDAO;
+import com.milestone.app.banners.vo.BannersVO;
 import com.milestone.app.donation.vo.DonationDTO;
 import com.milestone.app.member.dao.MemberDAO;
 import com.milestone.app.nursery.dao.NurseryDAO;
@@ -25,18 +27,20 @@ public class IndexController implements Execute {
 			session.invalidate();
 		}
 		
-		
 		DonationDTO donationDTO = new DonationDTO();
 		MemberDAO memberDAO = new MemberDAO();
 		NurseryDAO nurseryDAO = new NurseryDAO();
 		NurseryVO nurseryVO = new NurseryVO();
+		BannersVO bannersVO = new BannersVO();
+		BannersDAO bannersDAO = new BannersDAO();
 
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
-		
  		
-		req.setAttribute("member", memberDAO.selectMainAll());
-		req.setAttribute("nurserySM", memberDAO.helpSchoolSelect2());
+		req.setAttribute("member", memberDAO.selectMainAll()); //메인페이지 기부현황 목록
+		req.setAttribute("nurserySM", memberDAO.helpSchoolSelect2()); //메인페이지 도움이 필요한 보육원 목록
+		
+		req.setAttribute("banners", bannersDAO.bannersList()); //메인페이지 메인슬라이드 목록
 		
 		
 		result.setPath("/app/main/main.jsp");

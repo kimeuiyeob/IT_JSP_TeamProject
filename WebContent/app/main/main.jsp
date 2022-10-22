@@ -31,171 +31,77 @@
 <body>
 	<jsp:include page="../fix/header.jsp" />
 
-	<!-- ----------------------------뒷 배경 슬라이드--------------------------- -->
+	<!-- ----------------------------뒷 배경 슬라이드(완료)--------------------------- -->
 
 	<div id="bigback" class="main_swiper">
 		<div id="back" class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<img
-						src="https://www.hyosungfms.com/webfile/webedit/202011/20201109164832_psxtg0466323_l.jpg"
-						alt="">
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="https://jmagazine.joins.com/_data2/photo/2022/03/2041357502_YnIzcZ4u_1.jpg"
-						alt="">
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="https://image.shutterstock.com/image-vector/donation-box-charity-concept-human-260nw-2044244363.jpg"
-						alt="">
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="http://img.segye.com/content/image/2021/04/11/20210411509865.jpg"
-						alt="">
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="https://cra.org/crn/wp-content/uploads/sites/7/2015/01/trophy.jpg"
-						alt="">
-				</div>
-				<div class="swiper-slide">
-					<img
-						src="https://st2.depositphotos.com/1757583/11170/i/600/depositphotos_111702312-stock-photo-important-notice-3d-rendering-glowing.jpg"
-						alt="">
-				</div>
+
+
+				<c:forEach var="banners" items="${banners}">
+					<div class="swiper-slide">
+						<img src="${banners.getBannersImage()}" alt="">
+					</div>
+				</c:forEach>
+
+
 			</div>
 			<div class="main_nav"></div>
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
 
-	<!-- ----------------------------맨 앞 메인 슬라이드--------------------------- -->
+
+	<!-- ----------------------------맨 앞 메인 슬라이드(완료)--------------------------- -->
+
+
 
 	<div class="sub_swiper">
 		<div id="maininfo" class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<!-- 소식 -->
-					<a href="${pageContext.request.contextPath}/news/news.news"> <img
-						src="https://www.hyosungfms.com/webfile/webedit/202011/20201109164832_psxtg0466323_l.jpg"
-						alt=""></a>
-				</div>
-				<div class="swiper-slide">
-					<!-- 소개 -->
-					<a
-						href="${pageContext.request.contextPath}/introduce/introduce.intro">
-						<img
-						src="https://jmagazine.joins.com/_data2/photo/2022/03/2041357502_YnIzcZ4u_1.jpg"
-						alt="">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<!-- 기부하기 -->
-					<a
-						href="${pageContext.request.contextPath}/search/schoolSearchOk.school"
-						class="lists"> <img
-						src="https://image.shutterstock.com/image-vector/donation-box-charity-concept-human-260nw-2044244363.jpg"
-						alt=""></a>
-				</div>
-				<div class="swiper-slide">
-					<!-- 기부현황 -->
-					<a
-						href="${pageContext.request.contextPath}/donation/donationstatusOk.don">
-						<img
-						src="http://img.segye.com/content/image/2021/04/11/20210411509865.jpg"
-						alt="">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<!-- 기부랭킹 -->
-					<a
-						href="${pageContext.request.contextPath}/donation/rankingOk.indi">
-						<img
-						src="https://cra.org/crn/wp-content/uploads/sites/7/2015/01/trophy.jpg"
-						alt="">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<!-- 공지사항 -->
-					<a
-						href="${pageContext.request.contextPath}/member/noticeListOk.notice"
-						class="lists"> <img
-						src="https://st2.depositphotos.com/1757583/11170/i/600/depositphotos_111702312-stock-photo-important-notice-3d-rendering-glowing.jpg"
-						alt=""></a>
-				</div>
+
+
+				<c:forEach var="banners" items="${banners}">
+					<div class="swiper-slide">
+						<img src="${banners.getBannersImage()}" alt="">
+					</div>
+				</c:forEach>
+
+
 			</div>
 			<div class="sub_nav"></div>
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
 
-	<!-- ----------------------------써드 슬라이드-------------------------- -->
+
+
+	<!-- ----------------------------써드 슬라이드(완료)-------------------------- -->
+
+
 	<div class="third_swiper">
 		<div id="main" class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide active">
-					<p class="sub_swiper_Bigtext">
-						<!--최대 두줄 -->
-						소식
-					</p>
-					<p class="sub_swiper_smalltext">
-						<!--최대 두줄 -->
-						MiLESTONE의 새로운 소식을 알려드립니다.
-					</p>
-				</div>
-				<div class="swiper-slide">
-					<p class="sub_swiper_Bigtext">
-						<!--최대 두줄 -->
-						소개
-					</p>
-					<p class="sub_swiper_smalltext">
-						<!--최대 두줄 -->
-						MILESTONE는 어려운 보육원에 <br> 희망을 전하고자 합니다.
-					</p>
-				</div>
-				<div class="swiper-slide">
-					<p class="sub_swiper_Bigtext">
-						<!--최대 두줄 -->
-						기부하기
-					</p>
-					<p class="sub_swiper_smalltext">
-						<!--최대 두줄 -->
-						당신의 나눔이 세상을 더욱 밝게 합니다.
-					</p>
-				</div>
-				<div class="swiper-slide">
-					<p class="sub_swiper_Bigtext">
-						<!--최대 두줄 -->
-						기부 현황
-					</p>
-					<p class="sub_swiper_smalltext">
-						<!--최대 두줄 -->
-						아름다운 나눔 현황을 전합니다.
-					</p>
-				</div>
-				<div class="swiper-slide">
-					<p class="sub_swiper_Bigtext">
-						<!--최대 두줄 -->
-						기부 랭킹
-					</p>
-					<p class="sub_swiper_smalltext">
-						<!--최대 두줄 -->
-						MILESTONE의 기부왕은 누군가!!
-					</p>
-				</div>
-				<div class="swiper-slide">
-					<p class="sub_swiper_Bigtext">
-						<!--최대 두줄 -->
-						공지사항
-					</p>
-					<p class="sub_swiper_smalltext">
-						<!--최대 두줄 -->
-						MILESTONE 공지사항을 읽어주세요.
-					</p>
-				</div>
+
+
+				<c:forEach var="banners" items="${banners}">
+
+
+					<div class="swiper-slide active">
+						<p class="sub_swiper_Bigtext">
+							<!--메인 슬라이드 타이틀  -->
+							<c:out value="${banners.getBannersTitle()}" />
+						</p>
+						<p class="sub_swiper_smalltext">
+							<!--메인 슬라이드 부가 설명  -->
+							<c:out value="${banners.getBannersContent()}" />
+						</p>
+					</div>
+
+
+				</c:forEach>
+
+
 			</div>
 			<div class="sub_nav">
 				<div class="swiper-button-prev"
@@ -312,7 +218,7 @@
 		</div>
 	</div>
 
-	<!-- *************************************기부현황 select 8개 <완료>************************************* -->
+	<!-- ------------------------------기부현황 select 8개(완료) --------------------------------------------- -->
 
 	<div class="subjectname2">기부 현황</div>
 	<div class="showall"
@@ -376,7 +282,7 @@
 				src="https://image.utoimage.com/preview/cp869740/2021/05/202105015137_500.jpg"
 				alt="">
 		</div>
-		<div class="slide_item item4">
+		<div class="slide_item item4 }">
 			<img style="height: 300px; width: 400px"
 				src="https://image.utoimage.com/preview/cp872722/2021/10/202110002995_500.jpg"
 				alt="">
@@ -401,7 +307,7 @@
 	<script
 		src="${pageContext.request.contextPath}/assets/js/main/slide.js"></script>
 
-<%-- <a href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySM.getNurserySchoolMemberNumber()}'> --%>
+	<%-- <a href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySM.getNurserySchoolMemberNumber()}'> --%>
 
 
 	<!-- --------------------------------도움이 필요한 보육원---------------------------------------- -->
@@ -413,7 +319,8 @@
 				<div style="padding-right: 33px; padding-bottom: 20px;">
 					<img
 						style="height: 250px; width: 300px; border-radius: 5px; cursor: pointer;"
-						src="${nurserySM.getNurserySchoolPhoto()}" onclick="location.href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySM.getNurserySchoolMemberNumber()}'" />
+						src="${nurserySM.getNurserySchoolPhoto()}"
+						onclick="location.href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySM.getNurserySchoolMemberNumber()}'" />
 				</div>
 				<div>
 
@@ -435,15 +342,6 @@
 
 </body>
 
-<!-- slick js -->
-<!-- <script type="text/javascript">
-	$('.slickSlide').slick({
-		infinite : true,
-		slidesToShow : 4,
-		slidesToScroll : 1
-	}); -->
-
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
@@ -456,45 +354,5 @@
 <script
 	src="${pageContext.request.contextPath}/assets/js/main/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-
-<script type="text/javascript">
-	$(function() {
-		$.ajax({
-					url : "${pageContext.request.contextPath}/member/banner.me",
-					dataType : "json",
-					success : function change(banners) {
-						console.log("아작스 들어옴")
-				/* 		let text = "";
-						text += `<div class="slide slide_wrap">`
-						text += `<div class="slide_item item1">`
-						text += `<img src="https://i0.wp.com/getgovtgrants.com/wp-content/uploads/2021/01/Free-Baby-Clothes-and-Gear.webp" alt="">`
-						text += `</div>`
-
-						text += `<div class="slide_prev_button slide_button">`
-						text += `<img src="${pageContext.request.contextPath}/assets/img/main/left.png" alt="">`
-						text += `</div>`
-						text += `<div class="slide_next_button slide_button">`
-						text += `<img src="${pageContext.request.contextPath}/assets/img/main/right.png" alt="">`
-						text += `</div>`
-						text += `<ul class="slide_pagination">`
-						text += `</ul>`
-						text += `</div>`
-						$("#slideShow").html(text); */
-						
-						
-					    /* jsp 에 있는 images들  변경*/
-					      const images = $(".imagess");
-					      images.each((i)=>{
-					    	  
-					         images.eq(i).attr("src",banners[i].bannersImage);
-					         
-					      });
-						
-					}
-				})
-	})
-</script>
-
-
 
 </html>

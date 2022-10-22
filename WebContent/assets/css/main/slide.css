@@ -109,7 +109,7 @@
     width: 100%;
     /* slide drag를 위해 DOM요소가 드래그로 선택되는것을 방지 */
     user-select: none;
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(209 194 194);
   }
   .slide_item {
     /* layout */
