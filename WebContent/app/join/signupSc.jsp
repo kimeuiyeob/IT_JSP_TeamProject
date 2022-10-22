@@ -143,11 +143,22 @@
 							<h5>이메일</h5>
 						</div>
 						<div style="padding-bottom: 25px">
-							<input class="inputWrap" name="nurserySchoolMemberEmail"
-								type="text" value="" placeholder="example@naver.com">
+							<div class="flex">
+								<input class="inputWrap" id="email"
+									name="nurserySchoolMemberEmail" type="text" value=""
+									placeholder="example@naver.com"> <input type="button"
+									id="email_input" value="인증번호 받기" onclick="sendEmail()">
+							</div>
+							<br> <input type="text" name="checkNurserySchoolMemberEmail"
+								class="inputWrap" placeholder="인증번호 입력">
 							<div style="color: red; font-size: 10px;"
 								id="nurserySchoolMemberEmaildiv" value=""></div>
+							<div style="color: red; font-size: 10px;"
+								id="checkNurserySchoolMemberEmaildiv" value=""></div>
 						</div>
+
+
+
 
 						<div class="login">
 							<input id="submitButton" class="button" type="button"
@@ -200,7 +211,8 @@
 					</div>
 
 					<div style="position: relative;">
-						<div id="google_id_login" style="position: absolute; left: 33px; opacity: 0"></div>
+						<div id="google_id_login"
+							style="position: absolute; left: 33px; opacity: 0"></div>
 						<div class="login_google" style="position: absolute; z-index: -1;">
 							<input class="button4" type="button" value="구글로 시작하기"> <img
 								src="${pageContext.request.contextPath}/assets/img/join/google.png"
@@ -223,6 +235,15 @@
 	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script
 	src="${pageContext.request.contextPath}/assets/js/join/signupSc.js"></script>
+<!-- 아임포트 api -->
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+	(function() {
+		// https://dashboard.emailjs.com/admin/account
+		emailjs.init('oawZ8AtEkmgRUcRhW');
+	})();
+</script>
 <!-- 네이버 로그인 -->
 <script type="text/javascript"
 	src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js">
@@ -283,9 +304,6 @@
 <script type="text/javascript">
 	function handleCredentialResponse(response) {
 		const responsePayload = parseJwt(response.credential);
-		console.log("ID: " + responsePayload.sub);
-		console.log('Full Name: ' + responsePayload.name);
-		console.log("Email: " + responsePayload.email);
 
 		let name = responsePayload.name;
 		let email = responsePayload.email

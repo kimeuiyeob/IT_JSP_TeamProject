@@ -40,7 +40,6 @@ function checkId(individualMemberId) {
 	} else {
 		$("#individualMemberIddiv").text("");
 	}
-	console.log('아디중복 검사로 고고씽')
 	$.ajax({
 		url: contextPath + "/login/checkIdOk.indi",
 		type: "get",
@@ -173,7 +172,6 @@ $("input[name='individualMemberPassword']").on("blur", function() {
 	//공백검사
 	var spaceCheck = /\s/;
 
-	console.log(joinForm.individualMemberPassword.value)
 	if (!joinForm.individualMemberPassword.value) {
 		$("#individualMemberPassworddiv").text("비밀번호를 입력해주세요.");
 		$("#individualMemberPassworddiv").css("color", "red");
@@ -300,8 +298,15 @@ $("#submitButton").on('click', function() {
 		$("#individualMemberEmaildiv").css("color", "red");
 		check = true;
 	}
+	/*--------------------이메일 인증 안했을 때---------------------*/
+	if(checkEmail){
+		$("#checkIndividualMemberEmaildiv").text("인증번호 확인을 진행해주세요.");
+		$("#checkIndividualMemberEmaildiv").css("color", "red");
+	}
+	
 
-	if (!check && !idCheck && !nickNameCheck &&  !checkPw) {
+	if (!check && !idCheck && !nickNameCheck &&  !checkPw && !checkEmail) {
+		alert('회원가입을 완료했습니다 로그인을 진행해주세요')
 		joinForm.submit();
 	} else {
 		window.scrollTo(0, 0);
@@ -314,11 +319,7 @@ $('.login_naver').on('click',function(){
 })
 /*구글 클릭*/
 $('.login_google').on('click',function(){
-	console.log($('#google_id_login').eq(0).find('iframe').find(".nsm7Bb-HzV7m-LgbsSe"));
 	$('#google_id_login').eq(0).find('iframe').find(".nsm7Bb-HzV7m-LgbsSe").click();
-/*	console.log($('#google_id_login').eq(0).find('iframe').attr('src'))
-//	location.href = $('#google_id_login').eq(0).find('iframe').attr('src');
-	$('#google_id_login').eq(0).find('iframe').get(0).click();*/
 })
 
 /*카카오 로그인*/
@@ -349,5 +350,45 @@ function kakaoLogin() {
 		}
 	});
 }
+
+/*이메일인증*/
+let key = generateRandomCode();
+function generateRandomCode() {
+    let str = ''
+    for (let i = 0; i < 6; i++) {
+        str += Math.floor(Math.random() * 10)
+    }
+    return str
+}
+function sendEmail() {
+	if (!$("input[name='individualMemberEmail']").val()) {
+		$("#individualMemberEmaildiv").text("이메일을 입력해주세요.");
+		$("#individualMemberEmaildiv").css("color", "red");
+		return;
+	}
+	$("#checkIndividualMemberEmaildiv").text("입력하신 이메일로 인증번호를 발송했습니다.");
+	$("#checkIndividualMemberEmaildiv").css("color", "green");
+    emailjs.send("service_vfzxi5g", "template_vtzhsgc", {
+        message: key,
+        to_email: "ghkdwltn5@naver.com",
+    });
+}
+
+var checkEmail = true;
+$("input[name='checkIndividualMemberEmail']").on("blur",function (){
+	var inputKey = $('input[name = "checkIndividualMemberEmail"]').val();
+	if(inputKey==key){
+		$("#checkIndividualMemberEmaildiv").text("인증번호가 일치합니다.");
+		$("#checkIndividualMemberEmaildiv").css("color", "blue");
+		checkEmail = false;
+	}else{
+		$("#checkIndividualMemberEmaildiv").text("인증번호가 일치하지 않습니다.");
+		$("#checkIndividualMemberEmaildiv").css("color", "red");
+		checkEmail = true;
+	}
+	
+});
+
+
 
 
