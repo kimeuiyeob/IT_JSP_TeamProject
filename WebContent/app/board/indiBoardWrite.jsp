@@ -19,8 +19,8 @@
         <header>
             <div id="headerBox">
 
-                <div class="logo">
-               <img src="${pageContext.request.contextPath}/assets/img/board/logo.png">
+                <div class="logo" >
+	        	       <img src="${pageContext.request.contextPath}/assets/img/board/logo.png">
                 </div>
 
                 <div class="search_box">
@@ -111,7 +111,7 @@
 	                             style="height: 43px; cursor: pointer;">
 	                           </label>
  	                           <input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/>
-	                           <input type="button" onclick="cancelFile('nurserySchoolCommunityImage')" value="첨부 삭제">
+	                           <!-- <input type="button" onclick="cancelFile('nurserySchoolCommunityImage')" value="첨부 삭제"> -->
 	                       </div>
 	                   </div>
                    </div>
