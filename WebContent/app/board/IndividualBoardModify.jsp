@@ -20,7 +20,7 @@
             <div id="headerBox">
 
                 <div class="logo">
-               <img src="${pageContext.request.contextPath}/assets/img/board/logo.png">
+        	       <img src="${pageContext.request.contextPath}/assets/img/board/logo.png">
                 </div>
 
                 <div class="search_box">
@@ -60,8 +60,8 @@
                                 <img src="https://cdn.class101.net/images/cba86b3c-f6a4-42b3-9bbd-bf6c09e49d27/1920xauto.webp"
                                     alt="">
                                 <div style="margin: 10px;">
-                                    <div>닉네임</div>
-                                    <div id="miniProfileRight"><a href="myPage1.html " style="color: orange;">마이페이지
+                                    <div>${individualMemberId}</div>
+                                    <div id="miniProfileRight"><a href="myPage1.html " style="color: orange;"><a href="${pageContext.request.contextPath}/app/404/404.jsp"  style="text-decoration: none; color:black">마이페이지</a>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                 class="css-jdqsvn" style="width: 10px; height: 10px;">
                                                 <path
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="css-1g5174"></div>
-                            <div style="text-align: center;">로그아웃</div>
+                            <div style="text-align: center;"> <a href="${pageContext.request.contextPath}/member/index.me?logout=true"  id="logout" style="margin-right: 18px; text-decoration: none; color:black"> 로그아웃</a></div>
                         </div>
                     </div>
                 </div>
