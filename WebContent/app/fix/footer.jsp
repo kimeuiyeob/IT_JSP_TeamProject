@@ -32,16 +32,16 @@
           </div>
           <div class="footerup_right">
             <div class="footerup_right">
-              <a href="javascript:void(0)">보육원</a>
-              <a href="javascript:void(0)">기부하기</a>
-              <a href="javascript:void(0)">관리자</a>
+              <a href="">보육원</a>
+              <a href="">기부하기</a>
+              <a href="">관리자</a>
             </div>
             <div class="footerup_right_down">
-              <a href="${pageContext.request.contextPath}/search/schoolSearchOk.school">목록</a>
+              <a href="">목록</a>
             </div>
             <div class="footerup_right_down2">
-              <a href="${pageContext.request.contextPath}/donation/donationstatusOk.don">현황</a>
-              <a href="${pageContext.request.contextPath}/donation/rankingOk.indi">랭킹</a>
+              <a href="">현황</a>
+              <a href="">랭킹</a>
             </div>
             
             <div class="controll_enter" onclick="location.href = '${pageContext.request.contextPath}/member/statistics.me'">
