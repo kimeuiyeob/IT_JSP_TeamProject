@@ -44,7 +44,7 @@
               <a href="${pageContext.request.contextPath}/donation/rankingOk.indi">랭킹</a>
             </div>
             
-            <div class="controll_enter" onclick="location.href = '${pageContext.request.contextPath}/member/statistics.me'">
+            <div class="controll_enter" onclick="send()">
               관리자 모드
             </div>
           </div>
@@ -87,6 +87,17 @@
     slidesToShow: 4,
     slidesToScroll: 1
   });
+  
+  
+  function send(){
+	  if(${sessionScope.individualMemberNumber==1}){
+		  location.href = '${pageContext.request.contextPath}/member/statistics.me'
+	  }else{
+		  alert("관리자 계정으로 로그인하세요.");
+	  }
+  }
+  
+  
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
