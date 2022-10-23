@@ -142,8 +142,8 @@ body {
 										<input type="hidden" name="nurserySchoolMemberNumber"
 											value="${nurserySchoolMemberNumber}"> <input
 											type="text" name="donationAmount"
-											style="justify-content: right; text-align: right;"><span
-											style="padding-left: 10px">원</span>
+											style="justify-content: right; text-align: right; width:85%;"><span
+											style="padding-left: 10px; font-size: 16px;">원</span>
 									</form>
 								</div>
 							</div>
