@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +24,7 @@
 
 <body style="margin-top: 0px">
 	<jsp:include page="../fix/header.jsp" />
-	
+
 	<div class="maincontent">
 		<div class="mainset">
 			<h2 class="main">기부 현황</h2>
@@ -38,7 +40,7 @@
 		게시판 forEach 참고!!
 		 --%>
 
-<!-- =============================================================================================== -->
+		<!-- =============================================================================================== -->
 
 		<c:forEach var="donation" items="${donation}">
 
@@ -52,14 +54,15 @@
 					</h3>
 					<span>"<c:out value="${donation.getNickName()}" />"님께서 " <c:out
 							value="${donation.getNurserySchoolMemberName()}" />"에 <br>
-						<c:out value="${donation.getDonationAmount()}" />원"을 전달하셨습니다.
+						<fmt:formatNumber value="${donation.getDonationAmount()}"
+							pattern="#,###" />원"을 전달하셨습니다.
 					</span> <br> <br> <br> <br> <br>
 				</div>
 			</div>
 
 		</c:forEach>
-		
-<!-- =============================================================================================== -->
+
+		<!-- =============================================================================================== -->
 
 	</div>
 

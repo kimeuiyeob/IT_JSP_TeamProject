@@ -159,8 +159,17 @@
 		where
 		nursery_school_member_number = #{nurserySchoolMemberNumber}
 	</select>
-
-
+	
+		<!-- 메인페이지 보육원 목록 불러오는거 -->
+	<select id="mainSchoolSearch" resultType="nurseryVO">
+		select *
+		from
+		tbl_nursery_school_member
+		order by
+		nursery_school_member_join_date desc
+		limit 0,4;
+	</select>
+	
 </mapper>
 
 

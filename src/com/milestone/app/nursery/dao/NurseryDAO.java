@@ -83,4 +83,9 @@ public class NurseryDAO {
 		return sqlSession.selectOne("NurserySchoolMember.selectInfo", nurseryMemberNumber);
 	}
 	
+//	메인페이지 보육원 목록 불러오기
+	public List<NurseryVO> mainSchoolSearch() {
+		return sqlSession.selectList("NurserySchoolMember.mainSchoolSearch");
+	}
+	
 }

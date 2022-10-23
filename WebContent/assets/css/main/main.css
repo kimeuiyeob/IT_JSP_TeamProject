@@ -224,7 +224,7 @@ input::placeholder {
 }
 
 .longdivedimg {
-    border-radius: 5px;
+	border-radius: 5px;
     height: 74%;
     width: 100%;
     background-color: yellow;
@@ -248,12 +248,9 @@ input::placeholder {
     background-color: white;
 }
 
-.infoname {}
-
 .infoname>p {
     padding: 0;
     margin-top: 5px;
-    margin-bottom: ;
     font-size: 12px;
     font-weight: 700;
 }
