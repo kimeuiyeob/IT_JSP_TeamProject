@@ -93,6 +93,11 @@
 		individual_member_number, nursery_school_member_number)
 		values(#{donationDate}, #{donationProducts}, #{donationDetailProducts}, #{quantity}, #{boxQuantity}, #{individualMemberNumber}, #{nurserySchoolMemberNumber});
 	</insert>
+	<insert id="donationMoney" parameterType="donationVO">
+		insert into tbl_donation
+		(donation_amount, individual_member_number, nursery_school_member_number)
+		values(#{donationAmount}, #{individualMemberNumber}, #{nurserySchoolMemberNumber});
+	</insert>
 </mapper>
 
 

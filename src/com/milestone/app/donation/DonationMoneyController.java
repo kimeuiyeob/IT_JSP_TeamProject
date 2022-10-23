@@ -29,6 +29,7 @@ public class DonationMoneyController implements Execute {
 		int individualMemberNumber = Integer.valueOf("" + session.getAttribute("individualMemberNumber"));
 		System.out.println(individualMemberNumber);
 		req.setAttribute("individualVO", individualDAO.userOneInfo(individualMemberNumber));
+		req.setAttribute("nurserySchoolMemberNumber", nurserySchoolMemberNumber);
 
 		req.setAttribute("nurseryVO", nurseryDAO.selectDetail(nurserySchoolMemberNumber));
 

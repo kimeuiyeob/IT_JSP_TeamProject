@@ -66,6 +66,9 @@ public class IndividualDAO {
 	public void updateRecentLogin(IndividualVO individualVO) {
 		sqlSession.update("IndividualMember.updateRecentLogin",individualVO);
 	}
-	
+	// 기부횟수 증가
+	public void countDonation(int individualMemberNumber) {
+		sqlSession.update("IndividualMember.countDonation",individualMemberNumber);
+	}
 
 }

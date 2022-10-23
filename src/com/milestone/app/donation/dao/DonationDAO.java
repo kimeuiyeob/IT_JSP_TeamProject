@@ -39,5 +39,9 @@ public class DonationDAO {
 	public void donationProduct(DonationVO donationVO) {
 		sqlSession.insert("Donation.donationProduct", donationVO);
 	}
+	// 기부금기부
+	public void donationMoney(DonationVO donationVO) {
+		sqlSession.insert("Donation.donationMoney", donationVO);
+	}
 
 }
