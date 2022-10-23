@@ -35,7 +35,7 @@
 								</c:when>
 								<c:otherwise>
 									<img src="${nurseryVO.getNurserySchoolPhoto()}"
-										style="width: 800px; height : 500px;">
+										style="width: 800px; height: 500px;">
 								</c:otherwise>
 							</c:choose>
 

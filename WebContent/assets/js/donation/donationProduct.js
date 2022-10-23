@@ -24,9 +24,11 @@ $(function() {
 	const $options = $('.test');
 	const $labelKind = $(`label[for = 'donationProducts']`);
 	const $test = $('#donationProducts');
+	const donationProducts = $('input[name = "donationProducts"]');
 
 	$test.on('click', function() {
 		$labelKind.html($(this).val());
+		donationProducts.val($(this).val());
 	})
 
 	// $options.on('click', function () {

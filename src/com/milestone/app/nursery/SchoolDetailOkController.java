@@ -21,6 +21,7 @@ public class SchoolDetailOkController implements Execute {
 		Result result = new Result();
 		NurseryDAO nurseryDAO = new NurseryDAO();
 		NurseryVO nurseryVO = new NurseryVO();
+		System.out.println(req.getParameter("nurserySchoolMemberNumber"));
 		
 		int nurserySchoolMemberNumber = Integer.valueOf(req.getParameter("nurserySchoolMemberNumber"));
 		req.setAttribute("nurseryVO", nurseryDAO.selectDetail(nurserySchoolMemberNumber));

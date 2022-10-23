@@ -166,6 +166,7 @@ body {
 							<div class="flex" style="width: 30%">
 								<div class="contents-input-box">
 									<div class="selectbox" style="width: 330%;">
+										<input type = "hidden" name = "donationProducts" value = "">
 										<label for="donationProducts">종류</label> <select
 											id="donationProducts">
 											<option value="생필품" class="test">생필품</option>

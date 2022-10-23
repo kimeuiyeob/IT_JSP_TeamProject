@@ -136,9 +136,15 @@ body {
 									가격</div>
 								<div class="contents-title body-header-subTitle"
 									style="font-size: 15px; font-weight: 700;">
-									<input type="text" name="donationAmount"
-										style="justify-content: right; text-align: right;"><span
-										style="padding-left: 10px">원</span>
+									<form
+										action="${pageContext.request.contextPath}/donation/donationMoneyOk.don"
+										name="donationForm">
+										<input type="hidden" name="nurserySchoolMemberNumber"
+											value="${nurserySchoolMemberNumber}"> <input
+											type="text" name="donationAmount"
+											style="justify-content: right; text-align: right;"><span
+											style="padding-left: 10px">원</span>
+									</form>
 								</div>
 							</div>
 						</div>
@@ -175,10 +181,6 @@ body {
 				style="font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 17px; background-color: rgb(255, 242, 233);">결제하기</button>
 		</div>
 
-
-
-	</div>
-	</form>
 	</div>
 
 	<div style="height: 8px;"></div>
@@ -199,16 +201,18 @@ body {
 
 </body>
 <script type="text/javascript">
-var contextPath = "${pageContext.request.contextPath}";
-var individualMemberNumber = ${sessionScope.individualMemberNumber};
-var individualMemberName = '${individualVO.getIndividualMemberName()}';
-var individualMemberPhoneNumber = '${individualVO.getIndividualMemberPhoneNumber()}';
-var individualMemberEmail = '${individualVO.getIndividualMemberEmail()}';
-var individualMemberAddress = '${individualVO.getIndividualMemberAddress()}';
-var zipCode = '${individualVO.getZipCode()}';
-var nurserySchoolMemberName = '${nurseryVO.getNurserySchoolMemberName()}'
-var nurserySchoolMemberNumber = '${nurseryVO.getNurserySchoolMemberNumber()}'
-
+	var contextPath = "${pageContext.request.contextPath}";
+	var individualMemberNumber = $
+	{
+		sessionScope.individualMemberNumber
+	};
+	var individualMemberName = '${individualVO.getIndividualMemberName()}';
+	var individualMemberPhoneNumber = '${individualVO.getIndividualMemberPhoneNumber()}';
+	var individualMemberEmail = '${individualVO.getIndividualMemberEmail()}';
+	var individualMemberAddress = '${individualVO.getIndividualMemberAddress()}';
+	var zipCode = '${individualVO.getZipCode()}';
+	var nurserySchoolMemberName = '${nurseryVO.getNurserySchoolMemberName()}'
+	var nurserySchoolMemberNumber = '${nurseryVO.getNurserySchoolMemberNumber()}'
 </script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

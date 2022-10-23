@@ -126,10 +126,18 @@
 		where individual_member_number =
 		#{individualMemberNumber};
 	</select>
+	<!-- 최근로그인 -->
 	<update id="updateRecentLogin" parameterType="individualVO">
 		update
 		tbl_individual_member
 		set individual_member_recent_logins = #{individualMemberRecentLogins}
+		where individual_member_number = #{individualMemberNumber}
+	</update>
+	<!-- 기부횟수 증가 -->
+	<update id="countDonation" parameterType="_int">
+		update
+		tbl_individual_member
+		set number_of_donations = number_of_donations+1
 		where individual_member_number = #{individualMemberNumber}
 	</update>
 

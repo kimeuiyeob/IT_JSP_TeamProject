@@ -69,7 +69,8 @@ function requestPay() {
         if (rsp.success) {
             var msg = '결제가 완료되었습니다.';
             alert(msg);
-            location.href = contextPath+"/search/schoolDetailOk.school?nurserySchoolMemberNumber="+nurserySchoolMemberNumber;
+			donationForm.submit();
+//            location.href = contextPath+"/search/schoolDetailOk.school?nurserySchoolMemberNumber="+nurserySchoolMemberNumber;
         } else {
             var msg = '결제에 실패하였습니다.';
             msg += '에러내용 : ' + rsp.error_msg;
