@@ -58,9 +58,14 @@ public class IndividualDAO {
 	public IndividualDTO selectByIndividualMemberNumber(int individualMemberNumber) {
 		return sqlSession.selectOne("IndividualMember.selectByIndividualMemberNumber", individualMemberNumber);
 	}
-	
+	// 유저 한명의 모든 정보
 	public IndividualVO userOneInfo(int individualMemberNumber) {
 		return sqlSession.selectOne("IndividualMember.userOneInfo",individualMemberNumber);
 	}
+	// 최근로그인
+	public void updateRecentLogin(IndividualVO individualVO) {
+		sqlSession.update("IndividualMember.updateRecentLogin",individualVO);
+	}
+	
 
 }

@@ -113,16 +113,25 @@
 		from
 		tbl_individual_member
 	</select>
-	<select id="userOneInfo" parameterType="_int" resultType="individualVO">
-		select individual_member_number, individual_member_name, nickname,
+	<select id="userOneInfo" parameterType="_int"
+		resultType="individualVO">
+		select individual_member_number, individual_member_name,
+		nickname,
 		individual_member_phone_number, individual_member_id,
 		individual_member_password, individual_member_email,
 		individual_member_address, individual_member_detailed_address,
 		individual_member_profile_image, number_of_donations,
 		individual_member_join_date, individual_member_recent_logins, zip_code
 		from tbl_individual_member
-		where individual_member_number = #{individualMemberNumber};
+		where individual_member_number =
+		#{individualMemberNumber};
 	</select>
+	<update id="updateRecentLogin" parameterType="individualVO">
+		update
+		tbl_individual_member
+		set individual_member_recent_logins = #{individualMemberRecentLogins}
+		where individual_member_number = #{individualMemberNumber}
+	</update>
 
 </mapper>
 
