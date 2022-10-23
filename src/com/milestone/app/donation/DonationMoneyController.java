@@ -24,12 +24,12 @@ public class DonationMoneyController implements Execute {
 		NurseryVO nurseryVO = new NurseryVO();
 		NurseryDAO nurseryDAO = new NurseryDAO();
 		HttpSession session = req.getSession();
-		int nurserySchoolMemberNumber = Integer.valueOf(""+req.getParameter("nurserySchoolMemberNumber"));
-		int individualMemberNumber = Integer.valueOf(""+ session.getAttribute("individualMemberNumber"));
-		
+
+		int nurserySchoolMemberNumber = Integer.valueOf("" + req.getParameter("nurserySchoolMemberNumber"));
+		int individualMemberNumber = Integer.valueOf("" + session.getAttribute("individualMemberNumber"));
 		System.out.println(individualMemberNumber);
-	 	req.setAttribute("individualVO", individualDAO.userOneInfo(individualMemberNumber));
-		
+		req.setAttribute("individualVO", individualDAO.userOneInfo(individualMemberNumber));
+
 		req.setAttribute("nurseryVO", nurseryDAO.selectDetail(nurserySchoolMemberNumber));
 
 		result.setPath("/app/donation/donationMoney.jsp");
