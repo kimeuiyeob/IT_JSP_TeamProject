@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.milestone.app.nursery.vo.NurseryVO;
 import com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityDTO;
 import com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityVO;
 import com.milestone.mybatis.config.MyBatisConfig;
@@ -59,4 +60,12 @@ public class NurserySchoolCommunityDAO {
       sqlSession.update("NurserySchoolCommunity.update", nurserySchoolCommunityVO);
    }
       
+// 관리자 페이지 보육원 커뮤니티
+	public List<NurserySchoolCommunityDTO> managerSchoolCommunityList(Map<String, Integer> pageMap) {
+		return sqlSession.selectList("NurserySchoolMember.managerSchoolCommunityList", pageMap);
+	}
+
+	public int managerSchoolCommunitySelectCount() {
+		return sqlSession.selectOne("NurserySchoolMember.managerSchoolCommunitySelectCount");
+	}
 }
