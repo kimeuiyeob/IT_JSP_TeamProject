@@ -11,8 +11,28 @@ public class IndividualCommunityDTO {
 	private String individualCommunityDateCreated;
 	private int individualMemberNumber;
 	private String individualMemberId;
-	
-	public IndividualCommunityDTO () {;}
+	private String individualMemberName;
+	private String individualMemberEmail;
+
+	public String getIndividualMemberEmail() {
+		return individualMemberEmail;
+	}
+
+	public void setIndividualMemberEmail(String individualMemberEmail) {
+		this.individualMemberEmail = individualMemberEmail;
+	}
+
+	public String getIndividualMemberName() {
+		return individualMemberName;
+	}
+
+	public void setIndividualMemberName(String individualMemberName) {
+		this.individualMemberName = individualMemberName;
+	}
+
+	public IndividualCommunityDTO() {
+		;
+	}
 
 	public int getIndividualCommunityNumber() {
 		return individualCommunityNumber;
@@ -94,10 +114,10 @@ public class IndividualCommunityDTO {
 				+ ", individualCommunityLike=" + individualCommunityLike + ", individualCommunityImage="
 				+ individualCommunityImage + ", individualCommunityDateCreated=" + individualCommunityDateCreated
 				+ ", individualMemberNumber=" + individualMemberNumber + ", individualMemberId=" + individualMemberId
+				+ ", individualMemberName=" + individualMemberName + ", individualMemberEmail=" + individualMemberEmail
 				+ "]";
 	}
 
-	
 }
 
 //`individual_community_number`        INT              NOT NULL    AUTO_INCREMENT COMMENT '개인 게시판 글 번호', 

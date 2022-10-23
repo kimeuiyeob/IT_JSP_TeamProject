@@ -2,61 +2,119 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="IndividualCommunity">
 
-   <!-- 페이징 처리 :  -->
-   <select id="selectAll" resultType="individualCommunityDTO">
-      select individual_community_number, individual_community_title, individual_community_content, individual_community_image, individual_community_like, individual_community_hits,
-      i.individual_member_number, individual_member_name, i.individual_member_id
-      from tbl_individual_member i join tbl_individual_member_community c
-      on i.individual_member_number = c.individual_number
-      order by individual_community_number desc limit #{startRow}, #{rowCount}
-   </select>
-   
-   
-   <!-- 페이징 처리 -->
-   <select id="selectCount" resultType="_int">
-      select count(individual_community_number) from tbl_individual_member_community
-   </select>
-   
-   <!-- 게시글 작성 -->
-   <insert id="insert" parameterType="individualCommunityVO">
-      insert into tbl_individual_member_community 
-      (individual_community_title, individual_community_content, individual_number)
-      values(#{individualCommunityTitle}, #{individualCommunityContent}, #{individualMemberNumber});
-   </insert>
-   
-   <!-- 게시물 상세페이지 -->
-   <select id="select" parameterType="_int" resultType="individualCommunityDTO">
-   select individual_community_number, individual_community_title, individual_community_content, individual_community_date_created, individual_community_hits, 
-   i.individual_member_number, individual_member_id, individual_member_name 
-   from tbl_individual_member i join tbl_individual_member_community c 
-   on individual_community_number= #{individualCommunityNumber} and i.individual_member_number = c.individual_number 
-   </select>
-   
-   <!-- 조회수 -->
-   <update id="updateHits" parameterType="_int">
-      update tbl_individual_member_community
-      set individual_community_hits = individual_community_hits + 1 
-      where individual_community_number = #{individualCommunityNumber}
-   </update>
-   
-   <!-- 삭제 -->
-   <delete id="delete" parameterType="_int">
-      delete from tbl_individual_member_community
-      where individual_community_number=#{individualCommunityNumber}
-   </delete>
-   
-   <!-- 수정 -->
-   <update id="update" parameterType="individualCommunityVO">
-      update tbl_individual_member_community
-      set individual_community_title = #{individualCommunityTitle}, individual_community_content = #{individualCommunityContent}
-      where individual_community_number = #{individualCommunityNumber}
-   </update>
-   
-   <!-- 파일첨부 -->
-   	<select id="selectCurrentSequence" resultType="_int">
-		select last_insert_id()
+	<!-- 페이징 처리 : -->
+	<select id="selectAll" resultType="individualCommunityDTO">
+		select
+		individual_community_number, individual_community_title,
+		individual_community_content, individual_community_image,
+		individual_community_like, individual_community_hits,
+		i.individual_member_number, individual_member_name,
+		i.individual_member_id
+		from tbl_individual_member i join
+		tbl_individual_member_community c
+		on i.individual_member_number =
+		c.individual_number
+		order by individual_community_number desc limit
+		#{startRow}, #{rowCount}
 	</select>
-	
+
+
+	<!-- 페이징 처리 -->
+	<select id="selectCount" resultType="_int">
+		select
+		count(individual_community_number) from
+		tbl_individual_member_community
+	</select>
+
+	<!-- 게시글 작성 -->
+	<insert id="insert" parameterType="individualCommunityVO">
+		insert into
+		tbl_individual_member_community
+		(individual_community_title,
+		individual_community_content, individual_number)
+		values(#{individualCommunityTitle}, #{individualCommunityContent},
+		#{individualMemberNumber});
+	</insert>
+
+	<!-- 게시물 상세페이지 -->
+	<select id="select" parameterType="_int"
+		resultType="individualCommunityDTO">
+		select individual_community_number,
+		individual_community_title,
+		individual_community_content,
+		individual_community_date_created,
+		individual_community_hits,
+		i.individual_member_number, individual_member_id,
+		individual_member_name
+		from tbl_individual_member i join
+		tbl_individual_member_community c
+		on individual_community_number=
+		#{individualCommunityNumber} and
+		i.individual_member_number =
+		c.individual_number
+	</select>
+
+	<!-- 조회수 -->
+	<update id="updateHits" parameterType="_int">
+		update
+		tbl_individual_member_community
+		set individual_community_hits =
+		individual_community_hits + 1
+		where individual_community_number =
+		#{individualCommunityNumber}
+	</update>
+
+	<!-- 삭제 -->
+	<delete id="delete" parameterType="_int">
+		delete from
+		tbl_individual_member_community
+		where
+		individual_community_number=#{individualCommunityNumber}
+	</delete>
+
+	<!-- 수정 -->
+	<update id="update" parameterType="individualCommunityVO">
+		update
+		tbl_individual_member_community
+		set individual_community_title =
+		#{individualCommunityTitle},
+		individual_community_content =
+		#{individualCommunityContent}
+		where individual_community_number =
+		#{individualCommunityNumber}
+	</update>
+
+	<!-- 파일첨부 -->
+	<select id="selectCurrentSequence" resultType="_int">
+		select
+		last_insert_id()
+	</select>
+
+	<select id="managerIndiCommunityList" parameterType="map"
+		resultType="IndividualCommunityDTO">
+		select
+		imc.individual_community_number,
+		imc.individual_community_title,
+		imc.individual_community_content,
+		imc.individual_community_hits,
+		imc.individual_community_date_created,
+		imc.individual_number,
+		im.individual_member_name
+		from
+		tbl_individual_member_community imc,
+		tbl_individual_member im
+		where
+		imc.individual_number =im.individual_member_number
+		order by
+		individual_community_number
+		desc limit #{startRowIndi}, #{rowCount}
+	</select>
+
+	<select id="managerIndiCommunitySelectCount" resultType="_int">
+		select
+		count(individual_community_number) from
+		tbl_individual_member_community
+	</select>
 </mapper>
 
 
