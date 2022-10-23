@@ -1,6 +1,8 @@
 package com.milestone.app.nursery;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Base64;
 
 import javax.servlet.ServletException;
@@ -30,13 +32,8 @@ public class LoginOkController implements Execute{
 		String nurserySchoolMemberPassword = req.getParameter("nurserySchoolMemberPassword");
 		String autoLogin = req.getParameter("autoLogin")+"";
 		
-		System.out.println("누구세요?"+req.getHeader("Cookie"));
-		System.out.println(autoLogin);
-		
 		if(autoLogin.equals("on")) {
-			System.out.println("1차 들옴");
 			if(req.getHeader("Cookie") != null) {
-				System.out.println("안녕하세요");
 				for(Cookie cookie : req.getCookies()) {
 //					쿠키에 저장된 사용자 아이디를 찾아서 
 					if(cookie.getName().equals("nurserySchoolMemberId")) {
@@ -53,15 +50,18 @@ public class LoginOkController implements Execute{
 			}
 		}
 		
+		LocalDateTime now = LocalDateTime.now();
+		String formatedNow = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		
 		nurserySchoolMemberPassword = new String(Base64.getEncoder().encode(nurserySchoolMemberPassword.getBytes()));
 		
-		System.out.println(nurserySchoolMemberPassword);
-
 		nurseryVO.setNurserySchoolMemberId(nurserySchoolMemberId);
 		nurseryVO.setNurserySchoolMemberPassword(nurserySchoolMemberPassword);
+		nurseryVO.setNurserySchoolMemberRecentLogins(formatedNow);
 
 		try {
 			nurserySchoolMemberNumber = nurseryDAO.login(nurseryVO);
+			nurseryVO.setNurserySchoolMemberNumber(nurserySchoolMemberNumber);
 			session.setAttribute("nurserySchoolMemberId", nurserySchoolMemberId);
 			session.setAttribute("nurserySchoolMemberNumber", nurserySchoolMemberNumber);
 			
@@ -80,7 +80,6 @@ public class LoginOkController implements Execute{
 			result.setRedirect(true);
 			result.setPath(req.getContextPath() + "/member/index.me");
 		} catch (Exception e) {
-			System.out.println("널이 떠 브렀으");
 			result.setRedirect(false);
 			result.setPath("/login/login2.school?login=false");
 		}

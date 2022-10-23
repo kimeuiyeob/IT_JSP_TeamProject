@@ -30,7 +30,6 @@ public class LoginOkController implements Execute {
 		String individualMemberPassword = req.getParameter("individualMemberPassword");
 		String autoLogin = req.getParameter("autoLogin")+"";
 		
-		
 		if(autoLogin.equals("on")) {
 			if(req.getHeader("Cookie") != null) {
 				for(Cookie cookie : req.getCookies()) {
@@ -54,7 +53,6 @@ public class LoginOkController implements Execute {
 		
 		individualMemberPassword = new String(Base64.getEncoder().encode(individualMemberPassword.getBytes()));
 		
-
 		individualVO.setIndividualMemberId(individualMemberId);
 		individualVO.setIndividualMemberPassword(individualMemberPassword);
 		individualVO.setIndividualMemberRecentLogins(formatedNow);
