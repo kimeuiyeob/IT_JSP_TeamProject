@@ -62,6 +62,7 @@ public class LoginOkController implements Execute{
 		try {
 			nurserySchoolMemberNumber = nurseryDAO.login(nurseryVO);
 			nurseryVO.setNurserySchoolMemberNumber(nurserySchoolMemberNumber);
+			nurseryDAO.updateRecentLogin(nurseryVO);
 			session.setAttribute("nurserySchoolMemberId", nurserySchoolMemberId);
 			session.setAttribute("nurserySchoolMemberNumber", nurserySchoolMemberNumber);
 			
