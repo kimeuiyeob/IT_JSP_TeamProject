@@ -54,8 +54,16 @@
 					</h3>
 					<span>"<c:out value="${donation.getNickName()}" />"님께서 " <c:out
 							value="${donation.getNurserySchoolMemberName()}" />"에 <br>
-						<fmt:formatNumber value="${donation.getDonationAmount()}"
-							pattern="#,###" />원"을 전달하셨습니다.
+
+						<c:choose>
+							<c:when test="${empty donation.getDonationProducts()}">
+								<fmt:formatNumber value="${donation.getDonationAmount()}" pattern="#,###" />원"을 전달하셨습니다.
+							</c:when>
+							<c:otherwise>
+								"<c:out value="${donation.getDonationProducts()}" />"을 전달하셨습니다.
+							</c:otherwise>
+						</c:choose> 
+
 					</span> <br> <br> <br> <br> <br>
 				</div>
 			</div>
