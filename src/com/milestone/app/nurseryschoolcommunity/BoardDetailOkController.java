@@ -18,8 +18,6 @@ public class BoardDetailOkController implements Execute{
    public Result execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       System.out.println("디테일 들어옴");
       
-      
-      
       NurserySchoolCommunityDAO nurserySchoolCommunityDAO = new NurserySchoolCommunityDAO();
       Result result = new Result();
       FileDAO fileDAO = new FileDAO();

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="IndividualCommunityFile">
+	<insert id="insert" parameterType="IndividualFileVO">
+		insert into tbl_individual_community_file values(#{fileSystemName}, #{fileOriginalName}, #{individualCommunityNumber})
+	</insert>
+	
+	<select id="select" parameterType="_int" resultType="IndividualFileVO">
+		select individual_community_file_system_name, individual_community_file_original_name from tbl_individual_community_file where individual_community_number = #{individualCommunityNumber}
+	</select>
+	
+	<delete id="delete" parameterType="_int">
+		delete from tbl_individual_community_file where individual_community_number= #{individualCommunityNumber}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
