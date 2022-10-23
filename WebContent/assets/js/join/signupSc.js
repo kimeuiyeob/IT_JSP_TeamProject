@@ -328,7 +328,7 @@ function sendEmail() {
 	$("#checkNurserySchoolMemberEmaildiv").css("color", "green");
     emailjs.send("service_vfzxi5g", "template_vtzhsgc", {
         message: key,
-        to_email: "ghkdwltn5@naver.com",
+        to_email: $("input[name='nurserySchoolMemberEmail']").val(),
     });
 }
 
