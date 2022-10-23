@@ -29,7 +29,7 @@ public class MemberDAO {
 		return sqlSession.selectList("Banners.bannerList");
 	}
 	
-//	도움이 필요한 보육원 메인페이지꺼
+	//도움이 필요한 보육원 메인페이지꺼
 	public List<NurseryVO> helpSchoolSelect2() {
 		return sqlSession.selectList("NurserySchoolMember.helpSchoolSelect2");
 	}

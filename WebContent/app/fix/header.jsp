@@ -51,13 +51,13 @@
 			          	<c:when test="${not empty sessionScope.nurserySchoolMemberNumber}">
 					        <div class="user" style="min-width: 145px; margin-left: 32%;">
 					          <a href="${pageContext.request.contextPath}/member/index.me?logout=true"  id="logout" style="margin-right: 18px"> 로그아웃</a>
-			          		<a href="${pageContext.request.contextPath}/mypage/scmodifych.school"  id="schoolMyPage">보육원 마이페이지</a>
+			          		<a href="${pageContext.request.contextPath}/app/404/404.jsp"  id="schoolMyPage">보육원 마이페이지</a>
 				          </div>
 			          	</c:when>
 			          	<c:otherwise>
 					      <div class="user" style="min-width: 145px; margin-left: 33%;">
 					        <a href="${pageContext.request.contextPath}/member/index.me?logout=true"  id="logout" style="margin-right: 18px"> 로그아웃</a>
-				          	<a href="${pageContext.request.contextPath}/mypage/indimodifych.indi"  id="indiMyPage">개인 마이페이지</a>
+				          	<a href="${pageContext.request.contextPath}/app/404/404.jsp"  id="indiMyPage">개인 마이페이지</a>
 				          </div>
 			          	</c:otherwise>
 			          </c:choose>
