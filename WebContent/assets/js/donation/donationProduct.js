@@ -15,12 +15,6 @@ $(function() {
 		}
 	});
 
-
-	/* select태그 선택안되는 오류 수정*/
-	// if($("#kind option:selected").eq("생필품")){
-	//   $("#kind").val("생필품").prop("selected", true);
-	// }
-
 	const $options = $('.test');
 	const $labelKind = $(`label[for = 'donationProducts']`);
 	const $test = $('#donationProducts');
@@ -30,11 +24,6 @@ $(function() {
 		$labelKind.html($(this).val());
 		donationProducts.val($(this).val());
 	})
-
-	// $options.on('click', function () {
-	//   console.log("방가")
-	//   $labelKind.html($(this).val());
-	// })
 
 	/* ------------------------- */
 	$(".submit-button").mouseover(function() {
