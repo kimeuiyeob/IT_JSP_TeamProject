@@ -50,7 +50,7 @@
 		        <c:otherwise>
 			          <c:choose>
 			          	<c:when test="${not empty sessionScope.nurserySchoolMemberNumber}">
-					        <div class="user" style="min-width: 190px; margin-left: 30%;">
+					        <div class="user" style="min-width: 203px; margin-left: 31%;">
 					          <a href="${pageContext.request.contextPath}/member/index.me?logout=true"  id="logout" style="margin-right: 18px"> 로그아웃</a>
 			          		<a href="${pageContext.request.contextPath}/app/404/404.jsp"  id="schoolMyPage">보육원 마이페이지</a>
 				          </div>
