@@ -14,7 +14,7 @@
 		i.individual_member_number = n.nursery_school_member_number
 		order by
 		donation_number desc
-		limit 1,8;
+		limit 9;
 	</select>
 
 	<!-- 기부 관리 -->

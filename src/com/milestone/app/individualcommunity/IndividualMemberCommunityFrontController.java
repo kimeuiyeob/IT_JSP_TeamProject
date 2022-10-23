@@ -43,7 +43,7 @@ public class IndividualMemberCommunityFrontController extends HttpServlet{
 //		         request객체에 담겨서 전송된다
 		         result.setPath("/app/board/indiBoardWrite.jsp?individualMemberId="+req.getSession().getAttribute("individualMemberId"));
 		      } else if (request.equals("/board/inboardwriteOk.indicom")) { //게시글 작성 디비 조회
-		         result = new InBoardwriteOkController().execute(req, resp);
+		         result = new InboardwriteOkController().execute(req, resp);
 		      } else if (request.equals("/board/boardDetailOk.indicom")) {    //게시글 상세보기
 		         result = new BoardDetailOkController().execute(req, resp);
 		      } else if(request.equals("/board/boardUpdate.indicom")) {      //게시글 수정

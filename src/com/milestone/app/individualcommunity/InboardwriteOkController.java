@@ -16,7 +16,7 @@ import com.milestone.app.individualcommunity.vo.IndividualCommunityVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-public class InBoardwriteOkController implements Execute {
+public class InboardwriteOkController implements Execute {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
