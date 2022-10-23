@@ -119,103 +119,53 @@
 	</div>
 
 
-	<!-- ------------------------------------------------------------------ -->
+	<!-- ---------------------------------------------보육원 목록---------------------------------------------- -->
 
 
-	<div class="subjectname1">보육원 활동</div>
+	<div class="subjectname1">보육원 목록</div>
+	<div class="showall"
+		onclick="location.href = '${pageContext.request.contextPath}/search/schoolSearchOk.school'">
+		<p>전체보기</p>
+	</div>
 
 	<div class="longdivs">
-		<div class="longdived">
-			<div class="longdivedimg">
-				<img
-					src="https://i0.wp.com/getgovtgrants.com/wp-content/uploads/2021/01/Free-Baby-Clothes-and-Gear.webp"
-					alt="">
-			</div>
-			<div class="longdivedinfo">
-				<div class="infoname">
-					<p>보육원 명</p>
-				</div>
-				<div class="infodetail">
-					<p>보육원 활동 내용</p>
-				</div>
-				<div class="infolike">
-					<div class="heart">
-						<div>
-							<img
-								src="${pageContext.request.contextPath}/assets/img/main/heart.png"
-								alt="">
-						</div>
-						<div class="heartcount">1567</div>
-					</div>
-				</div>
-			</div>
-			<div class="longdivedetc">
-				<div class="etchighlight">후원</div>
-				<div class="etcname">월 10,000원</div>
-				<div class="etcetc">(날짜)</div>
-			</div>
-		</div>
 
-		<div class="longdived">
-			<div class="longdivedimg">
-				<img
-					src="https://social-phinf.pstatic.net/20210820_276/16294225839800BoP0_JPEG/photo-1604917621956-10dfa7cce2e7.jpg"
-					alt="">
-			</div>
-			<div class="longdivedinfo">
-				<div class="infoname">
-					<p>보육원 명</p>
+		<c:forEach var="schoolSearch" items="${schoolSearch}">
+
+			<div class="longdived" style="padding-right: 6px;">
+
+				<div class="longdivedimg">
+					<img src="${schoolSearch.getNurserySchoolPhoto()}"/>
 				</div>
-				<div class="infodetail">
-					<p>보육원 활동 내용</p>
+
+				<div class="longdivedinfo" style="margin-bottom: -30px">
+					<div class="infoname">
+						<h3 style="margin-top: 5px;">
+							<c:out value="${schoolSearch.getNurserySchoolMemberName()}" />
+						</h3>
+					</div>
+					<div class="infodetail">
+						<p>
+						<h4>
+							<c:out
+								value="${schoolSearch.getNurserySchoolIntroductoryArticle()}" />
+						</h4>
+						</p>
+					</div>
+					<div class="infolike"></div>
 				</div>
-				<div class="infolike">
-					<div class="heart">
-						<div>
-							<img
-								src="${pageContext.request.contextPath}/assets/img/main/heart.png"
-								alt="">
-						</div>
-						<div class="heartcount">1567</div>
+				<div class="longdivedetc">
+					<div class="etchighlight">
+						<c:out value="${schoolSearch.getNurserySchoolAddress()}" />
+					</div>
+					<div class="etcname">
+						<c:out value="${schoolSearch.getNurserySchoolDetailedAddress()}" />
 					</div>
 				</div>
 			</div>
-			<div class="longdivedetc">
-				<div class="etchighlight">후원</div>
-				<div class="etcname">월 10,000원</div>
-				<div class="etcetc">(날짜)</div>
-			</div>
-		</div>
-		<div class="longdived">
-			<div class="longdivedimg">
-				<img
-					src="https://techblog.woowahan.com/wp-content/uploads/2021/11/omar-lopez-vTknj2OxDVg-unsplash-600x400.jpg"
-					alt="">
-			</div>
-			<div class="longdivedinfo">
-				<div class="infoname">
-					<p>보육원 명</p>
-				</div>
-				<div class="infodetail">
-					<p>보육원 활동 내용</p>
-				</div>
-				<div class="infolike">
-					<div class="heart">
-						<div>
-							<img
-								src="${pageContext.request.contextPath}/assets/img/main/heart.png"
-								alt="">
-						</div>
-						<div class="heartcount">1567</div>
-					</div>
-				</div>
-			</div>
-			<div class="longdivedetc">
-				<div class="etchighlight">후원</div>
-				<div class="etcname">월 10,000원</div>
-				<div class="etcetc">(날짜)</div>
-			</div>
-		</div>
+
+		</c:forEach>
+
 	</div>
 
 	<!-- ------------------------------기부현황 select 8개(완료) --------------------------------------------- -->
@@ -307,12 +257,15 @@
 	<script
 		src="${pageContext.request.contextPath}/assets/js/main/slide.js"></script>
 
-	<%-- <a href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySM.getNurserySchoolMemberNumber()}'> --%>
 
-
-	<!-- --------------------------------도움이 필요한 보육원---------------------------------------- -->
+	<!-- --------------------------------도움이 필요한 보육원(완료)---------------------------------------- -->
 
 	<div class="subjectname">도움이 필요한 보육원</div>
+
+	<div class="showall"
+		onclick="location.href = '${pageContext.request.contextPath}/search/schoolSearchOk.school'">
+		<p>전체보기</p>
+	</div>
 	<div style="padding-left: 298px;">
 		<c:forEach var="nurserySM" items="${nurserySM}">
 			<div style="float: left;">
