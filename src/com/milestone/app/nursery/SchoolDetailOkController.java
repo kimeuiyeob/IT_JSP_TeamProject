@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.milestone.app.Execute;
 import com.milestone.app.Result;
@@ -23,7 +24,6 @@ public class SchoolDetailOkController implements Execute {
 		
 		int nurserySchoolMemberNumber = Integer.valueOf(req.getParameter("nurserySchoolMemberNumber"));
 		req.setAttribute("nurseryVO", nurseryDAO.selectDetail(nurserySchoolMemberNumber));
-		
 		
 		result.setPath("/app/donation/donation.jsp");
 		

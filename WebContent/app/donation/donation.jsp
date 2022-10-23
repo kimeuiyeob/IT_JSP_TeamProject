@@ -129,7 +129,8 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	var contextPath = "${pageContext.request.contextPath}";
-	var nurserySchoolMemberNumber = "${nurserySchoolMember.getNurserySchoolMemberNumber()}"
+	var nurserySchoolMemberNumber = "${nurserySchoolMember.getNurserySchoolMemberNumber()}";
+	var sessionNurserySchoolMemberNumber = "${nurserySchoolMemberNumber}";
 </script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/assets/js/donation/donation.js"></script>
