@@ -19,10 +19,10 @@
     <div style="padding-top : 200px">
         <div class="subjectname">
             <div>
-                보육원 커뮤니티 활동
+                보육원 커뮤니티
             </div>
             <div>
-                <input type="button" id="write" value="글 작성하기" style=" margin-left: 977px;" onclick="location.href='${pageContext.request.contextPath}/board/boardwrite.schoolcom'">
+                <input type="button" id="write" value="글 작성하기" style=" margin-left: 1024px;" onclick="location.href='${pageContext.request.contextPath}/board/boardwrite.schoolcom'">
             </div>
         </div>
     </div>
@@ -62,12 +62,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!--=========================인기추천 수정========================= -->
-                        <div class="longdivedetc">
-                            <div class="etchighlight">인기</div>
-                            <div class="etcname">추천 커뮤니티글</div>
-                        </div>
-                        <!--=========================인기추천 수정========================= -->
+                        <c:if test="${board.getNurserySchoolCommunityHits()>7}">
+	                        <div class="longdivedetc">
+	                            <div class="etchighlight">인기</div>
+	                            <div class="etcname">커뮤니티 글</div>
+	                        </div>
+                        </c:if>                        
                     </div>
             </c:forEach>
          </c:when>

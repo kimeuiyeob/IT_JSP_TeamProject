@@ -14,13 +14,14 @@
       <typeAlias type="com.milestone.app.individual.vo.IndividualVO" alias="individualVO"/>
       <typeAlias type="com.milestone.app.individual.vo.IndividualDTO" alias="individualDTO"/>
       <typeAlias type="com.milestone.app.individualcommunity.vo.IndividualCommunityVO" alias="individualCommunityVO"/>
+      <typeAlias type="com.milestone.app.individualcommunity.vo.IndividualCommunityDTO" alias="individualCommunityDTO"/>
       <typeAlias type="com.milestone.app.news.vo.NewsVO" alias="newsVO"/>
       <typeAlias type="com.milestone.app.notice.vo.NoticeVO" alias="noticeVO"/>
       <typeAlias type="com.milestone.app.nursery.vo.NurseryVO" alias="nurseryVO"/>
       <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityVO" alias="nurserySchoolCommunityVO"/>
       <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityDTO" alias="nurserySchoolCommunityDTO"/>
-      <typeAlias type="com.milestone.app.nurseryschoolcommunity.vo.NurserySchoolCommunityDTO" alias="nurserySchoolCommunityDTO"/>
       <typeAlias type="com.milestone.app.file.vo.FileVO" alias="fileVO"/>
+      <typeAlias type="com.milestone.app.individualFile.vo.IndividualFileVO" alias="IndividualFileVO"/>
    </typeAliases>
 
    <environments default="mysql">
@@ -47,6 +48,7 @@
       <mapper resource="com/milestone/mybatis/mapper/NurserySchoolCommunityMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/NurserySchoolMemberMapper.xml"/>
       <mapper resource="com/milestone/mybatis/mapper/FileMapper.xml"/>
+      <mapper resource="com/milestone/mybatis/mapper/IndividualFileMapper.xml"/>
    </mappers>
    
 </configuration>

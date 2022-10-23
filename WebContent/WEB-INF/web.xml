@@ -133,14 +133,24 @@
   </servlet-mapping>
   
   
-   <servlet>  <!--  첨부파일  -->
+   <servlet>  <!--  보육원 첨부파일  -->
   	<servlet-name>FileFrontController</servlet-name>
   	<servlet-class>com.milestone.app.file.FileFrontController</servlet-class>
   </servlet>
   
-  <servlet-mapping>  <!-- 첨부파일 -->
+  <servlet-mapping>  <!-- 보육원 첨부파일 -->
   	<servlet-name>FileFrontController</servlet-name>
   	<url-pattern>*.file</url-pattern> 
+  </servlet-mapping>
+
+   <servlet>  <!--  개인 첨부파일  -->
+  	<servlet-name>individualFileFrontController</servlet-name>
+  	<servlet-class>com.milestone.app.individualFile.FileFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- 개인 첨부파일 -->
+  	<servlet-name>individualFileFrontController</servlet-name>
+  	<url-pattern>*.individualFile</url-pattern> 
   </servlet-mapping>
   
   

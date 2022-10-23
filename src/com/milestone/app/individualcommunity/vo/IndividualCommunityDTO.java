@@ -1,6 +1,6 @@
 package com.milestone.app.individualcommunity.vo;
 
-public class IndividualCommunityVO {
+public class IndividualCommunityDTO {
 
 	private int individualCommunityNumber;
 	private String individualCommunityTitle;
@@ -10,8 +10,9 @@ public class IndividualCommunityVO {
 	private String individualCommunityImage;
 	private String individualCommunityDateCreated;
 	private int individualMemberNumber;
+	private String individualMemberId;
 	
-	public IndividualCommunityVO () {;}
+	public IndividualCommunityDTO () {;}
 
 	public int getIndividualCommunityNumber() {
 		return individualCommunityNumber;
@@ -77,16 +78,26 @@ public class IndividualCommunityVO {
 		this.individualMemberNumber = individualMemberNumber;
 	}
 
+	public String getIndividualMemberId() {
+		return individualMemberId;
+	}
+
+	public void setIndividualMemberId(String individualMemberId) {
+		this.individualMemberId = individualMemberId;
+	}
+
 	@Override
 	public String toString() {
-		return "IndividualCommunityVO [individualCommunityNumber=" + individualCommunityNumber
+		return "IndividualCommunityDTO [individualCommunityNumber=" + individualCommunityNumber
 				+ ", individualCommunityTitle=" + individualCommunityTitle + ", individualCommunityContent="
 				+ individualCommunityContent + ", individualCommunityHits=" + individualCommunityHits
 				+ ", individualCommunityLike=" + individualCommunityLike + ", individualCommunityImage="
 				+ individualCommunityImage + ", individualCommunityDateCreated=" + individualCommunityDateCreated
-				+ ", individualMemberNumber=" + individualMemberNumber + "]";
+				+ ", individualMemberNumber=" + individualMemberNumber + ", individualMemberId=" + individualMemberId
+				+ "]";
 	}
 
+	
 }
 
 //`individual_community_number`        INT              NOT NULL    AUTO_INCREMENT COMMENT '개인 게시판 글 번호', 

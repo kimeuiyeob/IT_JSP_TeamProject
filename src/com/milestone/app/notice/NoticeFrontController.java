@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.milestone.app.Result;
-import com.milestone.app.individualcommunity.InboardOkController;
-import com.milestone.app.individualcommunity.InboardwriteController;
 
 public class NoticeFrontController extends HttpServlet {
 

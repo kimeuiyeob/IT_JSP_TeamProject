@@ -75,7 +75,7 @@
             <a href="${pageContext.request.contextPath}/donation/donationstatusOk.don" class="lists">기부현황</a>
             <a href="${pageContext.request.contextPath}/donation/rankingOk.indi" class="lists">기부랭킹</a>
             <a href="${pageContext.request.contextPath}/board/schoolBoard.schoolcom" class="lists">보육원 커뮤니티</a>
-            <a href="${pageContext.request.contextPath}/board/inboardOk.indicom" class="lists">개인 커뮤니티</a>
+            <a href="${pageContext.request.contextPath}/board/indiBoard.indicom" class="lists">개인 커뮤니티</a>
             <a href="${pageContext.request.contextPath}/faq/faq.faq" class="lists">FAQ</a>
             <a href="${pageContext.request.contextPath}/member/noticeListOk.notice" class="lists">공지사항</a>
           </div>

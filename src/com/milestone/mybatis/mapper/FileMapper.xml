@@ -10,7 +10,7 @@
 	</select>
 	
 	<delete id="delete" parameterType="_int">
-		delete from tbl_file where nursery_school_community_number= #{nurserySchoolCommunityNumber}
+		delete from tbl_nursery_school_community_file where nursery_school_community_number= #{nurserySchoolCommunityNumber}
 	</delete>
 </mapper>
 

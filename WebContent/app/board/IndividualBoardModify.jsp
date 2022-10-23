@@ -60,9 +60,8 @@
                                 <img src="https://cdn.class101.net/images/cba86b3c-f6a4-42b3-9bbd-bf6c09e49d27/1920xauto.webp"
                                     alt="">
                                 <div style="margin: 10px;">
-                                
-                                    <div>${individualMemberId}</div>
-                                    <div id="miniProfileRight"><a href="myPage1.html " style="color: orange;"><a href="${pageContext.request.contextPath}/app/404/404.jsp"  style="text-decoration: none; color:black">마이페이지</a>
+                                    <div>닉네임</div>
+                                    <div id="miniProfileRight"><a href="myPage1.html " style="color: orange;">마이페이지
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                 class="css-jdqsvn" style="width: 10px; height: 10px;">
                                                 <path
@@ -73,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="css-1g5174"></div>
-                            <div style="text-align: center;"> <a href="${pageContext.request.contextPath}/member/index.me?logout=true"  id="logout" style="margin-right: 18px; text-decoration: none; color:black"> 로그아웃</a></div>
+                            <div style="text-align: center;">로그아웃</div>
                         </div>
                     </div>
                 </div>
@@ -92,123 +91,68 @@
        <div class="sc-e489b3e-3 gEAbaC" style="margin-top: -10px; margin-bottom: -20px;">
            <div class="sc-e489b3e-7 dkxgGx" style="padding-right: 20px; margin-left: 22px;">
 
+
                <!-- 프로필 사진 -->
                <div size="28" class="sc-1602cde7-0 bvsxdu">
                   <img sizes=" 100vw"
                     src="${pageContext.request.contextPath}/assets/img/board/smalluser.png"
                     style="height: 30px; padding-right: 5px">
                </div>
-          <form action="${pageContext.request.contextPath}/board/inboardwriteOk.indicom" name="writeForm" method="post" enctype="multipart/form-data">         
+             
                <!-- 작성자 -->
                <div class="writer" md="Body2" class="sc-8ee9b8f2-0 gBPcnX sc-e489b3e-8 eaqXQT"
                    style="font-size : 14px; letter-spacing: -1px; padding-right: 394px;"><c:out value="${individualMemberId}"/></div>
-    				<!-- 파일첨부 -->
-    				<div class="files">
-	                   <div style="display: flex;">
-	                       <div class="image-upload">
-	                           <label for="file-input" style="right: 20px;">
-        	                     <img src="${pageContext.request.contextPath}/assets/img/board/putpicture.png"
-	                             style="height: 43px; cursor: pointer;">
-	                           </label>
- 	                           <input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/>
-	                           <input type="button" onclick="cancelFile('nurserySchoolCommunityImage')" value="첨부 삭제">
-	                       </div>
-	                   </div>
+   
+               <!-- 파일첨부 -->
+                   <div style="display: flex;">
+                       <div class="image-upload">
+                           <label for="file-input" style="right: 20px;">
+                           <img
+                             src="${pageContext.request.contextPath}/assets/img/board/putpicture.png"
+                             style="height: 43px; cursor: pointer;">
+                           </label>
+                           <input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/>
+                           <!-- <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제"> -->
+                       </div>
                    </div>
            </div>
        </div>
 
-
-      <!-- 제목 -->
-         <input id="boardTitle" type="text" placeholder="제목을 입력하세요" name="individualCommunityTitle"
+   <form action="${pageContext.request.contextPath}/board/boardUpateOk.indicom" name="writeForm" method="post">
+         <!-- 커뮤니티 넘버 -->
+             <input type="hidden" name="individualCommunityNumber" value="${board.getIndividualCommunityNumber()}"/>
+         <!-- 제목 -->
+         <input id="boardTitle" type="text" value="${board.getIndividualCommunityTitle()}" name="individualCommunityTitle"
             style="padding: 16px; margin: 20px 20px 0 20px; width: 605px; height: 20px">
-         
             <!-- 내용 -->
          <div class="sc-e489b3e-9 iLCbOX" style="margin: 20px; margin-right: 14px;">
             <div class="sc-1f17b81e-1 fGEGPt postWrite">
                <textarea id="boardContent" class="sc-1f17b81e-0 dHJCuF sc-e489b3e-10 iTqZES  "
-                  placeholder="무단 홍보, 비방 글은 삭제될 수 있습니다." name="individualCommunityContent" autocomplete="off"></textarea>
+                 name="individualCommunityContent" autocomplete="off">${board.getIndividualCommunityContent()}</textarea>
             </div>
          </div>
 
 
          <!-- 첨부파일 -->
          <!-- 첨부파일 이름은 #fileName에 넣으세요 -->
-          <div id="attachedFile" style="padding: 0 20px 0 20px; color:rgb(190 190 190);">         
+         <div id="attachedFile" style="padding: 0 20px 0 20px; color:rgb(190 190 190);">         
             첨부된 파일:<input type="text" id="fileName" style="border-color:transparent" readonly="readonly">
-         </div> 
+         </div>
 
        <div id="withdrawal">
            <div id="content2">
                <div id="first">
-                   <input type="button" class="withdrawalSubmit" id="save" value="저장하기" onclick="send()"/>
+                   <input type="button" class="withdrawalSubmit" id="save" value="수정하기" onclick="send()"/>
                </div>
-                   <input type="button" style="margin-top:20px" class="cancel" id="save" value="취소하기" onclick="location.href='${pageContext.request.contextPath}/board/indiBoard.indicom'" class="lists"/>
+                   <input type="button" style="margin-top:20px" class="cancel" id="save" value="취소하기" onclick="history.back()" class="lists"/>
            </div>
        </div>
    </form>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/board/inBoardWrite.js"></script>
 <script>
-
-var check = false;
-
-$(function () {
-    $("#modalBody").hide();
-
-    $("#miniBox").hide();
-
-    $("#userWrap").click(function () {
-        if (!check) {
-            $("#miniBox").show();
-            check = true;
-        } else if (check) {
-            $("#miniBox").hide();
-            check = false;
-        }
-    });
-
-
-    $("#modifySubmit").mouseover(function () {
-        $(this).css("background-color", "rgb(255 86 0)")
-    });
-
-    $("#modifySubmit").mouseout(function () {
-        $(this).css("background-color", "rgb(255 242 233)")
-    });
-
-    $(".withdrawalSubmit").mouseover(function () {
-        $(this).css("background-color", "rgb(217 213 213)")
-    });
-
-    $(".withdrawalSubmit").mouseout(function () {
-        $(this).css("background-color", "rgb(248 248 248)")
-    });
-
-
-    $(".withdrawalSubmit").click(function () {
-        $("#modalBody").fadeIn();
-    });
-
-    $(".exit").click(function () {
-        $("#modalBody").fadeOut();
-    });
-
-    $("#continue").click(function () {
-        $("#modalBody").fadeOut();
-    });
-
-    $("#delete").click(function () {
-        $("#modalBody").fadeOut();
-        alert('회원탈퇴 처리되었습니다.');
-        location.href = "main/result.html";
-    })
-
-});
-
-
-
 function send(){
    
    if(!$("#boardTitle")){
@@ -219,29 +163,9 @@ function send(){
       alert("내용을 작성해주세요.");
       return;
    }
+   
    writeForm.submit();
 }
 
-$(".files").change(function(e){
-    var file = e.target.files[0];
-    var img = $(this).find("img");
-    var reader = new FileReader();
-    reader.readAsDataURL(file);
-    
-     reader.onload = function(e){
-        if(e.target.result.indexOf("image") != -1){
-           img.attr("src", e.target.result)
-        }else{
-           /* img.attr("src", "${pageContext.request.contextPath}/images/no_img.jpg"); */
-        }
-     }
-  });
- 
- function cancelFile(fileName){
-    $("input#" + fileName).val("");
-    $("img#" + fileName + "Img").attr("src", "${pageContext.request.contextPath}/images/filePlus.png");
- }
-
- 
 </script>
 </html>
