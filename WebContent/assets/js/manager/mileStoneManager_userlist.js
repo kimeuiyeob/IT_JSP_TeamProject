@@ -220,6 +220,9 @@ const $userType = $('.toolbar-choose-usertype-flex');
 $userType.on('mouseover',function(){
     $(this).css('color','#009ef7');
 })
+$userType.on('click', function () {
+    $('.content-container-hover').css('display', 'block');
+})
 
 $userType.on('mouseout',function(){
     $(this).css('color','#5e6278');
