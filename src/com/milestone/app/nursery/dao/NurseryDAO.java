@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.milestone.app.donation.vo.DonationDTO;
+import com.milestone.app.individual.vo.IndividualVO;
 import com.milestone.app.news.vo.NewsVO;
 import com.milestone.app.nursery.vo.NurseryVO;
 import com.milestone.mybatis.config.MyBatisConfig;
@@ -95,5 +96,10 @@ public class NurseryDAO {
 
 	public int managerSchoolSelectCount() {
 		return sqlSession.selectOne("NurserySchoolMember.managerSchoolSelectCount");
+	}
+
+	// 최근로그인
+	public void updateRecentLogin(NurseryVO nurseryVO) {
+		sqlSession.update("NurserySchoolMember.updateRecentLogin", nurseryVO);
 	}
 }

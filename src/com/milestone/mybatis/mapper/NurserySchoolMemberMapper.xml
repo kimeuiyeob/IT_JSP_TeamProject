@@ -188,6 +188,15 @@
 		select
 		count(nursery_school_member_number) from tbl_nursery_school_member
 	</select>
+	<!-- 최근로그인 -->
+	<update id="updateRecentLogin" parameterType="nurseryVO">
+		update
+		tbl_nursery_school_member
+		set nursery_school_member_recent_logins =
+		#{nurserySchoolMemberRecentLogins}
+		where nursery_school_member_number =
+		#{nurserySchoolMemberNumber}
+	</update>
 
 </mapper>
 
