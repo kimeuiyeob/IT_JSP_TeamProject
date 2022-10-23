@@ -6,6 +6,7 @@
 		count(individual_member_id) from tbl_individual_member where
 		individual_member_id = #{individual_member_id}
 	</select>
+
 	<select id="checkNickName" parameterType="string"
 		resultType="_int">
 		select count(nickName) from tbl_individual_member where
@@ -130,8 +131,10 @@
 	<update id="updateRecentLogin" parameterType="individualVO">
 		update
 		tbl_individual_member
-		set individual_member_recent_logins = #{individualMemberRecentLogins}
-		where individual_member_number = #{individualMemberNumber}
+		set individual_member_recent_logins =
+		#{individualMemberRecentLogins}
+		where individual_member_number =
+		#{individualMemberNumber}
 	</update>
 	<!-- 기부횟수 증가 -->
 	<update id="countDonation" parameterType="_int">
@@ -141,6 +144,26 @@
 		where individual_member_number = #{individualMemberNumber}
 	</update>
 
+
+	<!-- 관리자 개인 유저 리스트 -->
+	<select id="managerIndiList" parameterType="map"
+		resultType="IndividualVO">
+		select
+		individual_member_number, individual_member_name,
+		nickname,
+		individual_member_email,
+		individual_member_join_date,
+		individual_member_recent_logins
+		from tbl_individual_member
+		order by
+		individual_member_number
+		desc limit #{startRowIndi}, #{rowCount}
+	</select>
+
+	<select id="managerIndiListCount" resultType="_int">
+		select
+		count(individual_member_number) from tbl_individual_member
+	</select>
 </mapper>
 
 

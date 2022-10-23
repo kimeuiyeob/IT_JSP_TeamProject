@@ -159,8 +159,8 @@
 		where
 		nursery_school_member_number = #{nurserySchoolMemberNumber}
 	</select>
-	
-		<!-- 메인페이지 보육원 목록 불러오는거 -->
+
+	<!-- 메인페이지 보육원 목록 불러오는거 -->
 	<select id="mainSchoolSearch" resultType="nurseryVO">
 		select *
 		from
@@ -169,7 +169,26 @@
 		nursery_school_member_join_date desc
 		limit 0,4;
 	</select>
-	
+
+	<!-- 관리자 보육원 유저 리스트 -->
+	<select id="managerSchoolList" parameterType="map"
+		resultType="nurseryVO">
+		select
+		nursery_school_member_number,
+		nursery_school_member_name,
+		nursery_school_member_email,
+		nursery_school_member_recent_logins,
+		nursery_school_member_join_date
+		from tbl_nursery_school_member
+		order by nursery_school_member_number
+		desc limit #{startRowSchool}, #{rowCount}
+	</select>
+
+	<select id="managerSchoolSelectCount" resultType="_int">
+		select
+		count(nursery_school_member_number) from tbl_nursery_school_member
+	</select>
+
 </mapper>
 
 

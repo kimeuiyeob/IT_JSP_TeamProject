@@ -1,6 +1,7 @@
 package com.milestone.app.individual.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -58,17 +59,30 @@ public class IndividualDAO {
 	public IndividualDTO selectByIndividualMemberNumber(int individualMemberNumber) {
 		return sqlSession.selectOne("IndividualMember.selectByIndividualMemberNumber", individualMemberNumber);
 	}
+
 	// 유저 한명의 모든 정보
 	public IndividualVO userOneInfo(int individualMemberNumber) {
-		return sqlSession.selectOne("IndividualMember.userOneInfo",individualMemberNumber);
+		return sqlSession.selectOne("IndividualMember.userOneInfo", individualMemberNumber);
 	}
+
 	// 최근로그인
 	public void updateRecentLogin(IndividualVO individualVO) {
-		sqlSession.update("IndividualMember.updateRecentLogin",individualVO);
+		sqlSession.update("IndividualMember.updateRecentLogin", individualVO);
 	}
+
 	// 기부횟수 증가
 	public void countDonation(int individualMemberNumber) {
-		sqlSession.update("IndividualMember.countDonation",individualMemberNumber);
+		sqlSession.update("IndividualMember.countDonation", individualMemberNumber);
+	}
+
+//	관리자 페이지 개인 회원
+	public List<IndividualVO> managerIndiList(Map<String, Integer> pageMap) {
+		return sqlSession.selectList("IndividualMember.managerIndiList", pageMap);
+	}
+
+	// 게시물 개수
+	public int managerIndiListCount() {
+		return sqlSession.selectOne("IndividualMember.managerIndiListCount");
 	}
 
 }
