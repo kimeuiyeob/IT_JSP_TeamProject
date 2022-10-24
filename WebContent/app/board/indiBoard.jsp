@@ -50,7 +50,7 @@
                               <!-- 게시글 내용 -->
                          <a style="text-decoration: none; color: black"
                          href="${pageContext.request.contextPath}/board/boardDetailOk.indicom?individualCommunityNumber=${board.individualCommunityNumber}">
-                                <p><c:out value="${board.getIndividualCommunityContent()}"/></p>
+                                <p><c:out value="${board.getIndividualCommunityTitle()}"/></p>
                              </a>
                             </div>
                             <div class="infolike">

@@ -48,7 +48,7 @@
                               <!-- 게시글 내용 -->
                          <a style="text-decoration: none; color: black"
                          href="${pageContext.request.contextPath}/board/boardDetailOk.schoolcom?nurserySchoolCommunityNumber=${board.nurserySchoolCommunityNumber}">
-                                <p><c:out value="${board.getNurserySchoolCommunityContent()}"/></p>
+                                <p><c:out value="${board.getNurserySchoolCommunityTitle()}"/></p>
                              </a>
                             </div>
                             <div class="infolike">
