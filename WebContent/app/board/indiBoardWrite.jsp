@@ -98,7 +98,7 @@
                     src="${pageContext.request.contextPath}/assets/img/board/smalluser.png"
                     style="height: 30px; padding-right: 5px">
                </div>
-          <form action="${pageContext.request.contextPath}/board/inboardwriteOk.indicom" name="writeForm" method="post" enctype="multipart/form-data">         
+          <form action="${pageContext.request.contextPath}/board/inboardwriteOk.indicom" name="writeForm" method="post" enctype="multipart/form-data" style="display: flex;align-items: center;">         
                <!-- 작성자 -->
                <div class="writer" md="Body2" class="sc-8ee9b8f2-0 gBPcnX sc-e489b3e-8 eaqXQT"
                    style="font-size : 14px; letter-spacing: -1px; padding-right: 394px;"><c:out value="${individualMemberId}"/></div>

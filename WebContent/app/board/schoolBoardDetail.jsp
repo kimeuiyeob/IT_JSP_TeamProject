@@ -135,7 +135,7 @@
            <form action="#" class="combined" style="width:100%;" name="commentForm">
             <span style="width: 65%; margin-left:20px">
                <textarea name="commnetContent" placeholder="댓글을 입력하세요" rows="2" cols="" style="font-size: 18px; width:85%   ; resize: none; padding: 10px; margin-top:10px"></textarea></span>
-            <span style="width:10%"><input type="button" value="등록 " style="text-align: center;font-weight: 600;justify-content: center;align-items: center;border-color: transparent;background-color: rgb(248, 248, 248);height: 70px;width: 7%;margin-left:30px;cursor: pointer;"                         
+            <span style="width:10%; "><input type="button" value="등록 " style="text-align: center;font-weight: 600;justify-content: center;align-items: center;border-color: transparent;background-color: rgb(248, 248, 248);height: 70px;width: 7%;margin-left:30px;cursor: pointer;"                         
                    onclick="send()"></span>
            </form>
         </div>
