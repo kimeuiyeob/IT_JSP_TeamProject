@@ -18,7 +18,8 @@
 	<!-- 사이드 -->
 	<div id='sidebar'>
 		<div id='sidebar_header'>
-			<a href="${pageContext.request.contextPath}/member/statistics.me"
+			<a
+				href="${pageContext.request.contextPath}/management/managerDonateHistory.don"
 				id="mileStoneLogo"> </a>
 		</div>
 		<div id="sidebar_menu">
@@ -33,13 +34,13 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<div class="menu-item">
+							<%-- <div class="menu-item">
 								<a class="menu-link active"
 									href="${pageContext.request.contextPath}/member/statistics.me">
 									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">이용자 통계</span>
 								</a>
-							</div>
+							</div> --%>
 							<div class="menu-item">
 								<a class="menu-link active"
 									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
@@ -85,7 +86,7 @@
 						<div class="menu-sub">
 							<div class="menu-item">
 								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/management/community.board">
+									href="${pageContext.request.contextPath}/management/communityManager.manager">
 									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">게시글 목록</span>
 								</a>
@@ -93,7 +94,7 @@
 						</div>
 
 					</div>
-					<!-- 기부 일정 관리 -->
+					<%-- <!-- 기부 일정 관리 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
 								id="schedule-icon-img"></span>
@@ -104,13 +105,13 @@
 						<div class="menu-sub">
 							<div class="menu-item">
 								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/donation/donateSchedule.don">
+									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
 									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 일정 달력</span>
 								</a>
 							</div>
 						</div>
-					</div>
+					</div> --%>
 					<!-- 고객지원 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
@@ -127,13 +128,13 @@
 								</span> <span class="menu-title">공지사항 관리</span>
 								</a>
 							</div>
-							<div class="menu-item">
+							<%-- <div class="menu-item">
 								<a class="menu-link active"
 									href="${pageContext.request.contextPath}/management/banner.banners">
 									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">배너 관리</span>
 								</a>
-							</div>
+							</div> --%>
 						</div>
 					</div>
 				</div>

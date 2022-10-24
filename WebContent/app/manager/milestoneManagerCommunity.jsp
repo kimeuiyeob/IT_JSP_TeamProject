@@ -29,7 +29,9 @@
 	<!-- 사이드 -->
 	<div id='sidebar'>
 		<div id='sidebar_header'>
-			<a href="" id="mileStoneLogo"> </a>
+			<a
+				href="${pageContext.request.contextPath}/management/managerDonateHistory.don"
+				id="mileStoneLogo"> </a>
 		</div>
 		<div id="sidebar_menu">
 			<div id="sidebar_menu_wrapper">
@@ -43,15 +45,17 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+							<%-- <div class="menu-item">
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/member/statistics.me">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">이용자 통계</span>
 								</a>
-							</div>
+							</div> --%>
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 내역</span>
 								</a>
 							</div>
@@ -73,8 +77,9 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/userList.me">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">사용자 목록</span>
 								</a>
 							</div>
@@ -91,15 +96,16 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/communityManager.manager">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">게시글 목록</span>
 								</a>
 							</div>
 						</div>
 
 					</div>
-					<!-- 기부 일정 관리 -->
+					<%-- <!-- 기부 일정 관리 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
 								id="schedule-icon-img"></span>
@@ -109,13 +115,14 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 일정 달력</span>
 								</a>
 							</div>
 						</div>
-					</div>
+					</div> --%>
 					<!-- 고객지원 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
@@ -126,17 +133,19 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/managerNoticeListOk.notice">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">공지사항 관리</span>
 								</a>
 							</div>
-							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+							<%-- <div class="menu-item">
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/banner.banners">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">배너 관리</span>
 								</a>
-							</div>
+							</div> --%>
 						</div>
 					</div>
 				</div>
@@ -314,38 +323,81 @@
 											</tr>
 										</c:otherwise>
 									</c:choose>
-
+									<c:choose>
+										<c:when test="${nursery != null and fn:length(nursery) > 0}">
+											<c:forEach var="nursery" items="${nursery}">
+												<tr>
+													<th class="card-body-title-checkbox-padding"
+														style="width: 4%;"><label
+														class="card-body-title-user-checkbox">
+															<div class="check-img"></div> <input
+															class="notice-checked" type="checkbox">
+													</label></th>
+													<th class="card-body-title-padding" style="width: 22%;">
+														<div class="donater-info">
+															<div class="donater-info-img1"></div>
+															<div class="donater-info-text">
+																<div class="donater-name">
+																	<c:out value="${nursery.getNurserySchoolMemberName()}" />
+																</div>
+																<div>
+																	<c:out value="${nursery.getNurserySchoolMemberEmail()}" />
+																</div>
+															</div>
+														</div>
+													</th>
+													<th class="card-body-title-padding" style="width: 29%;">
+														<div class="donate-info-height">
+															<div class="donate-info-text">
+																<c:out
+																	value="${nursery.getNurserySchoolCommunityTitle()}" />
+															</div>
+														</div>
+													</th>
+													<th class="card-body-title-padding" style="width: 10%;">
+														<div class="donate-info-height">
+															<c:out value="${nursery.getNurserySchoolCommunityHits()}" />
+														</div>
+													</th>
+													<th class="card-body-title-padding" style="width: 25%;">
+														<div class="donate-info-height">
+															<c:out
+																value="${nursery.getNurserySchoolCommunityDateCreated()}" />
+														</div>
+													</th>
+											</c:forEach>
+										</c:when>
+										<c:otherwise>
+											<tr>
+												<td colspan="5" align="center">등록된 게시물이 없습니다.</td>
+											</tr>
+										</c:otherwise>
+									</c:choose>
 								</tbody>
 							</table>
-							<!-- 카드 푸터 -->
-							<div class="card-footer">
-								<div class="empty-div"></div>
-								<div class="paging-number-box">
-									<div class="paging-number">
-										<div class="paging-number-flex">
-											<div class="prev-page page-number-padding">
-												<a class="page-number-link" href="">
-													<div class="prev-page-prevArrow"></div>
-												</a>
-											</div>
-											<div class="page-number-padding">
-												<a class="page-number-link" href="">1</a>
-											</div>
-											<div class="page-number-padding">
-												<a class="page-number-link" href="">2</a>
-											</div>
-											<div class="page-number-padding">
-												<a class="page-number-link" href="">3</a>
-											</div>
-											<div class="next-page page-number-padding">
-												<a class="page-number-link" href="">
-													<div class="prev-page-nextArrow"></div>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							<table style="font-size: 1.3rem">
+								<tr align="center" valign="middle">
+									<td class="web-view"><c:if test="${prev}">
+											<a
+												href="${pageContext.request.contextPath}/management/communityManager.manager?page=${startPage - 1}">&lt;</a>
+										</c:if> <c:forEach var="i" begin="${startPage}" end="${endPage}">
+											<c:choose>
+												<c:when test="${not (i eq page)}">
+													<a
+														href="${pageContext.request.contextPath}/management/communityManager.manager?page=${i}">
+														<c:out value="${i}" />&nbsp;&nbsp;
+													</a>
+												</c:when>
+												<c:otherwise>
+													<c:out value="${i}" />&nbsp;&nbsp;
+							</c:otherwise>
+											</c:choose>
+										</c:forEach> <c:if test="${next}">
+											<a
+												href="${pageContext.request.contextPath}/management/communityManager.manager?page=${endPage + 1}">&gt;</a>
+										</c:if></td>
+								</tr>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -354,7 +406,9 @@
 			<footer>
 				<div id="footer-logo-box">
 					<div id="footer-flex">
+						<a href="${pageContext.request.contextPath}/member/index.me">
 						<div id="footer-logo"></div>
+						</a>
 						<div id="footer-company">2022© 동석한 아카데미 Team 4</div>
 					</div>
 				</div>
@@ -378,7 +432,7 @@
 <script
 	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 <script>
-    var jb = jQuery.noConflict();
+	var jb = jQuery.noConflict();
 </script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script

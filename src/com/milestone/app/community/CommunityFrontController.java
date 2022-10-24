@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.milestone.app.Result;
+import com.milestone.app.individualcommunity.IndiBoardOkController;
 
 public class CommunityFrontController extends HttpServlet {
 
@@ -29,8 +30,7 @@ public class CommunityFrontController extends HttpServlet {
 		Result result = null;
 
 		// ======================관리자 커뮤=======================
-
-		if (request.equals("/board/boardManager.bo")) { // 커뮤니티 화면 디비 조회
+		if (request.equals("/management/communityManager.manager")) { // 커뮤니티 화면 디비 조회
 			result = new CommunityListOkController().execute(req, resp);
 
 			// ======================메인 페이지=======================

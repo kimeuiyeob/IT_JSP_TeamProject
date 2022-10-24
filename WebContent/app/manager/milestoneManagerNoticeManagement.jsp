@@ -78,7 +78,9 @@
 	<!-- 사이드 -->
 	<div id='sidebar'>
 		<div id='sidebar_header'>
-			<a href="" id="mileStoneLogo"> </a>
+			<a
+				href="${pageContext.request.contextPath}/management/managerDonateHistory.don"
+				id="mileStoneLogo"> </a>
 		</div>
 		<div id="sidebar_menu">
 			<div id="sidebar_menu_wrapper">
@@ -92,15 +94,17 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+							<%-- <div class="menu-item">
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/member/statistics.me">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">이용자 통계</span>
 								</a>
-							</div>
+							</div> --%>
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 내역</span>
 								</a>
 							</div>
@@ -122,8 +126,9 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/userList.me">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">사용자 목록</span>
 								</a>
 							</div>
@@ -140,15 +145,16 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/communityManager.manager">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">게시글 목록</span>
 								</a>
 							</div>
 						</div>
 
 					</div>
-					<!-- 기부 일정 관리 -->
+					<%-- <!-- 기부 일정 관리 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
 								id="schedule-icon-img"></span>
@@ -158,13 +164,14 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 일정 달력</span>
 								</a>
 							</div>
 						</div>
-					</div>
+					</div> --%>
 					<!-- 고객지원 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
@@ -175,17 +182,19 @@
 						</span>
 						<div class="menu-sub">
 							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/managerNoticeListOk.notice">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">공지사항 관리</span>
 								</a>
 							</div>
-							<div class="menu-item">
-								<a class="menu-link active" href=""> <span
-									class="menu-bullet"> <span class="bullet"></span>
+							<%-- <div class="menu-item">
+								<a class="menu-link active"
+									href="${pageContext.request.contextPath}/management/banner.banners">
+									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">배너 관리</span>
 								</a>
-							</div>
+							</div> --%>
 						</div>
 					</div>
 				</div>
@@ -393,7 +402,9 @@
 			<footer>
 				<div id="footer-logo-box">
 					<div id="footer-flex">
-						<div id="footer-logo"></div>
+						<a href="${pageContext.request.contextPath}/member/index.me">
+							<div id="footer-logo"></div>
+						</a>
 						<div id="footer-company">2022© 동석한 아카데미 Team 4</div>
 					</div>
 				</div>
