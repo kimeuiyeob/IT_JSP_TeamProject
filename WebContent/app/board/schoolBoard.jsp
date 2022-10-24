@@ -35,7 +35,7 @@
             <c:forEach var="board" items="${boards}">
                    <div class="longdived">
                         <div class="longdivedimg">
-                            <img src="${pageContext.request.contextPath}/assets/img/board/baby1.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/assets/img/board/noPicture.jpg" alt="">
                         </div>
                         <input type="hidden" name="nurserySchoolCommunityNumber" value="${board.getNurserySchoolCommunityNumber()}">
                    <a style="text-decoration: none; color: black"
@@ -112,19 +112,12 @@
                <c:forEach var="i" begin="${startPage}" end="${endPage}">
                   <c:choose>
                      <c:when test="${not(i eq page)}">
-
-                          <li class="page-number active">
-                                 <span class="">
-	                                 <a href="${pageContext.request.contextPath}/board/schoolBoard.schoolcom?page=${i}" style="text-decoration: none">
-	                                 <c:out value="${i}"/>&nbsp;&nbsp;</a>
-                                 </span>
-                            
-                          </li>
+                       <a href="${pageContext.request.contextPath}/board/schoolBoard.schoolcom?page=${i}" style="text-decoration: none; color:black">
+                       	<c:out value="${i}"/>&nbsp;&nbsp;</a>
                      </c:when>
                      <c:otherwise>
                      	<a style="color: black;display: flex;align-items: center;">
-                           <span class=""><c:out value="${i}"/>&nbsp;&nbsp;</span>
-                     	</a>
+                           <span style="color:#fd3049"><c:out value="${i}"/>&nbsp;&nbsp;</span>	</a>
                      </c:otherwise>
                     </c:choose>
                </c:forEach>
