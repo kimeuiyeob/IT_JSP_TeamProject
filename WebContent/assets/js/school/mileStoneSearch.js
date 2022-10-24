@@ -9,7 +9,7 @@
 //   modal.style.display = "none"
 // })
 
-const modal1 = document.getElementById("modal-wrapper2")
+/*const modal1 = document.getElementById("modal-wrapper2")
 const btnModal1 = document.getElementById("open-modal2")
 btnModal1.addEventListener("click", e => {
   modal1.style.display = "flex"
@@ -18,7 +18,7 @@ btnModal1.addEventListener("click", e => {
 const closeBtn1 = modal1.querySelector(".close-modal2")
 closeBtn1.addEventListener("click", e => {
   modal1.style.display = "none"
-})
+})*/
 
 // const modal2 = document.getElementById("modal-wrapper3")
 // const btnModal2 = document.getElementById("open-modal3")

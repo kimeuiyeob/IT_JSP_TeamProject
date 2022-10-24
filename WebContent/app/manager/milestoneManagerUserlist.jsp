@@ -27,7 +27,6 @@
 		</div>
 	</div>
 	<!-- 사이드 -->
-	<!-- 사이드 -->
 	<div id='sidebar'>
 		<div id='sidebar_header'>
 			<a
@@ -46,13 +45,12 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<%-- <div class="menu-item">
-								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/member/statistics.me">
-									<span class="menu-bullet"> <span class="bullet"></span>
+							<div class="menu-item" onclick="javascript:btn()">
+								<a class="menu-link active" href=""> <span
+									class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">이용자 통계</span>
 								</a>
-							</div> --%>
+							</div>
 							<div class="menu-item">
 								<a class="menu-link active"
 									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
@@ -106,7 +104,7 @@
 						</div>
 
 					</div>
-					<%-- <!-- 기부 일정 관리 -->
+					<!-- 기부 일정 관리 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
 								id="schedule-icon-img"></span>
@@ -115,15 +113,14 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<div class="menu-item">
-								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
-									<span class="menu-bullet"> <span class="bullet"></span>
+							<div class="menu-item" onclick="javascript:btn()">
+								<a class="menu-link active" href=""> <span
+									class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 일정 달력</span>
 								</a>
 							</div>
 						</div>
-					</div> --%>
+					</div>
 					<!-- 고객지원 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
@@ -140,13 +137,12 @@
 								</span> <span class="menu-title">공지사항 관리</span>
 								</a>
 							</div>
-							<%-- <div class="menu-item">
-								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/management/banner.banners">
-									<span class="menu-bullet"> <span class="bullet"></span>
+							<div class="menu-item" onclick="javascript:btn()">
+								<a class="menu-link active" href=""> <span
+									class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">배너 관리</span>
 								</a>
-							</div> --%>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -191,14 +187,15 @@
 						<!-- 카드 헤더 -->
 						<div class="card-header">
 							<div class="card-title">
-								<div class="card-title-item-box">
+								<div class="card-title-item-box" onclick="javascript:btn()">
 									<div class="card-item-search"></div>
-									<input id="search-bar" type="text" placeholder="검색">
+									<input id="search-bar" type="text" placeholder="검색"
+										style="color: transparent; text-shadow: 0 0 0 black;">
 								</div>
 							</div>
 							<div class="card-toolbar">
 								<div class="card-toolbar-itemBox">
-									<button class="card-toolbar-item">
+									<button class="card-toolbar-item" onclick="javascript:btn()">
 										<div id="filter-img"></div>
 										필터
 
@@ -251,7 +248,7 @@
 											</div>
 										</div>
 									</button>
-									<button class="card-toolbar-item">
+									<button class="card-toolbar-item" onclick="javascript:btn()">
 										<div id="out-img"></div>
 										사용자 삭제
 									</button>
@@ -487,8 +484,8 @@
 			<footer>
 				<div id="footer-logo-box">
 					<div id="footer-flex">
-					<a href="${pageContext.request.contextPath}/member/index.me">
-						<div id="footer-logo"></div>
+						<a href="${pageContext.request.contextPath}/member/index.me">
+							<div id="footer-logo"></div>
 						</a>
 						<div id="footer-company">2022© 동석한 아카데미 Team 4</div>
 					</div>
@@ -535,5 +532,9 @@
 		$("#nomartb").hide();
 	}
 </script>
-
+<script>
+	function btn() {
+		alert('준비중입니다.');
+	}
+</script>
 </html>

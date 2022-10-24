@@ -37,13 +37,13 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<%-- <div class="menu-item">
+							<div class="menu-item" onclick="javascript:btn()">
 								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/member/statistics.me">
+									href="">
 									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">이용자 통계</span>
 								</a>
-							</div> --%>
+							</div>
 							<div class="menu-item">
 								<a class="menu-link active"
 									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
@@ -97,8 +97,8 @@
 						</div>
 
 					</div>
-					<%-- <!-- 기부 일정 관리 -->
-					<div class="menu_item">
+					<!-- 기부 일정 관리 -->
+					<div class="menu_item" >
 						<span class="menu-link"> <span class="menu-icon"> <span
 								id="schedule-icon-img"></span>
 						</span> <span class="menu-title">기부 일정 관리</span> <span class="menu-arrow">
@@ -106,15 +106,15 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<div class="menu-item">
+							<div class="menu-item" onclick="javascript:btn()">
 								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
+									href="">
 									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 일정 달력</span>
 								</a>
 							</div>
 						</div>
-					</div> --%>
+					</div>
 					<!-- 고객지원 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
@@ -131,13 +131,13 @@
 								</span> <span class="menu-title">공지사항 관리</span>
 								</a>
 							</div>
-							<%-- <div class="menu-item">
+							<div class="menu-item" onclick="javascript:btn()">
 								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/management/banner.banners">
+									href="">
 									<span class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">배너 관리</span>
 								</a>
-							</div> --%>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -220,5 +220,9 @@
 	src="${pageContext.request.contextPath}/assets/js/manager/mileStoneManager_donateSchedule.js"></script>
 <script
 	src='${pageContext.request.contextPath}/assets/js/manager/main.js'></script>
-
+<script>
+	function btn() {
+		alert('준비중입니다.');
+	}
+</script>
 </html>

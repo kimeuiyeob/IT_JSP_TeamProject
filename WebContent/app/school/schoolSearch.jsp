@@ -15,7 +15,8 @@
 	<jsp:include page="../fix/header.jsp" />
 
 	<div class="buttonall" style="padding-top: 225px;">
-		<button id="open-modal2" type="button2" style="width: 115.13px;">
+		<button id="open-modal2" type="button2" style="width: 115.13px;"
+			onclick="javascript:btn()">
 			<div class="div2">
 				보육원 위치<img
 					src="${pageContext.request.contextPath}/assets/img/school/역삼각형.png"
@@ -124,4 +125,9 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script
 	src="${pageContext.request.contextPath}/assets/js/school/mileStoneSearch.js"></script>
+<script>
+	function btn() {
+		alert('준비중입니다.');
+	}
+</script>
 </html>
