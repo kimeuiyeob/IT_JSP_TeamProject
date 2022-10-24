@@ -169,12 +169,12 @@ $checkBox.on('click', function (e) {
 
 
 /* -----------배너 추가,수정 모달창-------------- */
-const $addBanner = $('.card-toolbar-item').eq(0);
+/*const $addBanner = $('.card-toolbar-item').eq(0);
 var addBannerGroupModal = $('.add-banner-group-modal')[0];
 var addBannerModal = $('.add-banner-modal')[0];
 var $modalSubmit = $('.modal-submit');
 var $closeImg = $('.close-img');
-var $selectFileorurlButton = $('.select-fileorurl-button');
+var $selectFileorurlButton = $('.select-fileorurl-button');*/
 
 /* ------------------------------------ */
 

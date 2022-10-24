@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<!-- 배너 그룹명 모달창 -->
-	<div class="add-banner-group-modal">
+	<div class="add-banner-group-modal" >
 		<div class="add-banner-group-modal-body">
 			<div class="notice-modal-header">
 				<h2>배너 추가</h2>
@@ -85,13 +85,12 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<%-- <div class="menu-item">
-								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/member/statistics.me">
-									<span class="menu-bullet"> <span class="bullet"></span>
+							<div class="menu-item" onclick="javascript:btn()">
+								<a class="menu-link active" href=""> <span
+									class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">이용자 통계</span>
 								</a>
-							</div> --%>
+							</div>
 							<div class="menu-item">
 								<a class="menu-link active"
 									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
@@ -145,7 +144,7 @@
 						</div>
 
 					</div>
-					<%-- <!-- 기부 일정 관리 -->
+					<!-- 기부 일정 관리 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
 								id="schedule-icon-img"></span>
@@ -154,15 +153,14 @@
 						</span>
 						</span>
 						<div class="menu-sub">
-							<div class="menu-item">
-								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/management/managerDonateHistory.don">
-									<span class="menu-bullet"> <span class="bullet"></span>
+							<div class="menu-item" onclick="javascript:btn()">
+								<a class="menu-link active" href=""> <span
+									class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">기부 일정 달력</span>
 								</a>
 							</div>
 						</div>
-					</div> --%>
+					</div>
 					<!-- 고객지원 -->
 					<div class="menu_item">
 						<span class="menu-link"> <span class="menu-icon"> <span
@@ -179,13 +177,12 @@
 								</span> <span class="menu-title">공지사항 관리</span>
 								</a>
 							</div>
-							<%-- <div class="menu-item">
-								<a class="menu-link active"
-									href="${pageContext.request.contextPath}/management/banner.banners">
-									<span class="menu-bullet"> <span class="bullet"></span>
+							<div class="menu-item" onclick="javascript:btn()">
+								<a class="menu-link active" href=""> <span
+									class="menu-bullet"> <span class="bullet"></span>
 								</span> <span class="menu-title">배너 관리</span>
 								</a>
-							</div> --%>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -218,11 +215,11 @@
 						<div class="card-header">
 							<div class="card-toolbar">
 								<div class="card-toolbar-itemBox">
-									<button class="card-toolbar-item">
+									<button class="card-toolbar-item" onclick="javascript:btn()">
 										<div id="plusBlue-img"></div>
 										배너 추가
 									</button>
-									<button class="card-toolbar-item">
+									<button class="card-toolbar-item" onclick="javascript:btn()">
 										<div id="out-img"></div>
 										배너 삭제
 									</button>
@@ -335,5 +332,9 @@
 	src="${pageContext.request.contextPath}/assets/js/manager/mileStoneManager_public.js"></script>
 <script
 	src="${pageContext.request.contextPath}/assets/js/manager/mileStoneManager_banner.js"></script>
-
+<script>
+	function btn() {
+		alert('준비중입니다.');
+	}
+</script>
 </html>

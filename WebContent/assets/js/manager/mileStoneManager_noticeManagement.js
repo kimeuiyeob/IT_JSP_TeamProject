@@ -1,5 +1,5 @@
 /* ------------------필터 클릭, 호버--------------------- */
-const $filter = $('.card-toolbar-item').eq(0);
+/*const $filter = $('.card-toolbar-item').eq(0);
 const $filterDropdown = $('.menu-sub-dropdown');
 const $filters = $('.card-toolbar-item');
 const $filtersLast = $('.card-toolbar-itemBox').children().last()
@@ -84,9 +84,9 @@ $filtersLast.on('click', function () {
     if (deleteModal.classList.contains('show')) {
         body.style.overflow = 'hidden';
     }
-})
+})*/
 /* ---------------------필터 서브-------------- */
-const $selectOption = $('.menu-sub-dropdown-option-box');
+/*const $selectOption = $('.menu-sub-dropdown-option-box');
 
 $selectOption.on('click', function () {
     console.log('방가')
@@ -97,10 +97,10 @@ $selectOption.on('click', function () {
         $(this).find('.menu-sub-dropdown-option-sub').css('display', 'none');
         $(this).find('input').prop('checked', false);
     }
-})
+})*/
 
 /* ----------------- 필터 서브 옵션 호버---------------- */
-const $subOption = $('.menu-sub-dropdown-option-sub-item');
+/*const $subOption = $('.menu-sub-dropdown-option-sub-item');
 
 $subOption.on('mouseover', function () {
     $(this).css('background-color', '#f4f6fa');
@@ -114,10 +114,10 @@ $subOption.on('mouseout', function () {
 $subOption.on('click', function () {
     $(this).closest('label').find('.menu-sub-dropdown-option-text').html($(this).html());
 })
-
+*/
 /* ------------------ 필터 서브 옵션 푸터 호버----------------*/
 
-const $subOptionResetChoose = $('.menu-sub-dropdown-Botton').eq(0);
+/*const $subOptionResetChoose = $('.menu-sub-dropdown-Botton').eq(0);
 const $subOptionApllyChoose = $('.menu-sub-dropdown-Botton').eq(1);
 $subOptionApllyChoose.css('background-color', '#009ef7');
 $subOptionApllyChoose.css('color', '#fff');
@@ -135,7 +135,7 @@ $subOptionApllyChoose.on('mouseover', function () {
 $subOptionApllyChoose.on('mouseout', function () {
     $(this).css('background-color', '#009ef7');
 })
-
+*/
 /* ----------------체크박스-------------------- */
 const $checkBox = $('.notice-checked');
 const $checkBoxAll = $('.notice-checked-all');
@@ -177,7 +177,7 @@ $checkBox.on('click', function (e) {
 
 
 /* -----------공지사항 추가,수정 모달창-------------- */
-const $addNotice = $('.card-toolbar-item').eq(2);
+/*const $addNotice = $('.card-toolbar-item').eq(2);
 const $updateNotice = $('.card-toolbar-item').eq(1);
 const addNoticeModal = $('.add-schedule-modal')[0];
 const updateNoticeModal = $('.update-notice-modal')[0];
@@ -222,9 +222,9 @@ $addNotice.on('click', function () {
         body.style.overflow = 'hidden';
     }
 })
-
+*/
 /* -----------삭제 모달창-------------- */
-const $delete = $('.donate-outBox');
+/*const $delete = $('.donate-outBox');
 const $finalDelete = $('.delete-modal-delete');
 const $finalDeleteCancel = $('.delete-modal-cancel');
 const deleteModal = $('.delete-modal')[0];
@@ -254,11 +254,11 @@ $delete.on('mouseover', function () {
 $delete.on('mouseout', function () {
     $(this).css('color', '#7e8299');
     $(this).css('background-color', '#f5f8fa');
-})
+})*/
 
 /* -----------------썸머노트-------------- */
 
-jb('.summernote').summernote({
+/*jb('.summernote').summernote({
     placeholder: 'Hello stand alone ui',
     tabsize: 2,
     height: 280,
@@ -271,10 +271,10 @@ jb('.summernote').summernote({
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']]
     ]
-});
+});*/
 
 /* -------------- 페이지 이동 ---------------- */
-const $pageNumberLink = $('.page-number-link');
+/*const $pageNumberLink = $('.page-number-link');
 
 $pageNumberLink.on('mouseover', function () {
     $(this).css('background-color', '#f4f6fa');
@@ -287,12 +287,7 @@ $pageNumberLink.on('mouseout', function () {
 })
 
 
-
-
-
-
-
-
+*/
 
 
 
