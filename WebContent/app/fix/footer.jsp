@@ -91,7 +91,7 @@
   
   function send(){
 	  if(${sessionScope.individualMemberNumber==10}){
-		  location.href = '${pageContext.request.contextPath}/member/statistics.me'
+		  location.href = '${pageContext.request.contextPath}/management/managerDonateHistory.don'
 	  }else{
 		  alert("관리자 계정으로 로그인하세요.");
 	  }
