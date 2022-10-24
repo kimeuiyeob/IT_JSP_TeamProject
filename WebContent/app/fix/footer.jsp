@@ -90,7 +90,7 @@
   
   
   function send(){
-	  if(${sessionScope.individualMemberNumber==10}){
+	  if(${sessionScope.individualMemberNumber==1}){
 		  location.href = '${pageContext.request.contextPath}/management/managerDonateHistory.don'
 	  }else{
 		  alert("관리자 계정으로 로그인하세요.");
