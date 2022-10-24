@@ -77,11 +77,9 @@ body {
 									src="https://cdn.class101.net/images/cba86b3c-f6a4-42b3-9bbd-bf6c09e49d27/1920xauto.webp"
 									alt="">
 								<div style="margin: 10px;">
-									<div>닉네임</div>
-									<div id="miniProfileRight">
-										<a
-											href="${pageContext.request.contextPath}/mypage/indimodifych.indi"
-											style="color: orange;">마이페이지 <svg
+                                    <div>${individualMemberId}</div>
+                                    <div id="miniProfileRight"><a href="myPage1.html"><a href="${pageContext.request.contextPath}/app/404/404.jsp"  style="text-decoration: none; color:rgb(255 114 42)">마이페이지</a>
+											<svg
 												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 												class="css-jdqsvn" style="width: 10px; height: 10px;">
                                       <path

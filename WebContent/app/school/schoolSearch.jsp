@@ -87,9 +87,9 @@
 			</c:forEach>
 		</c:when>
 		<c:otherwise>
-			<tr>
-				<td colspan="5" align="center">등록된 보육원이 없습니다.</td>
-			</tr>
+			<div style="left: 50%;position: absolute;">
+				등록된 보육원이 없습니다.
+			</div>
 		</c:otherwise>
 	</c:choose>
 	<div style="font-size: 16px;">
@@ -127,7 +127,7 @@
 	src="${pageContext.request.contextPath}/assets/js/school/mileStoneSearch.js"></script>
 <script>
 	function btn() {
-		alert('준비중입니다.');
+		alert('페이지 준비중입니다.');
 	}
 </script>
 </html>
