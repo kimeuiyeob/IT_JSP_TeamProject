@@ -22,7 +22,9 @@
                 개인 커뮤니티
             </div>
             <div>
-                <input type="button" id="write" value="글 작성하기" style=" margin-left: 1045px;" onclick="location.href='${pageContext.request.contextPath}/board/boardwrite.indicom'">
+            <input type="hidden" value="${sessionScope.individualMemberNumber}" name="who">
+            <input type="hidden" value="${sessionScope.nurserySchoolMemberNumber}" name="who2">
+                <input type="button" id="write" value="글 작성하기" style=" margin-left: 1045px;" onclick="writePost()">
             </div>
         </div>
     </div>
@@ -142,7 +144,18 @@
 
 </body>
 <script>
-   $("longdived").click
-
+   $("longdived").click;
+	
+     function writePost(){
+	   if(${sessionScope.individualMemberNumber != null}){
+		   location.href='${pageContext.request.contextPath}/board/boardwrite.indicom';
+	   }else if(${sessionScope.nurserySchoolMemberNumber != null}){
+		   alert("개인회원 전용 커뮤니티입니다");
+	   }else{
+		   alert("로그인 후 서비스 이용이 가능합니다");
+		   location.href='${pageContext.request.contextPath}/member/login.me';
+	   } 
+   }
+              		
 </script>
 </html>
