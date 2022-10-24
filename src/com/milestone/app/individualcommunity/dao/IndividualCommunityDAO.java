@@ -62,11 +62,11 @@ public class IndividualCommunityDAO {
 
 //	   관리자 개인커뮤
 	public List<IndividualCommunityDTO> managerIndiCommunityList(Map<String, Integer> pageMap) {
-		return sqlSession.selectList("NurserySchoolMember.managerIndiCommunityList", pageMap);
+		return sqlSession.selectList("IndividualCommunity.managerIndiCommunityList", pageMap);
 	}
 
 	public int managerIndiCommunitySelectCount() {
-		return sqlSession.selectOne("NurserySchoolMember.managerIndiCommunitySelectCount");
+		return sqlSession.selectOne("IndividualCommunity.managerIndiCommunitySelectCount");
 	}
 
 }

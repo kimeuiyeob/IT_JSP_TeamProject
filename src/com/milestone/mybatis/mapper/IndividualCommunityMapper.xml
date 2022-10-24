@@ -107,7 +107,7 @@
 		imc.individual_number =im.individual_member_number
 		order by
 		individual_community_number
-		desc limit #{startRowIndi}, #{rowCount}
+		desc limit #{startRow}, #{rowCount}
 	</select>
 
 	<select id="managerIndiCommunitySelectCount" resultType="_int">

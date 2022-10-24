@@ -11,8 +11,17 @@ public class NurserySchoolCommunityDTO {
    private String nurserySchoolCommunityDateCreated;
    private int nurserySchoolMemberNumber;
    private String nurserySchoolMemberName;
+   private String nurserySchoolMemberEmail;
    
-   public NurserySchoolCommunityDTO () {;}
+   public String getNurserySchoolMemberEmail() {
+	return nurserySchoolMemberEmail;
+}
+
+public void setNurserySchoolMemberEmail(String nurserySchoolMemberEmail) {
+	this.nurserySchoolMemberEmail = nurserySchoolMemberEmail;
+}
+
+public NurserySchoolCommunityDTO () {;}
 
    public int getNurserySchoolCommunityNumber() {
       return nurserySchoolCommunityNumber;
@@ -87,15 +96,15 @@ public class NurserySchoolCommunityDTO {
    }
 
    @Override
-   public String toString() {
-      return "NurserySchoolCommunityDTO [nurserySchoolCommunityNumber=" + nurserySchoolCommunityNumber
-            + ", nurserySchoolCommunityTitle=" + nurserySchoolCommunityTitle + ", nurserySchoolCommunityContent="
-            + nurserySchoolCommunityContent + ", nurserySchoolCommunityHits=" + nurserySchoolCommunityHits
-            + ", nurserySchoolCommunityLike=" + nurserySchoolCommunityLike + ", nurserySchoolCommunityImage="
-            + nurserySchoolCommunityImage + ", nurserySchoolCommunityDateCreated="
-            + nurserySchoolCommunityDateCreated + ", nurserySchoolMemberNumber=" + nurserySchoolMemberNumber
-            + ", nurserySchoolMemberName=" + nurserySchoolMemberName + "]";
-   }
+public String toString() {
+	return "NurserySchoolCommunityDTO [nurserySchoolCommunityNumber=" + nurserySchoolCommunityNumber
+			+ ", nurserySchoolCommunityTitle=" + nurserySchoolCommunityTitle + ", nurserySchoolCommunityContent="
+			+ nurserySchoolCommunityContent + ", nurserySchoolCommunityHits=" + nurserySchoolCommunityHits
+			+ ", nurserySchoolCommunityLike=" + nurserySchoolCommunityLike + ", nurserySchoolCommunityImage="
+			+ nurserySchoolCommunityImage + ", nurserySchoolCommunityDateCreated=" + nurserySchoolCommunityDateCreated
+			+ ", nurserySchoolMemberNumber=" + nurserySchoolMemberNumber + ", nurserySchoolMemberName="
+			+ nurserySchoolMemberName + ", nurserySchoolMemberEmail=" + nurserySchoolMemberEmail + "]";
+}
 
 
 }

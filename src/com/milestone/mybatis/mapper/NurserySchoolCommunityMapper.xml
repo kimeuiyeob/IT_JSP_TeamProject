@@ -93,12 +93,12 @@
 	<select id="managerSchoolCommunityList" parameterType="map"
 		resultType="NurserySchoolCommunityDTO">
 		select
-		smc.nursery_school_community_number,
-		smc.nursery_school_community_title,
-		smc.nursery_school_community_content,
-		smc.nursery_school_community_hits,
-		smc.nursery_school_community_date_created,
-		smc.nursery_school_member_number,
+		smc.nursery_school_community_number ,
+		smc.nursery_school_community_title ,
+		smc.nursery_school_community_hits
+		,
+		smc.nursery_school_community_date_created ,
+		smc.nursery_school_member_number ,
 		sm.nursery_school_member_name
 		from
 		tbl_nursery_school_member_community smc,
@@ -106,8 +106,9 @@
 		where
 		smc.nursery_school_member_number =
 		sm.nursery_school_member_number
-		order by nursery_school_member_number
-		desc limit #{startRowSchool}, #{rowCount}
+		order by
+		smc.nursery_school_community_number
+		desc limit #{startRow}, #{rowCount}
 	</select>
 
 	<select id="managerSchoolCommunitySelectCount" resultType="_int">
