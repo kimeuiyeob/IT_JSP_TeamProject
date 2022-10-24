@@ -227,7 +227,7 @@ input::placeholder {
 	border-radius: 5px;
     height: 74%;
     width: 100%;
-    background-color: yellow;
+    background-color: #f2f2e4;
     display: flex;
     justify-content: center;
     overflow: hidden;
