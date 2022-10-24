@@ -110,9 +110,10 @@
         	                     <img src="${pageContext.request.contextPath}/assets/img/board/putpicture.png"
 	                             style="height: 43px; cursor: pointer;">
 	                           </label>
- 	                           <input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/>
-	                           <!-- <input type="button" onclick="cancelFile('nurserySchoolCommunityImage')" value="첨부 삭제"> -->
-	                       </div>
+	                           <input name="individualCommunityImage" id="file-input" type="" style="display: none;"onclick="noReady()"/>
+							<!--<input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/> -->
+                           <!-- <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제"> -->
+                           </div>
 	                   </div>
                    </div>
            </div>
@@ -151,6 +152,9 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+function noReady(){
+	alert("페이지 준비중입니다");
+}
 
 var check = false;
 
