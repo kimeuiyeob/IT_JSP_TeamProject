@@ -108,7 +108,7 @@
 	                       <div class="image-upload">
 	                           <label for="file-input" style="right: 20px;">
         	                     <img src="${pageContext.request.contextPath}/assets/img/board/putpicture.png"
-	                             style="height: 43px; cursor: pointer;">
+	                             style="height: 43px; cursor: pointer; position: absolute;right: 3%;top: 12%;">
 	                           </label>
 	                           <input name="individualCommunityImage" id="file-input" type="" style="display: none;"onclick="noReady()"/>
 							<!--<input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/> -->
