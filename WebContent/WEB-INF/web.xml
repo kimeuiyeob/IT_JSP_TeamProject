@@ -153,12 +153,12 @@
   	<url-pattern>*.individualFile</url-pattern> 
   </servlet-mapping>
   
-   <servlet>  <!--  개인 첨부파일  -->
+   <servlet>  
   	<servlet-name>CommunityFrontController</servlet-name>
   	<servlet-class>com.milestone.app.community.CommunityFrontController</servlet-class>
   </servlet>
   
-  <servlet-mapping>  <!-- 개인 첨부파일 -->
+  <servlet-mapping>  
   	<servlet-name>CommunityFrontController</servlet-name>
   	<url-pattern>*.manager</url-pattern> 
   </servlet-mapping>
