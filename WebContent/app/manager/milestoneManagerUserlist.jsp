@@ -339,16 +339,16 @@
 									</c:otherwise>
 								</c:choose>
 							</table>
-							<table style="font-size: 1.3rem" id="schooltb">
+							<table style="font-size: 16px" id="schooltb">
 								<tr align="center" valign="middle">
 									<td class="web-view"><c:if test="${prevSchool}">
-											<a
+											<a style="text-decoration: none; color: black"
 												href="${pageContext.request.contextPath}/management/userList.me?pageSchool=${startPageSchool - 1}">&lt;</a>
 										</c:if> <c:forEach var="i" begin="${startPageSchool}"
 											end="${endPageSchool}">
 											<c:choose>
 												<c:when test="${not (i eq pageSchool)}">
-													<a
+													<a style="text-decoration: none; color: black"
 														href="${pageContext.request.contextPath}/management/userList.me?pageSchool=${i}">
 														<c:out value="${i}" />&nbsp;&nbsp;
 													</a>
@@ -358,7 +358,7 @@
 															</c:otherwise>
 											</c:choose>
 										</c:forEach> <c:if test="${nextSchool}">
-											<a
+											<a style="text-decoration: none; color: black"
 												href="${pageContext.request.contextPath}/management/userList.me?pageSchool=${endPageSchool + 1}">&gt;</a>
 										</c:if></td>
 								</tr>
@@ -448,16 +448,16 @@
 										</c:otherwise>
 									</c:choose>
 								</table>
-								<table style="font-size: 1.3rem; display: none;" id="nomartb">
+								<table style="font-size: 16px; display: none;" id="nomartb">
 									<tr align="center" valign="middle">
 										<td class="web-view"><c:if test="${prevIndi}">
-												<a
+												<a style="text-decoration: none; color: black"
 													href="${pageContext.request.contextPath}/management/userList.me?pageIndi=${startPageIndi - 1}">&lt;</a>
 											</c:if> <c:forEach var="i" begin="${startPageIndi}"
 												end="${endPageIndi}">
 												<c:choose>
 													<c:when test="${not (i eq pageIndi)}">
-														<a
+														<a style="text-decoration: none; color: black"
 															href="${pageContext.request.contextPath}/management/userList.me?pageIndi=${i}">
 															<c:out value="${i}" />&nbsp;&nbsp;
 														</a>
@@ -467,7 +467,7 @@
 															</c:otherwise>
 												</c:choose>
 											</c:forEach> <c:if test="${nextIndi}">
-												<a
+												<a style="text-decoration: none; color: black"
 													href="${pageContext.request.contextPath}/management/userList.me?pageIndi=${endPageIndi + 1}">&gt;</a>
 											</c:if></td>
 									</tr>
