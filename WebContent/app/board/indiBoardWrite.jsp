@@ -62,7 +62,7 @@
                                 <div style="margin: 10px;">
                                 
                                     <div>${individualMemberId}</div>
-                                    <div id="miniProfileRight"><a href="myPage1.html " style="color: orange;"><a href="${pageContext.request.contextPath}/app/404/404.jsp"  style="text-decoration: none; color:black">마이페이지</a>
+                                    <div id="miniProfileRight"><a href="myPage1.html "><a href="${pageContext.request.contextPath}/app/404/404.jsp"  style="text-decoration: none; color:rgb(255 86 0)">마이페이지</a>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                 class="css-jdqsvn" style="width: 10px; height: 10px;">
                                                 <path
@@ -158,7 +158,6 @@ function noReady(){
 
 var check = false;
 
-$(function () {
     $("#modalBody").hide();
 
     $("#miniBox").hide();
@@ -171,8 +170,6 @@ $(function () {
             $("#miniBox").hide();
             check = false;
         }
-    });
-
 
     $("#modifySubmit").mouseover(function () {
         $(this).css("background-color", "rgb(255 86 0)")
@@ -212,7 +209,6 @@ $(function () {
 });
 
 
-
 function send(){
    
    if(!$("#boardTitle")){
@@ -245,6 +241,7 @@ $(".files").change(function(e){
     $("input#" + fileName).val("");
     $("img#" + fileName + "Img").attr("src", "${pageContext.request.contextPath}/images/filePlus.png");
  }
+
 
  
 </script>
