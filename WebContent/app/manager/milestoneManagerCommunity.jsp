@@ -373,15 +373,17 @@
 									</c:choose>
 								</tbody>
 							</table>
-							<table style="font-size: 1.3rem">
+
+							<table
+								style="font-size: 16px; ">
 								<tr align="center" valign="middle">
 									<td class="web-view"><c:if test="${prev}">
-											<a
+											<a style="text-decoration: none; color: black"
 												href="${pageContext.request.contextPath}/management/communityManager.manager?page=${startPage - 1}">&lt;</a>
 										</c:if> <c:forEach var="i" begin="${startPage}" end="${endPage}">
 											<c:choose>
 												<c:when test="${not (i eq page)}">
-													<a
+													<a style="text-decoration: none; color: black"
 														href="${pageContext.request.contextPath}/management/communityManager.manager?page=${i}">
 														<c:out value="${i}" />&nbsp;&nbsp;
 													</a>
@@ -391,7 +393,7 @@
 							</c:otherwise>
 											</c:choose>
 										</c:forEach> <c:if test="${next}">
-											<a
+											<a style="text-decoration: none; color: black"
 												href="${pageContext.request.contextPath}/management/communityManager.manager?page=${endPage + 1}">&gt;</a>
 										</c:if></td>
 								</tr>

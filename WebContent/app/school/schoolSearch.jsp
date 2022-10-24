@@ -92,18 +92,18 @@
 			</tr>
 		</c:otherwise>
 	</c:choose>
-	<div style="font-size: 1.3rem">
+	<div style="font-size: 16px;">
 		<div align="center" valign="middle">
 			<div class="web-view"
 				style="padding-top: 915px; padding-right: 20px;">
 				<c:if test="${prev}">
-					<a
+					<a style="text-decoration: none; color: black"
 						href="${pageContext.request.contextPath}/search/schoolSearchOk.school?page=${startPage - 1}">&lt;</a>
 				</c:if>
 				<c:forEach var="i" begin="${startPage}" end="${endPage}">
 					<c:choose>
 						<c:when test="${not (i eq page)}">
-							<a
+							<a style="text-decoration: none; color: black"
 								href="${pageContext.request.contextPath}/search/schoolSearchOk.school?page=${i}">
 								<c:out value="${i}" />&nbsp;&nbsp;
 							</a>
@@ -114,7 +114,7 @@
 					</c:choose>
 				</c:forEach>
 				<c:if test="${next}">
-					<a
+					<a style="text-decoration: none; color: black"
 						href="${pageContext.request.contextPath}/search/schoolSearchOk.school?page=${endPage + 1}">&gt;</a>
 				</c:if>
 			</div>
