@@ -111,7 +111,8 @@
                              src="${pageContext.request.contextPath}/assets/img/board/putpicture.png"
                              style="height: 43px; cursor: pointer;">
                            </label>
-                           <input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/>
+                           <input name="individualCommunityImage" id="file-input" type="" style="display: none;"onclick="noReady()"/>
+							<!--<input name="individualCommunityImage" id="file-input" type="file" style="display: none;"onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]"/> -->
                            <!-- <input type="button" onclick="cancelFile('board_file1')" value="첨부 삭제"> -->
                        </div>
                    </div>
@@ -153,6 +154,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/board/inBoardWrite.js"></script>
 <script>
+function noReady(){
+	alert("페이지 준비중입니다");
+}
+
 function send(){
    
    if(!$("#boardTitle")){
