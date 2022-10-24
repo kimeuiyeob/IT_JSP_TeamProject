@@ -67,7 +67,6 @@
 		from
 		tbl_nursery_school_member
 		order by number_of_donations_received
-		desc
 		limit 1;
 	</select>
 
@@ -85,7 +84,6 @@
 		from
 		tbl_nursery_school_member
 		order by number_of_donations_received
-		desc
 		limit 4;
 	</select>
 
