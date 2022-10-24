@@ -31,7 +31,7 @@
 							style="width: 262px; height: 32px; padding-left: 14px;">닉네임</div>
 						<div class="category"
 							style="width: 260px; height: 32px; margin-left: -5px;">기부
-							금액</div>
+							정보</div>
 						<div class="subscribe" style="width: 127px; height: 32px;">기부
 							횟수</div>
 						<div class="count"
@@ -51,8 +51,15 @@
 								<c:out value="${ranking.getNickName()}" />
 							</div>
 							<div class="category2" style="width: 260px; height: 36px;">
-								<span class="circle"> <fmt:formatNumber
-										value="${ranking.getDonationAmount()}" pattern="#,###" /></span>
+								<span class="circle"> <c:choose>
+										<c:when test="${empty ranking.getDonationProducts()}">
+											<fmt:formatNumber value="${ranking.getDonationAmount()}"
+												pattern="#,###" />
+										</c:when>
+										<c:otherwise>
+											<c:out value="${ranking.getDonationProducts()}" />
+										</c:otherwise>
+									</c:choose></span>
 							</div>
 							<div class="subscribe2" style="width: 127px; height: 36px;">
 								<div class="number">
