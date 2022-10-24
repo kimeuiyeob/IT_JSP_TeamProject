@@ -134,7 +134,7 @@
 
 			<div class="longdived" style="padding-right: 6px;">
 
-				<div class="longdivedimg">
+				<div class="longdivedimg" style="background-color: #f2f2e4;">
 					<img src="${schoolSearch.getNurserySchoolPhoto()}"/>
 				</div>
 

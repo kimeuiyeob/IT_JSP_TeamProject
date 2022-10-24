@@ -68,7 +68,7 @@
 							href='${pageContext.request.contextPath}/search/schoolDetailOk.school?nurserySchoolMemberNumber=${nurserySchoolMember.getNurserySchoolMemberNumber()}'>
 							<div class="nurseryInfoWrap">
 								<img src="${nurserySchoolMember.getNurserySchoolPhoto()}"
-									style="width: 400px; height: 300px; border-radius: 5px">
+									style="width: 400px; height: 300px; border-radius: 5px;">
 								<br>
 								<h3 style="margin-bottom: 5px;">
 									<c:out
