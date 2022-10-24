@@ -32,7 +32,8 @@ public class RankingMyOkController implements Execute {
 		int individualMemberNumber = (Integer)req.getSession().getAttribute("individualMemberNumber");
 		
 		JSONObject myInfo = new JSONObject(individualDAO.selectByIndividualMemberNumber(individualMemberNumber));
-		
+		System.out.println("안녕");
+		System.out.println(myInfo);
 		out.print(myInfo.toString());
 		out.close();
 		

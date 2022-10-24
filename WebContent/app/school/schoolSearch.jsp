@@ -87,9 +87,7 @@
 			</c:forEach>
 		</c:when>
 		<c:otherwise>
-			<div style="left: 50%;position: absolute;">
-				등록된 보육원이 없습니다.
-			</div>
+			<div style="left: 50%; position: absolute;">등록된 보육원이 없습니다.</div>
 		</c:otherwise>
 	</c:choose>
 	<div style="font-size: 16px;">
@@ -110,7 +108,7 @@
 						</c:when>
 						<c:otherwise>
 							<c:out value="${i}" />&nbsp;&nbsp;
-			</c:otherwise>
+         </c:otherwise>
 					</c:choose>
 				</c:forEach>
 				<c:if test="${next}">
@@ -126,8 +124,8 @@
 <script
 	src="${pageContext.request.contextPath}/assets/js/school/mileStoneSearch.js"></script>
 <script>
-	function btn() {
-		alert('페이지 준비중입니다.');
-	}
+   function btn() {
+      alert('페이지 준비중입니다.');
+   }
 </script>
 </html>

@@ -27,9 +27,11 @@
 				<div class="wrap">
 					<div class="box">
 						<div class="leftsidemenu" style="width: 128px; height: 32px;"></div>
-						<div class="information" style="width: 262px; height: 32px; padding-left: 14px;">닉네임</div>
-						<div class="category" style="width: 260px; height: 32px; margin-left: -5px;">
-							기부 금액</div>
+						<div class="information"
+							style="width: 262px; height: 32px; padding-left: 14px;">닉네임</div>
+						<div class="category"
+							style="width: 260px; height: 32px; margin-left: -5px;">기부
+							정보</div>
 						<div class="subscribe" style="width: 127px; height: 32px;">기부
 							횟수</div>
 						<div class="count"
@@ -37,27 +39,36 @@
 							기부 날짜</div>
 					</div>
 					<c:forEach var="ranking" items="${ranking}">
-								<c:set var="i" value="${i+1}"/>
+						<c:set var="i" value="${i+1}" />
 						<div class="box2">
 							<div class="leftside" style="width: 128px; height: 36px;">
-							
+
 								<%-- <img style="width: 40px"; src="${pageContext.request.contextPath}/assets/img/donation/medall.png"> --%>
 								${i}
-								
+
 							</div>
 							<div class="name" style="width: 262px; height: 36px;">
 								<c:out value="${ranking.getNickName()}" />
 							</div>
 							<div class="category2" style="width: 260px; height: 36px;">
-								<span class="circle">
-							<fmt:formatNumber value="${ranking.getDonationAmount()}" pattern="#,###"/></span>
+								<span class="circle"> <%-- <fmt:formatNumber value="${ranking.getDonationAmount()}" pattern="#,###"/> --%>
+									<c:choose>
+										<c:when test="${empty ranking.getDonationProducts()}">
+											<fmt:formatNumber value="${ranking.getDonationAmount()}"
+												pattern="#,###" />
+										</c:when>
+										<c:otherwise>
+											<c:out value="${ranking.getDonationProducts()}" />
+										</c:otherwise>
+									</c:choose></span>
 							</div>
 							<div class="subscribe2" style="width: 127px; height: 36px;">
 								<div class="number">
 									<c:out value="${ranking.getNumberOfDonations()}" />
 								</div>
 							</div>
-							<div class="count2" style="width: 283px; height: 36px; padding-left: 32px">
+							<div class="count2"
+								style="width: 283px; height: 36px; padding-left: 32px">
 								<div class="date">
 									<c:out value="${ranking.getDonationDate()}" />
 								</div>
@@ -65,9 +76,9 @@
 						</div>
 					</c:forEach>
 				</div>
-				
+
 				<div id="mywrap"></div>
-				
+
 				<div class="yearconfirm" style="padding-bottom: 70px;">
 					<button id="buttonchange2"
 						onmouseover="buttonChange(this.id, 'grey', 'white');"
