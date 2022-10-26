@@ -4,7 +4,7 @@
 
 	<select id="selectDonationStatus" resultType="donationDTO">
 		select
-		d.donation_number, d.donation_amount, d.donation_products,
+		d.donation_number, d.donation_amount, d.donation_products, d.donation_date,
 		i.nickname,
 		n.nursery_school_photo, n.nursery_school_member_name
 		from tbl_donation
@@ -13,7 +13,7 @@
 		d.individual_member_number = i.individual_member_number and
 		d.nursery_school_member_number = n.nursery_school_member_number
 		order by
-		donation_number desc
+		donation_date desc
 		limit 9;
 		
 	</select>

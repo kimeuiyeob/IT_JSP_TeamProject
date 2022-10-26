@@ -256,7 +256,7 @@
 	src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 <script type="text/javascript">
-	var naver_id_login = new naver_id_login("_VjlH3jAE2LhRMAaID_g",
+	var naver_id_login = new naver_id_login("nEJp3lFxDmVWFYwi2f0z",
 			"http://localhost:8081/milestone/login/join.school");
 	var state = naver_id_login.getUniqState();
 	naver_id_login.setButton("white", 2, 40);
@@ -277,7 +277,7 @@
 	src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 <script type="text/javascript">
-	var naver_id_login = new naver_id_login("_VjlH3jAE2LhRMAaID_g",
+	var naver_id_login = new naver_id_login("nEJp3lFxDmVWFYwi2f0z",
 			"http://localhost:8081/milestone/login/join.school");
 	// 	var naver_id_login = new window.naver_id_login("_VjlH3jAE2LhRMAaID_g",
 	// 			"http://localhost:8081/milestone/login/join.indi");

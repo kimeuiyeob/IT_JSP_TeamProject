@@ -13,7 +13,7 @@
 		d.donation_number = i.individual_member_number and
 		i.individual_member_number = n.nursery_school_member_number
 		order by
-		d.donation_date desc
+		donation_date desc
 		limit 0,8;
 	</select>
 

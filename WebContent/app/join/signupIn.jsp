@@ -262,10 +262,10 @@
 
 <script type="text/javascript">
 	var naver_id_login = new naver_id_login("nEJp3lFxDmVWFYwi2f0z",
-			"http://localhost:8085/milestone/login/join.indi");
+			"http://localhost:8081/milestone/login/join.indi");
 	var state = naver_id_login.getUniqState();
 	naver_id_login.setButton("white", 2, 40);
-	naver_id_login.setDomain("http://localhost:8085");
+	naver_id_login.setDomain("http://localhost:8081");
 	naver_id_login.setState(state);
 	naver_id_login.init_naver_id_login();
 </script>
@@ -283,7 +283,7 @@
 
 <script type="text/javascript">
 	var naver_id_login = new naver_id_login("nEJp3lFxDmVWFYwi2f0z",
-			"http://localhost:8085/milestone/login/join.indi");
+			"http://localhost:8081/milestone/login/join.indi");
 	// 	var naver_id_login = new window.naver_id_login("_VjlH3jAE2LhRMAaID_g",
 	// 			"http://localhost:8081/milestone/login/join.indi");
 	// 접근 토큰 값 출력
@@ -333,7 +333,7 @@
 	window.onload = function() {
 		google.accounts.id
 				.initialize({
-					client_id : "250193952162-irr29ctdo9pdn3l2u7k3r4t6srhvms4i.apps.googleusercontent.com",
+					client_id : "120612497162-lhsmsgpenrnho6d6enf6ojseql19k2sf.apps.googleusercontent.com",
 					callback : handleCredentialResponse
 				});
 		google.accounts.id.renderButton(document
@@ -349,7 +349,7 @@
 <!-- 카카오 로그인 -->
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script>
-	Kakao.init('8a615142da8642a1d7a4d97e4e049c0e')
+	Kakao.init('27196e37a11da8d522daa82f6b41a2e2')
 </script>
 
 </html>
